@@ -3,26 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rivet — WhatsApp automation platform</title>
+    <title>Rivet | Deploy WhatsApp automations like software</title>
 
-    <!-- SEO (keep it minimal + not indexed) -->
+    <!-- SEO -->
     <meta
       name="description"
-      content="Rivet provides tools for building and operating WhatsApp automations using the WhatsApp Cloud API."
+      content="Rivet is the agency operating system for WhatsApp: multi-client workspaces, packs, safe releases, observability, and production-grade controls. API/webhook-first by default."
     />
-    <meta name="robots" content="noindex, nofollow" />
-    <meta name="referrer" content="no-referrer" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://YOUR_DOMAIN_HERE/" />
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Rivet — WhatsApp automation platform" />
+    <meta property="og:title" content="Rivet | Deploy WhatsApp automations like software" />
     <meta
       property="og:description"
-      content="Rivet provides tools for building and operating WhatsApp automations using the WhatsApp Cloud API."
+      content="The agency operating system for WhatsApp: packs, safe releases, observability, and controls. API/webhook-first by default."
     />
-    <meta property="og:image" content="./assets/og-rivet.png" />
+    <!-- Use a real absolute URL once the domain is live -->
+    <meta property="og:url" content="https://YOUR_DOMAIN_HERE/" />
+    <meta property="og:image" content="https://YOUR_DOMAIN_HERE/assets/og-rivet.png" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Fonts -->
+    <!-- Fonts (Updated): Sora (display) + Manrope (body) + JetBrains Mono (mono) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,7 +39,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/rivet-apple-touch-180.png" />
     <meta name="theme-color" content="#0B0F14" />
 
-    <!-- Tailwind CDN (fine for this mini-site) -->
+    <!-- Tailwind CDN (quick start). For production, compile Tailwind in your build. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -72,6 +75,7 @@
     </script>
 
     <style>
+      /* Subtle blueprint grid */
       .grid-bg {
         background-image: linear-gradient(to right, rgba(138, 148, 166, 0.10) 1px, transparent 1px),
           linear-gradient(to bottom, rgba(138, 148, 166, 0.08) 1px, transparent 1px);
@@ -82,8 +86,15 @@
         background-image: radial-gradient(rgba(230, 234, 240, 0.05) 1px, transparent 1px);
         background-size: 24px 24px;
       }
+
+      /* Subtle edge darkening (keeps it flat but premium) */
       .vignette {
         box-shadow: inset 0 0 160px rgba(0, 0, 0, 0.65);
+      }
+
+      /* Smooth anchor scroll */
+      html {
+        scroll-behavior: smooth;
       }
     </style>
   </head>
@@ -94,19 +105,28 @@
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
           <!-- Brand -->
-          <a href="/" class="group flex items-center gap-3">
+          <a href="#" class="group flex items-center gap-3">
+            <!-- Logo tile (industrial panel + LED) -->
             <div
               class="relative h-9 w-9 rounded-xl bg-rivet-graphite border border-white/10 ring-1 ring-inset ring-white/10
-                     shadow-panel grid place-items-center overflow-hidden transition duration-200
+                     shadow-panel grid place-items-center overflow-hidden
+                     transition duration-200
                      group-hover:border-white/20 group-hover:ring-rivet-blue/40 group-hover:shadow-glow group-hover:-translate-y-[1px]"
             >
+              <!-- LED -->
               <span
-                class="absolute right-1 top-1 h-1.5 w-1.5 rounded-full bg-rivet-blue/35 transition duration-200
+                class="absolute right-1 top-1 h-1.5 w-1.5 rounded-full bg-rivet-blue/35
+                       transition duration-200
                        group-hover:bg-rivet-blue group-hover:shadow-[0_0_0_6px_rgba(45,107,255,0.18)]"
                 aria-hidden="true"
               ></span>
 
-              <img src="./assets/rivet-icon.png" alt="Rivet" class="h-7 w-7 object-contain" draggable="false" />
+              <img
+                src="./assets/rivet-icon.png"
+                alt="Rivet"
+                class="h-7 w-7 object-contain transition duration-200 group-hover:opacity-95"
+                draggable="false"
+              />
             </div>
 
             <div class="leading-tight">
@@ -115,20 +135,29 @@
             </div>
           </a>
 
-          <!-- Nav (compliance pages only) -->
+          <!-- Nav -->
           <nav class="hidden md:flex items-center gap-6 text-sm text-rivet-steel">
-            <a class="hover:text-rivet-alloy transition" href="/privacy.html">Privacy</a>
-            <a class="hover:text-rivet-alloy transition" href="/terms.html">Terms</a>
-            <a class="hover:text-rivet-alloy transition" href="/contact.html">Contact</a>
+            <a class="hover:text-rivet-alloy transition" href="#product">Product</a>
+            <a class="hover:text-rivet-alloy transition" href="#demo">Demo</a>
+            <a class="hover:text-rivet-alloy transition" href="#packs">Packs</a>
+            <a class="hover:text-rivet-alloy transition" href="#pricing">Pricing</a>
+            <a class="hover:text-rivet-alloy transition" href="#security">Security</a>
+            <a class="hover:text-rivet-alloy transition" href="#faq">FAQ</a>
           </nav>
 
-          <!-- CTA -->
+          <!-- CTAs -->
           <div class="flex items-center gap-3">
             <a
-              href="/contact.html"
+              href="#demo"
+              class="hidden sm:inline-flex items-center justify-center rounded-xl border border-white/10 bg-rivet-graphite px-4 py-2 text-sm text-rivet-alloy hover:border-white/20 transition"
+            >
+              Join waitlist
+            </a>
+            <a
+              href="#demo"
               class="inline-flex items-center justify-center rounded-xl bg-rivet-blue px-4 py-2 text-sm font-semibold text-white hover:bg-rivet-deep transition focus:outline-none focus:ring-2 focus:ring-rivet-glow"
             >
-              Contact
+              Book a demo
             </a>
           </div>
         </div>
@@ -143,49 +172,799 @@
       <div class="absolute inset-x-0 top-0 h-px bg-white/10 pointer-events-none"></div>
 
       <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-        <div class="max-w-3xl">
-          <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-rivet-steel">
-            <span class="h-2 w-2 rounded-full bg-rivet-ok"></span>
-            WhatsApp Cloud API • Webhooks • Operational controls
-          </div>
-
-          <h1 class="mt-6 text-4xl sm:text-5xl font-semibold tracking-tight text-rivet-alloy font-display">
-            Rivet: WhatsApp automation infrastructure for agencies.
-          </h1>
-
-          <p class="mt-4 text-lg text-rivet-steel">
-            This site exists for verification and policy references. Rivet provides tools for building and operating
-            WhatsApp automations, including event ingestion (webhooks), routing, and observability.
-          </p>
-
-          <div class="mt-8 grid gap-4 sm:grid-cols-2">
-            <div class="rounded-2xl border border-white/10 bg-rivet-graphite/60 p-5">
-              <div class="text-sm font-semibold text-rivet-alloy">What Rivet does</div>
-              <ul class="mt-3 space-y-2 text-sm text-rivet-steel">
-                <li>Receive WhatsApp events via webhooks</li>
-                <li>Execute bot logic and reply via Cloud API</li>
-                <li>Provide auditability and operational controls</li>
-              </ul>
+        <div class="grid gap-10 lg:grid-cols-12 lg:items-center">
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-rivet-steel">
+              <span class="h-2 w-2 rounded-full bg-rivet-ok"></span>
+              Meta Cloud API direct • Client-owned billing
             </div>
 
-            <div class="rounded-2xl border border-white/10 bg-rivet-graphite/60 p-5">
-              <div class="text-sm font-semibold text-rivet-alloy">Policy links</div>
-              <div class="mt-3 space-y-2 text-sm">
-                <a class="text-rivet-glow hover:text-rivet-alloy transition" href="/privacy.html">Privacy Policy</a><br />
-                <a class="text-rivet-glow hover:text-rivet-alloy transition" href="/terms.html">Terms</a><br />
-                <a class="text-rivet-glow hover:text-rivet-alloy transition" href="/contact.html">Contact</a>
+            <h1 class="mt-6 text-4xl sm:text-5xl font-semibold tracking-tight text-rivet-alloy font-display">
+              Deploy WhatsApp automations like software.
+            </h1>
+
+            <p class="mt-4 text-lg text-rivet-steel max-w-2xl">
+              Rivet is the agency operating system for WhatsApp: multi-client workspaces, packs, and safe releases,
+              with production-grade observability and controls.
+            </p>
+
+            <div class="mt-6 rounded-2xl border border-white/10 bg-rivet-graphite/60 p-4 max-w-2xl">
+              <div class="flex items-start gap-3">
+                <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-xs text-rivet-alloy">
+                  API
+                </span>
+                <div class="text-sm text-rivet-steel">
+                  <span class="text-rivet-alloy font-semibold">API + webhooks by default.</span>
+                  Optional <span class="text-rivet-alloy font-semibold">no-infra mode</span> for pilots/SMEs or when an API isn’t ready yet.
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+              <a
+                href="#demo"
+                class="inline-flex items-center justify-center rounded-xl bg-rivet-blue px-5 py-3 text-sm font-semibold text-white hover:bg-rivet-deep transition focus:outline-none focus:ring-2 focus:ring-rivet-glow"
+              >
+                Book a demo
+              </a>
+              <a
+                href="#product"
+                class="inline-flex items-center justify-center rounded-xl border border-white/10 bg-rivet-graphite px-5 py-3 text-sm text-rivet-alloy hover:border-white/20 transition"
+              >
+                See how it works
+              </a>
+              <a
+                href="#demo"
+                class="inline-flex items-center justify-center rounded-xl border border-white/10 bg-rivet-graphite px-5 py-3 text-sm text-rivet-alloy hover:border-white/20 transition"
+              >
+                Join waitlist
+              </a>
+            </div>
+
+            <p class="mt-4 text-xs text-rivet-steel">
+              WhatsApp messaging fees are billed by WhatsApp. Rivet is billed separately as software.
+            </p>
+
+            <!-- Trust strip -->
+            <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-rivet-steel">
+              <div class="rounded-xl border border-white/10 bg-rivet-graphite/60 px-3 py-3">Multi-tenant by design</div>
+              <div class="rounded-xl border border-white/10 bg-rivet-graphite/60 px-3 py-3">Versioning + rollback</div>
+              <div class="rounded-xl border border-white/10 bg-rivet-graphite/60 px-3 py-3">Run Timeline (debuggable)</div>
+              <div class="rounded-xl border border-white/10 bg-rivet-graphite/60 px-3 py-3">Policies + safety rails</div>
+            </div>
+          </div>
+
+          <!-- Hero panel mock -->
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl border border-white/10 bg-rivet-graphite shadow-panel overflow-hidden">
+              <div class="flex items-center justify-between px-4 py-3 border-b border-white/10">
+                <div class="flex items-center gap-2 text-sm">
+                  <span class="h-2 w-2 rounded-full bg-rivet-ok"></span>
+                  <span class="text-rivet-alloy font-medium">Rivet Console</span>
+                </div>
+                <div class="text-xs text-rivet-steel">Workspace: Clinic Demo</div>
+              </div>
+
+              <div class="p-4 space-y-4">
+                <div class="grid grid-cols-3 gap-3">
+                  <div class="col-span-1 rounded-xl border border-white/10 bg-rivet-charcoal/60 p-3">
+                    <div class="text-xs text-rivet-steel">Inbox</div>
+                    <div class="mt-2 space-y-2">
+                      <div class="rounded-lg bg-white/5 p-2">
+                        <div class="flex justify-between text-xs">
+                          <span class="text-rivet-alloy">Unassigned</span>
+                          <span class="text-rivet-warn">3</span>
+                        </div>
+                      </div>
+                      <div class="rounded-lg bg-white/5 p-2">
+                        <div class="flex justify-between text-xs">
+                          <span class="text-rivet-alloy">Assigned</span>
+                          <span class="text-rivet-steel">8</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-span-2 rounded-xl border border-white/10 bg-rivet-charcoal/60 p-3">
+                    <div class="flex items-center justify-between">
+                      <div class="text-xs text-rivet-steel">Deployment</div>
+                      <div class="inline-flex items-center gap-2 text-xs text-rivet-steel">
+                        <span class="h-2 w-2 rounded-full bg-rivet-blue"></span>
+                        Active: v12
+                      </div>
+                    </div>
+                    <div class="mt-3 rounded-lg border border-white/10 bg-white/5 p-3">
+                      <div class="flex items-center justify-between">
+                        <div class="text-sm text-rivet-alloy font-medium">Clinic Booking Pack</div>
+                        <span class="text-xs text-white bg-rivet-blue rounded-full px-2 py-1">Rollback ready</span>
+                      </div>
+                      <div class="mt-2 text-xs text-rivet-steel">
+                        Last run: 2m ago • Success 98.4% • Webhook latency 220ms
+                      </div>
+
+                      <div class="mt-4 flex gap-2">
+                        <button class="rounded-xl bg-rivet-blue px-3 py-2 text-xs font-semibold text-white hover:bg-rivet-deep transition">
+                          Publish
+                        </button>
+                        <button class="rounded-xl border border-white/10 bg-rivet-graphite px-3 py-2 text-xs text-rivet-alloy hover:border-white/20 transition">
+                          Roll back
+                        </button>
+                        <button class="rounded-xl border border-white/10 bg-rivet-graphite px-3 py-2 text-xs text-rivet-alloy hover:border-white/20 transition">
+                          Export Pack
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="mt-3 grid grid-cols-2 gap-3">
+                      <div class="rounded-lg border border-white/10 bg-white/5 p-3">
+                        <div class="text-xs text-rivet-steel">Run Timeline</div>
+                        <div class="mt-1 text-sm text-rivet-alloy font-semibold">Traceable</div>
+                      </div>
+                      <div class="rounded-lg border border-white/10 bg-white/5 p-3">
+                        <div class="text-xs text-rivet-steel">Policy checks</div>
+                        <div class="mt-1 text-sm text-rivet-alloy font-semibold">Enforced</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="rounded-xl border border-white/10 bg-rivet-charcoal/60 p-3">
+                  <div class="flex items-center justify-between">
+                    <div class="text-xs text-rivet-steel">Run Timeline</div>
+                    <div class="text-[11px] text-rivet-steel font-mono">corr_id=9f2a…</div>
+                  </div>
+                  <div class="mt-2 space-y-2 font-mono text-[11px] text-rivet-steel">
+                    <div><span class="text-rivet-ok">OK</span> msg.received phone_number_id=… -> workspace=clinic-demo</div>
+                    <div><span class="text-rivet-ok">OK</span> flow.start pack=clinic v12 trigger="hi"</div>
+                    <div><span class="text-rivet-ok">OK</span> policy.check window=24h quiet_hours=off</div>
+                    <div><span class="text-rivet-ok">OK</span> send.text -> "Reply 1 to book, 2 for hours"</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p class="mt-3 text-xs text-rivet-steel">
+              Mock UI for illustration. Replace with screenshots once your Week 2 inbox is live.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product -->
+    <section id="product" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-rivet-alloy font-display">
+          Built for agencies and operators, not hobby bots.
+        </h2>
+        <p class="mt-3 text-rivet-steel">
+          Rivet gives you production controls: safe releases, governance, and observability across multiple client workspaces.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-2xl border border-white/10 bg-rivet-graphite shadow-panel p-6">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-semibold text-rivet-alloy">Flow DevOps</h3>
+            <span class="h-2 w-2 rounded-full bg-rivet-blue"></span>
+          </div>
+          <ul class="mt-4 space-y-2 text-sm text-rivet-steel">
+            <li>Version every publish</li>
+            <li>Rollback in one click</li>
+            <li>Release notes per deploy</li>
+            <li>Promotion-ready model</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-rivet-graphite shadow-panel p-6">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-semibold text-rivet-alloy">Run Timeline</h3>
+            <span class="h-2 w-2 rounded-full bg-rivet-blue"></span>
+          </div>
+          <ul class="mt-4 space-y-2 text-sm text-rivet-steel">
+            <li>Step-by-step trace</li>
+            <li>Variables + branches</li>
+            <li>Retries + failures</li>
+            <li>Correlation IDs</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-rivet-graphite shadow-panel p-6">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-semibold text-rivet-alloy">Packs</h3>
+            <span class="h-2 w-2 rounded-full bg-rivet-blue"></span>
+          </div>
+          <ul class="mt-4 space-y-2 text-sm text-rivet-steel">
+            <li>Build once, reuse</li>
+            <li>Import/export across clients</li>
+            <li>Install checks</li>
+            <li>Upgrade path</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-rivet-graphite shadow-panel p-6">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-semibold text-rivet-alloy">Safety & Policy</h3>
+            <span class="h-2 w-2 rounded-full bg-rivet-blue"></span>
+          </div>
+          <ul class="mt-4 space-y-2 text-sm text-rivet-steel">
+            <li>24h rules support</li>
+            <li>Throttles + quiet hours</li>
+            <li>Kill switches</li>
+            <li>Audit trails</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 rounded-2xl border border-white/10 bg-rivet-graphite/60 p-6">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <div class="text-sm font-semibold text-rivet-alloy">Integrates with your stack</div>
+            <div class="mt-1 text-sm text-rivet-steel">
+              API calls + signed webhooks with delivery logs and retries. Optional no-infra mode for pilots or teams without ready APIs.
+            </div>
+          </div>
+          <a
+            href="#demo"
+            class="inline-flex items-center justify-center rounded-xl bg-rivet-blue px-4 py-2 text-sm font-semibold text-white hover:bg-rivet-deep transition"
+          >
+            Book a demo
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo -->
+    <section id="demo" class="border-t border-white/5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid gap-8 lg:grid-cols-12 lg:items-start">
+          <div class="lg:col-span-6">
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-rivet-alloy font-display">
+              Book a demo (30 minutes).
+            </h2>
+            <p class="mt-3 text-rivet-steel max-w-xl">
+              We’ll install a pack, trigger a WhatsApp journey, and show the Run Timeline (decisions, variables, retries),
+              plus policies and audit trails.
+            </p>
+
+            <div class="mt-6 grid gap-3 sm:grid-cols-2 text-xs text-rivet-steel">
+              <div class="rounded-xl border border-white/10 bg-rivet-graphite/60 px-3 py-3">
+                <div class="font-semibold text-rivet-alloy">You’ll see</div>
+                <div class="mt-1">Pack install • Publish/rollback • Run Timeline</div>
+              </div>
+              <div class="rounded-xl border border-white/10 bg-rivet-graphite/60 px-3 py-3">
+                <div class="font-semibold text-rivet-alloy">Bring</div>
+                <div class="mt-1">Use case • API/webhooks (optional) • WhatsApp number</div>
+              </div>
+            </div>
+
+            <div class="mt-6 rounded-2xl border border-white/10 bg-rivet-graphite/60 p-5">
+              <div class="text-sm font-semibold text-rivet-alloy">Fast-track integrations</div>
+              <div class="mt-2 flex flex-wrap gap-2 text-[11px]">
+                <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">Webhooks</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">REST APIs</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">WooCommerce</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">Shopify</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">Meta Catalog</span>
+              </div>
+              <div class="mt-3 text-xs text-rivet-steel">
+                Optional no-infra mode is perfect for pilots, SMEs, and teams whose APIs aren’t ready yet.
               </div>
             </div>
           </div>
 
-          <div class="mt-8 rounded-2xl border border-white/10 bg-rivet-graphite/60 p-5">
-            <div class="text-sm font-semibold text-rivet-alloy">Contact</div>
-            <p class="mt-2 text-sm text-rivet-steel">
-              Email:
-              <a class="text-rivet-glow hover:text-rivet-alloy transition" href="mailto:nkosi@rivetsoftware.dev">
-                nkosi@rivetsoftware.dev
-              </a>
+          <div class="lg:col-span-6">
+            <div class="rounded-2xl border border-white/10 bg-rivet-graphite shadow-panel p-6">
+              <div class="flex items-center justify-between">
+                <div class="text-sm font-semibold text-rivet-alloy">Request a demo</div>
+                <span class="text-xs text-rivet-steel">We’ll reply within 24 hours</span>
+              </div>
+
+              <!-- Set data-endpoint to Formspree/your API when ready -->
+              <form id="demoForm" data-endpoint="" class="mt-6 grid gap-4">
+                <!-- Honeypot (spam bots fill it) -->
+                <input type="text" name="website" id="website" class="hidden" tabindex="-1" autocomplete="off" />
+
+                <div class="grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <label class="text-xs text-rivet-steel" for="name">Full name</label>
+                    <input
+                      id="name"
+                      name="name"
+                      required
+                      class="mt-1 w-full rounded-xl border border-white/10 bg-rivet-charcoal px-4 py-3 text-sm text-rivet-alloy placeholder:text-rivet-steel/70 focus:outline-none focus:ring-2 focus:ring-rivet-glow"
+                      placeholder="Roger Nkosi"
+                    />
+                  </div>
+                  <div>
+                    <label class="text-xs text-rivet-steel" for="company">Company</label>
+                    <input
+                      id="company"
+                      name="company"
+                      required
+                      class="mt-1 w-full rounded-xl border border-white/10 bg-rivet-charcoal px-4 py-3 text-sm text-rivet-alloy placeholder:text-rivet-steel/70 focus:outline-none focus:ring-2 focus:ring-rivet-glow"
+                      placeholder="Rivet Software (Pty) Ltd"
+                    />
+                  </div>
+                </div>
+
+                <div class="grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <label class="text-xs text-rivet-steel" for="email">Email</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      class="mt-1 w-full rounded-xl border border-white/10 bg-rivet-charcoal px-4 py-3 text-sm text-rivet-alloy placeholder:text-rivet-steel/70 focus:outline-none focus:ring-2 focus:ring-rivet-glow"
+                      placeholder="you@company.com"
+                    />
+                  </div>
+                  <div>
+                    <label class="text-xs text-rivet-steel" for="whatsapp">WhatsApp number</label>
+                    <input
+                      id="whatsapp"
+                      name="whatsapp"
+                      required
+                      class="mt-1 w-full rounded-xl border border-white/10 bg-rivet-charcoal px-4 py-3 text-sm text-rivet-alloy placeholder:text-rivet-steel/70 focus:outline-none focus:ring-2 focus:ring-rivet-glow"
+                      placeholder="+27…"
+                    />
+                  </div>
+                </div>
+
+                <div class="grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <label class="text-xs text-rivet-steel" for="agency">Are you an agency?</label>
+                    <select
+                      id="agency"
+                      name="agency"
+                      class="mt-1 w-full rounded-xl border border-white/10 bg-rivet-charcoal px-4 py-3 text-sm text-rivet-alloy focus:outline-none focus:ring-2 focus:ring-rivet-glow"
+                    >
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                      <option value="not_sure">Not sure</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="text-xs text-rivet-steel" for="usecase">Primary use case</label>
+                    <select
+                      id="usecase"
+                      name="usecase"
+                      class="mt-1 w-full rounded-xl border border-white/10 bg-rivet-charcoal px-4 py-3 text-sm text-rivet-alloy focus:outline-none focus:ring-2 focus:ring-rivet-glow"
+                    >
+                      <option value="ecommerce">E-commerce</option>
+                      <option value="courier">Courier / logistics</option>
+                      <option value="support">Customer support</option>
+                      <option value="sales">Sales / lead gen</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="text-xs text-rivet-steel" for="notes">Notes (optional)</label>
+                  <textarea
+                    id="notes"
+                    name="notes"
+                    rows="4"
+                    class="mt-1 w-full rounded-xl border border-white/10 bg-rivet-charcoal px-4 py-3 text-sm text-rivet-alloy placeholder:text-rivet-steel/70 focus:outline-none focus:ring-2 focus:ring-rivet-glow"
+                    placeholder="Tell us what you want to automate, what systems you have (API/webhooks/Woo/Shopify), and how many client workspaces you manage."
+                  ></textarea>
+                </div>
+
+                <button
+                  id="demoSubmit"
+                  type="submit"
+                  class="inline-flex items-center justify-center rounded-xl bg-rivet-blue px-5 py-3 text-sm font-semibold text-white hover:bg-rivet-deep transition focus:outline-none focus:ring-2 focus:ring-rivet-glow"
+                >
+                  Request demo
+                </button>
+
+                <p class="text-xs text-rivet-steel">
+                  By submitting, you agree we can contact you about Rivet. We don’t sell your data.
+                </p>
+
+                <div id="demoSuccess" class="hidden rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-rivet-alloy">
+                  ✅ Request received. We’ll contact you shortly.
+                </div>
+
+                <div id="demoError" class="hidden rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-rivet-alloy">
+                  ⚠️ Something went wrong. Please try again, or email us at <span class="font-mono">hello@YOUR_DOMAIN_HERE</span>.
+                </div>
+              </form>
+            </div>
+
+            <p class="mt-3 text-xs text-rivet-steel">
+              Tip: Set a simple form endpoint later (Formspree or your API). This UI already supports it.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packs -->
+    <section id="packs" class="border-t border-white/5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-rivet-alloy font-display">
+              Packs are your advantage.
+            </h2>
+            <p class="mt-3 text-rivet-steel max-w-2xl">
+              Build once. Deploy everywhere. Packs let you productize what already works for your clients.
+            </p>
+          </div>
+          <a
+            href="#demo"
+            class="inline-flex items-center justify-center rounded-xl border border-white/10 bg-rivet-graphite px-4 py-2 text-sm text-rivet-alloy hover:border-white/20 transition"
+          >
+            Book a demo
+          </a>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <div class="rounded-2xl border border-white/10 bg-rivet-graphite shadow-panel p-6">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold text-rivet-alloy">Clinic Booking Pack</h3>
+              <span class="text-xs text-rivet-steel">v1</span>
+            </div>
+            <p class="mt-3 text-sm text-rivet-steel">
+              Booking, reschedule, reminders, and receptionist handoff.
+            </p>
+            <div class="mt-4 flex items-center gap-2 text-xs text-rivet-steel">
+              <span class="h-2 w-2 rounded-full bg-rivet-ok"></span> Low integration effort
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-rivet-graphite shadow-panel p-6">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold text-rivet-alloy">Logistics Updates Pack</h3>
+              <span class="text-xs text-rivet-steel">v1</span>
+            </div>
+            <p class="mt-3 text-sm text-rivet-steel">
+              Order tracking, ETA updates, proof-of-delivery capture.
+            </p>
+            <div class="mt-4 flex items-center gap-2 text-xs text-rivet-steel">
+              <span class="h-2 w-2 rounded-full bg-rivet-warn"></span> Needs webhook integration
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-rivet-graphite shadow-panel p-6">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold text-rivet-alloy">Real Estate Qualifier Pack</h3>
+              <span class="text-xs text-rivet-steel">v1</span>
+            </div>
+            <p class="mt-3 text-sm text-rivet-steel">
+              Lead capture, preferences, viewing booking, agent summary.
+            </p>
+            <div class="mt-4 flex items-center gap-2 text-xs text-rivet-steel">
+              <span class="h-2 w-2 rounded-full bg-rivet-ok"></span> Great for agencies
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 rounded-2xl border border-white/10 bg-rivet-graphite/60 p-5">
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <div class="flex flex-wrap items-center gap-3">
+                <div class="text-sm font-semibold text-rivet-alloy">Also shipping early</div>
+
+                <span
+                  class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-2.5 py-1
+                         text-[11px] uppercase tracking-wide text-rivet-steel"
+                >
+                  <span
+                    class="h-1.5 w-1.5 rounded-full bg-rivet-blue/60 shadow-[0_0_0_6px_rgba(45,107,255,0.10)]"
+                    aria-hidden="true"
+                  ></span>
+                  Status: In build
+                </span>
+              </div>
+
+              <div class="mt-1 text-sm text-rivet-steel">
+                eCommerce Pack with African payment rails and delivery integrations.
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 text-[11px]">
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">PayGate</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">Ozow</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">Paystack</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">Courier APIs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-rivet-steel">
+          <span class="h-2 w-2 rounded-full bg-rivet-warn"></span>
+          Launching April 2026
+        </div>
+
+        <h2 class="mt-4 text-2xl sm:text-3xl font-semibold tracking-tight text-rivet-alloy font-display">
+          Simple pricing. Industrial-grade output.
+        </h2>
+        <p class="mt-3 text-rivet-steel">
+          Platform included. Pay more only for scale and deeper ops controls. Commerce connectors are add-ons.
+        </p>
+      </div>
+
+      <!-- All plans include strip -->
+      <div class="mt-8 rounded-2xl border border-white/10 bg-rivet-graphite/60 p-6">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+          <div>
+            <div class="text-sm font-semibold text-rivet-alloy">All plans include</div>
+            <div class="mt-2 flex flex-wrap gap-2 text-[11px]">
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">Multi-tenant workspaces</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">Inbox + handoff</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">Steps Builder + runtime</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">Webhooks + API calls</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">Policies (quiet hours/rate limits)</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">Audit trails</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">Run Timeline</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">Templates support</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">Packs (install/import)</span>
+            </div>
+
+            <div class="mt-4">
+              <div class="text-sm font-semibold text-rivet-alloy">Add-ons</div>
+              <div class="mt-2 flex flex-wrap gap-2 text-[11px]">
+                <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">WooCommerce connector</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">Shopify connector</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">Meta Catalog Sync + reconciliation</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-rivet-steel">No-infra mode (optional)</span>
+              </div>
+              <div class="mt-2 text-xs text-rivet-steel">
+                Commerce is modular by design: turn it on per workspace when you need it.
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="#demo"
+            class="inline-flex items-center justify-center rounded-xl bg-rivet-blue px-4 py-2 text-sm font-semibold text-white hover:bg-rivet-deep transition"
+          >
+            Book a demo
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-10 grid gap-6 lg:grid-cols-3">
+        <!-- Pilot -->
+        <div class="rounded-2xl border border-white/10 bg-rivet-graphite shadow-panel p-7">
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="text-lg font-semibold text-rivet-alloy">Pilot</h3>
+              <p class="mt-1 text-sm text-rivet-steel">For early client projects and proof-of-value.</p>
+            </div>
+            <span class="text-xs text-white bg-white/10 rounded-full px-2 py-1">Launch</span>
+          </div>
+
+          <div class="mt-6">
+            <div class="text-4xl font-semibold text-rivet-alloy">R799</div>
+            <div class="text-sm text-rivet-steel">per month</div>
+          </div>
+
+          <ul class="mt-6 space-y-2 text-sm text-rivet-steel">
+            <li>1 workspace included</li>
+            <li>2 seats included</li>
+            <li>Inbox + runner + Packs</li>
+            <li>Webhooks + API calls</li>
+            <li><span class="text-rivet-alloy font-medium">Run Timeline:</span> 7 days</li>
+            <li><span class="text-rivet-alloy font-medium">Audit trails:</span> 30 days</li>
+          </ul>
+
+          <div class="mt-8 grid gap-3">
+            <a
+              href="#demo"
+              class="inline-flex w-full items-center justify-center rounded-xl bg-rivet-blue px-4 py-3 text-sm font-semibold text-white hover:bg-rivet-deep transition"
+            >
+              Join waitlist
+            </a>
+            <a
+              href="#demo"
+              class="inline-flex w-full items-center justify-center rounded-xl border border-white/10 bg-rivet-charcoal px-4 py-3 text-sm font-semibold text-rivet-alloy hover:border-white/20 transition"
+            >
+              Book a demo
+            </a>
+          </div>
+
+          <p class="mt-3 text-xs text-rivet-steel">WhatsApp messaging fees billed separately by WhatsApp.</p>
+        </div>
+
+        <!-- Growth -->
+        <div class="rounded-2xl border border-rivet-blue/40 bg-rivet-graphite shadow-panel p-7 relative">
+          <div class="absolute -top-3 left-6 rounded-full bg-rivet-blue px-3 py-1 text-xs font-semibold text-white">
+            Recommended
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold text-rivet-alloy">Growth</h3>
+            <p class="mt-1 text-sm text-rivet-steel">For agencies shipping in production.</p>
+          </div>
+
+          <div class="mt-6">
+            <div class="text-4xl font-semibold text-rivet-alloy">R1,999</div>
+            <div class="text-sm text-rivet-steel">per month</div>
+          </div>
+
+          <ul class="mt-6 space-y-2 text-sm text-rivet-steel">
+            <li>3 workspaces included</li>
+            <li>5 seats included</li>
+            <li><span class="text-rivet-alloy font-medium">Versioning + rollback</span></li>
+            <li><span class="text-rivet-alloy font-medium">Pack export/import</span></li>
+            <li><span class="text-rivet-alloy font-medium">Commerce-ready</span> (add Woo/Shopify)</li>
+            <li><span class="text-rivet-alloy font-medium">Run Timeline:</span> 30 days</li>
+            <li><span class="text-rivet-alloy font-medium">Audit trails:</span> 180 days</li>
+          </ul>
+
+          <div class="mt-8 grid gap-3">
+            <a
+              href="#demo"
+              class="inline-flex w-full items-center justify-center rounded-xl bg-rivet-blue px-4 py-3 text-sm font-semibold text-white hover:bg-rivet-deep transition"
+            >
+              Book a demo
+            </a>
+            <a
+              href="#demo"
+              class="inline-flex w-full items-center justify-center rounded-xl border border-white/10 bg-rivet-charcoal px-4 py-3 text-sm font-semibold text-rivet-alloy hover:border-white/20 transition"
+            >
+              Join waitlist
+            </a>
+          </div>
+
+          <p class="mt-3 text-xs text-rivet-steel">WhatsApp messaging fees billed separately by WhatsApp.</p>
+        </div>
+
+        <!-- Pro -->
+        <div class="rounded-2xl border border-white/10 bg-rivet-graphite shadow-panel p-7">
+          <div>
+            <h3 class="text-lg font-semibold text-rivet-alloy">Pro</h3>
+            <p class="mt-1 text-sm text-rivet-steel">For large agencies and operators.</p>
+          </div>
+
+          <div class="mt-6">
+            <div class="text-4xl font-semibold text-rivet-alloy">Custom</div>
+            <div class="text-sm text-rivet-steel">talk to sales</div>
+          </div>
+
+          <ul class="mt-6 space-y-2 text-sm text-rivet-steel">
+            <li>Environments (dev/stage/prod)</li>
+            <li>Approvals / change control</li>
+            <li><span class="text-rivet-alloy font-medium">Run Timeline:</span> 90+ days</li>
+            <li><span class="text-rivet-alloy font-medium">Audit trails:</span> 365+ days</li>
+            <li>Advanced observability + SLAs</li>
+            <li>Onboarding support</li>
+          </ul>
+
+          <div class="mt-8 grid gap-3">
+            <a
+              href="#demo"
+              class="inline-flex w-full items-center justify-center rounded-xl bg-rivet-blue px-4 py-3 text-sm font-semibold text-white hover:bg-rivet-deep transition"
+            >
+              Book a demo
+            </a>
+            <a
+              href="#demo"
+              class="inline-flex w-full items-center justify-center rounded-xl border border-white/10 bg-rivet-charcoal px-4 py-3 text-sm font-semibold text-rivet-alloy hover:border-white/20 transition"
+            >
+              Join waitlist
+            </a>
+          </div>
+
+          <p class="mt-3 text-xs text-rivet-steel">WhatsApp messaging fees billed separately by WhatsApp.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 text-sm text-rivet-steel">
+        <span class="text-rivet-alloy font-medium">Overages:</span> +R300 per additional workspace • +R75 per additional seat
+        <div class="mt-1 text-xs text-rivet-steel">Pricing is beta and may adjust before April launch.</div>
+      </div>
+    </section>
+
+    <!-- Security -->
+    <section id="security" class="border-t border-white/5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div class="max-w-2xl">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-rivet-alloy font-display">
+            Built with production controls.
+          </h2>
+          <p class="mt-3 text-rivet-steel">Rivet focuses on isolation, auditability, and operational safety from day one.</p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-2xl border border-white/10 bg-rivet-graphite p-6">
+            <div class="text-sm font-semibold text-rivet-alloy">Workspace isolation</div>
+            <div class="mt-2 text-sm text-rivet-steel">Tenant-safe routing and data separation.</div>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-rivet-graphite p-6">
+            <div class="text-sm font-semibold text-rivet-alloy">Audit trails</div>
+            <div class="mt-2 text-sm text-rivet-steel">Publish history and admin actions you can trust.</div>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-rivet-graphite p-6">
+            <div class="text-sm font-semibold text-rivet-alloy">Policy engine</div>
+            <div class="mt-2 text-sm text-rivet-steel">Quiet hours, throttles, and safety checks.</div>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-rivet-graphite p-6">
+            <div class="text-sm font-semibold text-rivet-alloy">Retention controls</div>
+            <div class="mt-2 text-sm text-rivet-steel">Sensible defaults, configurable policies.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-rivet-alloy font-display">FAQ</h2>
+        <p class="mt-3 text-rivet-steel">Short answers. No smoke.</p>
+      </div>
+
+      <div class="mt-10 grid gap-6 lg:grid-cols-2">
+        <details class="rounded-2xl border border-white/10 bg-rivet-graphite p-6">
+          <summary class="cursor-pointer text-sm font-semibold text-rivet-alloy">Do I need to be a Meta Business Partner?</summary>
+          <p class="mt-3 text-sm text-rivet-steel">
+            No. Rivet integrates with Meta Cloud API direct. Clients connect their WhatsApp business assets and pay WhatsApp fees directly.
+          </p>
+        </details>
+
+        <details class="rounded-2xl border border-white/10 bg-rivet-graphite p-6">
+          <summary class="cursor-pointer text-sm font-semibold text-rivet-alloy">Do you include WhatsApp message costs?</summary>
+          <p class="mt-3 text-sm text-rivet-steel">
+            No. WhatsApp messaging fees are billed by WhatsApp. Rivet is billed separately as software.
+          </p>
+        </details>
+
+        <details class="rounded-2xl border border-white/10 bg-rivet-graphite p-6">
+          <summary class="cursor-pointer text-sm font-semibold text-rivet-alloy">We already have an API. Is Rivet still useful?</summary>
+          <p class="mt-3 text-sm text-rivet-steel">
+            Yes. Rivet is API/webhook-first by default. The optional no-infra mode is just for pilots, SMEs, or teams whose APIs aren’t ready yet.
+          </p>
+        </details>
+
+        <details class="rounded-2xl border border-white/10 bg-rivet-graphite p-6">
+          <summary class="cursor-pointer text-sm font-semibold text-rivet-alloy">Can I roll back after publishing?</summary>
+          <p class="mt-3 text-sm text-rivet-steel">
+            Yes. Rollback is part of Rivet’s deployment model so agencies can ship without fear.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="border-t border-white/5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div class="rounded-3xl border border-white/10 bg-rivet-graphite shadow-panel p-8 sm:p-10 relative overflow-hidden">
+          <div class="absolute inset-0 vignette pointer-events-none"></div>
+          <div class="absolute inset-x-0 top-0 h-px bg-white/10 pointer-events-none"></div>
+
+          <div class="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-rivet-alloy font-display">
+                Ready to ship automations like an engineer?
+              </h2>
+              <p class="mt-3 text-rivet-steel max-w-xl">
+                Book a demo and we’ll show pack install, a live WhatsApp journey, and the Run Timeline end-to-end.
+              </p>
+            </div>
+            <div class="flex gap-3">
+              <a
+                href="#demo"
+                class="inline-flex items-center justify-center rounded-xl bg-rivet-blue px-5 py-3 text-sm font-semibold text-white hover:bg-rivet-deep transition"
+              >
+                Book a demo
+              </a>
+              <a
+                href="#demo"
+                class="inline-flex items-center justify-center rounded-xl border border-white/10 bg-rivet-charcoal px-5 py-3 text-sm font-semibold text-rivet-alloy hover:border-white/20 transition"
+              >
+                Join waitlist
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -196,21 +975,67 @@
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div class="text-sm text-rivet-steel">
-            © <span id="year2"></span> Rivet Software. All rights reserved.
+            © <span id="year"></span> Rivet Software (Pty) Ltd. All rights reserved.
           </div>
           <div class="flex gap-4 text-sm text-rivet-steel">
-            <a class="hover:text-rivet-alloy transition" href="/privacy.html">Privacy</a>
-            <a class="hover:text-rivet-alloy transition" href="/terms.html">Terms</a>
-            <a class="hover:text-rivet-alloy transition" href="/contact.html">Contact</a>
+            <a class="hover:text-rivet-alloy transition" href="#demo">Privacy</a>
+            <a class="hover:text-rivet-alloy transition" href="#demo">Terms</a>
+            <a class="hover:text-rivet-alloy transition" href="#demo">Status</a>
+            <a class="hover:text-rivet-alloy transition" href="#demo">Contact</a>
           </div>
         </div>
       </div>
     </footer>
 
     <script>
-      const y = new Date().getFullYear();
-      document.getElementById("year").textContent = y;
-      document.getElementById("year2").textContent = y;
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const demoForm = document.getElementById("demoForm");
+      const demoSuccess = document.getElementById("demoSuccess");
+      const demoError = document.getElementById("demoError");
+      const demoSubmit = document.getElementById("demoSubmit");
+
+      function setSubmitting(isSubmitting) {
+        if (!demoSubmit) return;
+        demoSubmit.disabled = isSubmitting;
+        demoSubmit.classList.toggle("opacity-70", isSubmitting);
+        demoSubmit.classList.toggle("cursor-not-allowed", isSubmitting);
+        demoSubmit.textContent = isSubmitting ? "Submitting…" : "Request demo";
+      }
+
+      if (demoForm) {
+        demoForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          // Honeypot check
+          const hp = document.getElementById("website");
+          if (hp && hp.value) return;
+
+          demoSuccess.classList.add("hidden");
+          demoError.classList.add("hidden");
+          setSubmitting(true);
+
+          const endpoint = demoForm.getAttribute("data-endpoint");
+          const data = new FormData(demoForm);
+
+          try {
+            if (endpoint && endpoint.trim().length > 0) {
+              const res = await fetch(endpoint, { method: "POST", body: data, headers: { Accept: "application/json" } });
+              if (!res.ok) throw new Error("Form submit failed");
+            }
+
+            demoSuccess.classList.remove("hidden");
+            demoSuccess.scrollIntoView({ behavior: "smooth", block: "nearest" });
+
+            setTimeout(() => demoForm.reset(), 200);
+          } catch (err) {
+            demoError.classList.remove("hidden");
+            demoError.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          } finally {
+            setSubmitting(false);
+          }
+        });
+      }
     </script>
   </body>
 </html>
