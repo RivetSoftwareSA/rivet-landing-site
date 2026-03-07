@@ -1,9 +1,0 @@
-{
-  "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "rivet-landing-site",
-  "compatibility_date": "2026-02-23",
-  "assets": {
-    "directory": "./",
-    "not_found_handling": "single-page-application"
-  }
-}
