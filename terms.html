@@ -1,39 +1,472 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rivet — Terms</title>
-  <meta name="robots" content="noindex, nofollow" />
-  <style>
-    body { max-width: 920px; margin: 40px auto; padding: 0 16px; font-family: system-ui, Segoe UI, Roboto, Arial; line-height: 1.55; }
-    h1,h2 { line-height: 1.2; }
-  </style>
-</head>
-<body>
-  <h1>Terms</h1>
-  <p><strong>Last updated:</strong> 2026-01-30</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service | Rivet Software</title>
 
-  <p>
-    Rivet is an automation platform that integrates with WhatsApp via the WhatsApp Cloud API.
-    By using Rivet, you agree to comply with applicable laws and WhatsApp/Meta policies.
-  </p>
+    <meta name="description" content="Rivet Software Terms of Service — the agreement governing your use of the Rivet WhatsApp automation platform." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://rivetsoftware.dev/terms" />
 
-  <h2>Early access</h2>
-  <p>
-    Rivet may be provided in early access/beta. Features can change. The service is provided “as is” to the extent permitted by law.
-  </p>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <h2>Responsible use</h2>
-  <p>
-    You are responsible for the content you send, consent, opt-ins, and policy compliance for each connected WhatsApp business account.
-  </p>
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <meta name="theme-color" content="#0B0F1A" />
 
-  <h2>Contact</h2>
-  <p>
-    Email: <a href="mailto:nkosi@rivetsoftware.dev">nkosi@rivetsoftware.dev</a>
-  </p>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              rv: {
+                night:   '#0B0F1A',
+                slate:   '#151929',
+                card:    '#1C2136',
+                border:  '#2E3555',
+                border2: '#3D4570',
+                teal:    '#00D4A1',
+                text:    '#F0F1F5',
+                muted:   '#9498AE',
+                faint:   '#5E6380',
+                warn:    '#FFB020',
+              },
+            },
+            fontFamily: {
+              display: ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              sans:    ['IBM Plex Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              mono:    ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+            },
+            boxShadow: {
+              teal: '0 0 24px rgba(0,212,161,0.15)',
+            },
+          },
+        },
+      };
+    </script>
 
-  <p><a href="/">← Back</a></p>
-</body>
+    <style>
+      html { scroll-behavior: smooth; }
+      .toc-link { transition: color 0.15s, border-color 0.15s; }
+      .toc-link.active { color: #00D4A1; border-left-color: #00D4A1; }
+    </style>
+  </head>
+
+  <body class="bg-rv-night text-rv-text antialiased font-sans">
+
+    <!-- NAV -->
+    <header class="sticky top-0 z-50 border-b border-rv-border bg-rv-night/90 backdrop-blur-md">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <a href="/" class="flex items-center gap-2.5">
+            <img src="./assets/rivet-icon.png" alt="Rivet" class="h-8 w-8 object-contain" draggable="false" />
+            <span class="font-display text-xl font-bold tracking-tight text-rv-text">Rivet</span>
+          </a>
+          <nav class="hidden md:flex items-center gap-8 font-sans text-sm font-medium text-rv-muted">
+            <a href="/#product"  class="hover:text-rv-text transition-colors">Product</a>
+            <a href="/#packs"    class="hover:text-rv-text transition-colors">Packs</a>
+            <a href="/#pricing"  class="hover:text-rv-text transition-colors">Pricing</a>
+            <a href="/#faq"      class="hover:text-rv-text transition-colors">FAQ</a>
+          </nav>
+          <div class="flex items-center gap-4">
+            <a href="/#demo" class="hidden sm:inline font-sans text-sm font-medium text-rv-muted hover:text-rv-text transition-colors">Book a demo</a>
+            <a href="/register" class="inline-flex items-center justify-center rounded-lg bg-rv-teal px-5 py-2 font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
+              Start free trial
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- PAGE HEADER -->
+    <div class="bg-rv-slate border-b border-rv-border py-12">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="flex items-center gap-2 font-sans text-sm text-rv-faint">
+          <a href="/" class="hover:text-rv-text transition-colors">Home</a>
+          <span>/</span>
+          <span class="text-rv-muted">Terms of Service</span>
+        </div>
+        <h1 class="mt-4 font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1px;">Terms of Service</h1>
+        <div class="mt-3 flex flex-wrap items-center gap-4">
+          <span class="font-sans text-sm text-rv-muted">Rivet Software (Pty) Ltd</span>
+          <span class="rounded-full border border-rv-border bg-rv-card px-3 py-1 font-mono text-xs text-rv-teal">Effective: 14 March 2026</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CONTENT -->
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 py-16">
+      <div class="lg:grid lg:grid-cols-[240px_1fr] lg:gap-16">
+
+        <!-- Sticky TOC (desktop) -->
+        <aside class="hidden lg:block">
+          <div class="sticky top-24">
+            <div class="font-sans text-xs font-semibold uppercase tracking-wide text-rv-muted mb-4">Contents</div>
+            <nav class="space-y-1">
+              <a href="#s1"  class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">1. Acceptance of Terms</a>
+              <a href="#s2"  class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">2. Description of Services</a>
+              <a href="#s3"  class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">3. Account Registration</a>
+              <a href="#s4"  class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">4. WhatsApp Business Platform</a>
+              <a href="#s5"  class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">5. Subscription &amp; Payment</a>
+              <a href="#s6"  class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">6. Free Trial</a>
+              <a href="#s7"  class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">7. Acceptable Use</a>
+              <a href="#s8"  class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">8. Intellectual Property</a>
+              <a href="#s9"  class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">9. Data Protection</a>
+              <a href="#s10" class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">10. Service Availability</a>
+              <a href="#s11" class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">11. Limitation of Liability</a>
+              <a href="#s12" class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">12. Indemnification</a>
+              <a href="#s13" class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">13. Term &amp; Termination</a>
+              <a href="#s14" class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">14. Modifications</a>
+              <a href="#s15" class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">15. Governing Law</a>
+              <a href="#s16" class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">16. General</a>
+              <a href="#s17" class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">17. Contact Us</a>
+            </nav>
+
+            <div class="mt-8 rounded-xl border border-rv-border bg-rv-card p-4">
+              <div class="font-sans text-xs font-semibold text-rv-muted mb-2">Related</div>
+              <a href="/privacy" class="block font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Privacy Policy &rarr;</a>
+              <a href="mailto:legal@rivetsoftware.dev" class="mt-2 block font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">legal@rivetsoftware.dev</a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main content -->
+        <article class="min-w-0">
+
+          <!-- Mobile TOC -->
+          <div class="mb-10 rounded-xl border border-rv-border bg-rv-card p-5 lg:hidden">
+            <div class="font-sans text-xs font-semibold uppercase tracking-wide text-rv-muted mb-3">Contents</div>
+            <div class="grid grid-cols-2 gap-x-4 gap-y-1.5">
+              <a href="#s1"  class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">1. Acceptance</a>
+              <a href="#s2"  class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">2. Services</a>
+              <a href="#s3"  class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">3. Registration</a>
+              <a href="#s4"  class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">4. WhatsApp</a>
+              <a href="#s5"  class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">5. Subscription</a>
+              <a href="#s6"  class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">6. Free Trial</a>
+              <a href="#s7"  class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">7. Acceptable Use</a>
+              <a href="#s8"  class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">8. IP</a>
+              <a href="#s9"  class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">9. Data</a>
+              <a href="#s10" class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">10. Availability</a>
+              <a href="#s11" class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">11. Liability</a>
+              <a href="#s12" class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">12. Indemnity</a>
+            </div>
+          </div>
+
+          <div class="space-y-12">
+
+            <section id="s1">
+              <h2 class="font-display text-xl font-bold text-rv-text">1. Acceptance of Terms</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">
+                These Terms of Service ("Terms") constitute a legally binding agreement between you ("Customer", "you", or "your") and Rivet Software (Pty) Ltd ("Rivet", "we", "us", or "our"), a company incorporated in South Africa. By registering for, accessing, or using the Rivet platform, you agree to be bound by these Terms.
+              </p>
+              <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
+                If you are accepting these Terms on behalf of a company or other legal entity, you represent that you have the authority to bind that entity. If you do not agree to these Terms, do not use our services.
+              </p>
+            </section>
+
+            <section id="s2">
+              <h2 class="font-display text-xl font-bold text-rv-text">2. Description of Services</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">
+                Rivet provides a WhatsApp-first business automation platform that enables SMBs to automate customer communication, manage WhatsApp Business accounts, build automated conversation flows (BotFlows), connect e-commerce platforms, and manage product catalogues via WhatsApp.
+              </p>
+              <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
+                Our services are provided on a subscription basis and are subject to the plan selected by you at registration or as subsequently modified.
+              </p>
+            </section>
+
+            <section id="s3">
+              <h2 class="font-display text-xl font-bold text-rv-text">3. Account Registration</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">To use Rivet you must create an account. You agree to:</p>
+              <ul class="mt-3 space-y-2">
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Provide accurate, current, and complete information during registration</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Maintain and promptly update your account information</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Keep your login credentials confidential and not share them with third parties</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Notify us immediately of any unauthorised access to your account</li>
+              </ul>
+              <p class="mt-4 font-sans text-sm text-rv-faint leading-relaxed">
+                You are responsible for all activity that occurs under your account. We reserve the right to suspend or terminate accounts where we have reason to believe registration information is false or misleading.
+              </p>
+            </section>
+
+            <section id="s4">
+              <h2 class="font-display text-xl font-bold text-rv-text">4. WhatsApp Business Platform</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">Use of Rivet's WhatsApp integration is subject to:</p>
+              <ul class="mt-3 space-y-2">
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Meta's WhatsApp Business Terms of Service</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Meta's Business Solution Provider terms and policies</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>WhatsApp's Acceptable Use Policy</li>
+              </ul>
+              <p class="mt-4 font-sans text-sm text-rv-faint leading-relaxed">
+                You represent and warrant that your use of WhatsApp through Rivet complies with all applicable Meta policies. You are solely responsible for the content of messages sent through our platform. We reserve the right to suspend your WhatsApp integration if we determine, in our sole discretion, that your usage violates Meta's policies or applicable law.
+              </p>
+            </section>
+
+            <section id="s5">
+              <h2 class="font-display text-xl font-bold text-rv-text">5. Subscription and Payment</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+
+              <h3 class="mt-6 font-display text-sm font-semibold uppercase tracking-wide text-rv-teal">5.1 Plans and Pricing</h3>
+              <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
+                Rivet is offered on tiered subscription plans as described on our website. Pricing is in South African Rand (ZAR) unless otherwise stated. We reserve the right to modify pricing with 30 days' written notice.
+              </p>
+
+              <h3 class="mt-6 font-display text-sm font-semibold uppercase tracking-wide text-rv-teal">5.2 Billing</h3>
+              <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
+                Subscriptions are billed monthly or annually in advance. Payment is due on the first day of each billing period. Failure to pay may result in suspension of your account after a grace period of 7 days.
+              </p>
+
+              <h3 class="mt-6 font-display text-sm font-semibold uppercase tracking-wide text-rv-teal">5.3 Refunds</h3>
+              <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
+                All fees are non-refundable except where required by applicable law or as expressly stated in our refund policy. We may, at our discretion, issue credits for service outages or other issues.
+              </p>
+
+              <h3 class="mt-6 font-display text-sm font-semibold uppercase tracking-wide text-rv-teal">5.4 Taxes</h3>
+              <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
+                All fees are exclusive of applicable taxes. Where required, VAT or other applicable taxes will be added to your invoice.
+              </p>
+            </section>
+
+            <section id="s6">
+              <h2 class="font-display text-xl font-bold text-rv-text">6. Free Trial</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">
+                Where we offer a free trial, you may use the services without charge for the stated trial period. At the end of the trial period, your account will require a paid subscription to continue. We reserve the right to modify or discontinue trial offerings at any time.
+              </p>
+            </section>
+
+            <section id="s7">
+              <h2 class="font-display text-xl font-bold text-rv-text">7. Acceptable Use</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">You agree not to use Rivet to:</p>
+              <ul class="mt-3 space-y-2">
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-warn"></span>Send unsolicited bulk messages (spam) or messages that violate WhatsApp's policies</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-warn"></span>Distribute malware, phishing content, or other harmful material</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-warn"></span>Harass, threaten, or harm any individual or group</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-warn"></span>Infringe the intellectual property rights of any third party</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-warn"></span>Engage in fraudulent, deceptive, or misleading conduct</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-warn"></span>Violate any applicable law or regulation, including the Electronic Communications and Transactions Act (ECTA) and the Consumer Protection Act of South Africa</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-warn"></span>Attempt to gain unauthorised access to our systems or other users' accounts</li>
+              </ul>
+              <div class="mt-5 rounded-xl border border-rv-warn/30 bg-rv-warn/5 p-4">
+                <p class="font-sans text-sm text-rv-warn leading-relaxed">
+                  Violation of this section may result in immediate suspension or termination of your account without refund.
+                </p>
+              </div>
+            </section>
+
+            <section id="s8">
+              <h2 class="font-display text-xl font-bold text-rv-text">8. Intellectual Property</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+
+              <h3 class="mt-6 font-display text-sm font-semibold uppercase tracking-wide text-rv-teal">8.1 Our IP</h3>
+              <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
+                Rivet and its licensors retain all intellectual property rights in the platform, including software, designs, trademarks, and documentation. These Terms do not grant you any rights to our intellectual property except the limited licence to use the platform as described herein.
+              </p>
+
+              <h3 class="mt-6 font-display text-sm font-semibold uppercase tracking-wide text-rv-teal">8.2 Your Content</h3>
+              <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
+                You retain ownership of all content, data, and materials you upload or create within the platform ('Customer Data'). By using Rivet, you grant us a limited, non-exclusive licence to process your Customer Data solely to provide the services.
+              </p>
+            </section>
+
+            <section id="s9">
+              <h2 class="font-display text-xl font-bold text-rv-text">9. Data Protection</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">
+                Our collection and use of personal information is governed by our <a href="/privacy" class="text-rv-teal hover:opacity-80 transition-opacity">Privacy Policy</a>, which is incorporated into these Terms by reference. Where we process personal information on your behalf (such as your customers' WhatsApp contact data), we act as a data operator/processor and you act as the responsible party under POPIA.
+              </p>
+              <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
+                You warrant that you have all necessary consents and authorisations to provide us with Customer Data for processing.
+              </p>
+            </section>
+
+            <section id="s10">
+              <h2 class="font-display text-xl font-bold text-rv-text">10. Service Availability</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">
+                We aim to provide a reliable service but do not guarantee uninterrupted availability. Scheduled maintenance will be communicated in advance where reasonably practicable. We are not liable for downtime caused by third-party services including Meta's WhatsApp Business Platform.
+              </p>
+              <div class="mt-4">
+                <a href="https://status.rivetsoftware.dev" target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-sans text-sm text-rv-teal hover:opacity-80 transition-opacity">
+                  <span class="h-2 w-2 rounded-full bg-rv-teal"></span>
+                  Check platform status &rarr;
+                </a>
+              </div>
+            </section>
+
+            <section id="s11">
+              <h2 class="font-display text-xl font-bold text-rv-text">11. Limitation of Liability</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">
+                To the maximum extent permitted by applicable law, Rivet's total liability to you for any claims arising from or related to these Terms or the services shall not exceed the total fees paid by you in the three months preceding the claim.
+              </p>
+              <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
+                We shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or goodwill, even if advised of the possibility of such damages.
+              </p>
+              <p class="mt-4 font-sans text-sm text-rv-faint leading-relaxed">
+                Nothing in these Terms limits liability for death or personal injury caused by negligence, fraud, or any other liability that cannot be excluded by law.
+              </p>
+            </section>
+
+            <section id="s12">
+              <h2 class="font-display text-xl font-bold text-rv-text">12. Indemnification</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">
+                You agree to indemnify and hold harmless Rivet and its officers, directors, employees, and agents from any claims, damages, losses, and expenses (including reasonable legal fees) arising from your use of the platform, your Customer Data, your violation of these Terms, or your violation of any third-party rights.
+              </p>
+            </section>
+
+            <section id="s13">
+              <h2 class="font-display text-xl font-bold text-rv-text">13. Term and Termination</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+
+              <h3 class="mt-6 font-display text-sm font-semibold uppercase tracking-wide text-rv-teal">13.1 Term</h3>
+              <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
+                These Terms commence on the date you accept them and continue until terminated by either party.
+              </p>
+
+              <h3 class="mt-6 font-display text-sm font-semibold uppercase tracking-wide text-rv-teal">13.2 Termination by You</h3>
+              <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
+                You may cancel your subscription at any time through your account settings. Cancellation takes effect at the end of the current billing period.
+              </p>
+
+              <h3 class="mt-6 font-display text-sm font-semibold uppercase tracking-wide text-rv-teal">13.3 Termination by Us</h3>
+              <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
+                We may suspend or terminate your account immediately if you breach these Terms, fail to pay fees, or if required by law or Meta's policies.
+              </p>
+
+              <h3 class="mt-6 font-display text-sm font-semibold uppercase tracking-wide text-rv-teal">13.4 Effect of Termination</h3>
+              <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
+                Upon termination, your right to use the platform ceases immediately. We will provide you with a reasonable opportunity to export your data before deletion, subject to our data retention policy.
+              </p>
+            </section>
+
+            <section id="s14">
+              <h2 class="font-display text-xl font-bold text-rv-text">14. Modifications to Terms</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">
+                We reserve the right to modify these Terms at any time. We will notify you of material changes by email or prominent notice on the platform at least 14 days before they take effect. Your continued use of the platform after changes take effect constitutes your acceptance of the revised Terms.
+              </p>
+            </section>
+
+            <section id="s15">
+              <h2 class="font-display text-xl font-bold text-rv-text">15. Governing Law and Disputes</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">
+                These Terms are governed by the laws of the Republic of South Africa. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts of South Africa. Where possible, we encourage resolution of disputes through good-faith negotiation before resorting to legal proceedings.
+              </p>
+            </section>
+
+            <section id="s16">
+              <h2 class="font-display text-xl font-bold text-rv-text">16. General</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <ul class="mt-5 space-y-2">
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>These Terms constitute the entire agreement between you and Rivet regarding the platform.</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>If any provision of these Terms is found unenforceable, the remaining provisions continue in full force.</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Our failure to enforce any provision is not a waiver of our right to do so in the future.</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>You may not assign your rights under these Terms without our prior written consent. We may assign our rights in connection with a merger, acquisition, or sale of assets.</li>
+              </ul>
+            </section>
+
+            <section id="s17">
+              <h2 class="font-display text-xl font-bold text-rv-text">17. Contact Us</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <div class="mt-5 rounded-2xl border border-rv-border bg-rv-card p-6">
+                <div class="font-display text-base font-semibold text-rv-text">Rivet Software (Pty) Ltd</div>
+                <div class="mt-4 space-y-2">
+                  <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-rv-faint w-16">Email</span>
+                    <a href="mailto:legal@rivetsoftware.dev" class="font-sans text-sm text-rv-teal hover:opacity-80 transition-opacity">legal@rivetsoftware.dev</a>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-rv-faint w-16">Website</span>
+                    <a href="https://rivetsoftware.dev" class="font-sans text-sm text-rv-muted hover:text-rv-text transition-colors">rivetsoftware.dev</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </article>
+      </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-rv-night border-t border-rv-border py-16">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-5">
+          <div class="lg:col-span-2">
+            <div class="flex items-center gap-2.5">
+              <img src="./assets/rivet-icon.png" alt="Rivet" class="h-8 w-8 object-contain" draggable="false" />
+              <span class="font-display text-xl font-bold tracking-tight text-rv-text">Rivet</span>
+            </div>
+            <p class="mt-3 font-sans text-sm text-rv-faint leading-relaxed max-w-xs">
+              WhatsApp automation for businesses that can't afford to miss a lead, a delivery, or an appointment.
+            </p>
+            <p class="mt-4 font-sans text-xs text-rv-faint">Built in South Africa &#127487;&#127462;</p>
+          </div>
+          <div>
+            <div class="font-sans text-xs font-semibold uppercase tracking-wide text-rv-muted">Product</div>
+            <ul class="mt-4 space-y-2.5">
+              <li><a href="/#product"  class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Features</a></li>
+              <li><a href="/#packs"    class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Packs</a></li>
+              <li><a href="/#pricing"  class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Pricing</a></li>
+              <li><a href="/#demo"     class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Book a demo</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="font-sans text-xs font-semibold uppercase tracking-wide text-rv-muted">Resources</div>
+            <ul class="mt-4 space-y-2.5">
+              <li><a href="/#faq"      class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">FAQ</a></li>
+              <li><a href="/#security" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Security</a></li>
+              <li><a href="https://status.rivetsoftware.dev" target="_blank" rel="noopener" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Status</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="font-sans text-xs font-semibold uppercase tracking-wide text-rv-muted">Legal</div>
+            <ul class="mt-4 space-y-2.5">
+              <li><a href="/privacy"  class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Privacy</a></li>
+              <li><a href="/terms"    class="font-sans text-sm text-rv-teal hover:opacity-80 transition-opacity">Terms</a></li>
+              <li><a href="mailto:hello@rivetsoftware.dev" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-12 border-t border-rv-border pt-8">
+          <p class="font-sans text-sm text-rv-faint">&copy; <span id="year"></span> Rivet Software (Pty) Ltd. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Highlight active TOC section on scroll
+      const sections = document.querySelectorAll('section[id]');
+      const tocLinks = document.querySelectorAll('.toc-link');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-20% 0px -70% 0px' });
+      sections.forEach(s => observer.observe(s));
+    </script>
+
+  </body>
 </html>

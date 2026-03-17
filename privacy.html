@@ -1,55 +1,428 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rivet — Privacy Policy</title>
-  <meta name="robots" content="noindex, nofollow" />
-  <style>
-    body { max-width: 920px; margin: 40px auto; padding: 0 16px; font-family: system-ui, Segoe UI, Roboto, Arial; line-height: 1.55; }
-    h1,h2 { line-height: 1.2; }
-    code { background: #f2f2f2; padding: 2px 6px; border-radius: 6px; }
-  </style>
-</head>
-<body>
-  <h1>Privacy Policy</h1>
-  <p><strong>Last updated:</strong> 2026-01-30</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy | Rivet Software</title>
 
-  <p>
-    Rivet (“we”, “us”) provides tools for building and operating WhatsApp automations (including webhook ingestion and message sending via the WhatsApp Cloud API).
-    This policy explains what information we process and why.
-  </p>
+    <meta name="description" content="Rivet Software Privacy Policy — how we collect, use, and protect your personal information." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://rivetsoftware.dev/privacy" />
 
-  <h2>Information we process</h2>
-  <ul>
-    <li><strong>Account data</strong>: email, workspace details, authentication identifiers.</li>
-    <li><strong>Messaging data</strong>: message content and metadata (timestamps, message IDs, phone number IDs, sender IDs) required to deliver and route messages.</li>
-    <li><strong>Operational logs</strong>: diagnostics and security logs to keep the service reliable and safe.</li>
-  </ul>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <h2>How we use information</h2>
-  <ul>
-    <li>To receive events (webhooks), execute automations, and send responses.</li>
-    <li>To operate, secure, troubleshoot, and improve the service.</li>
-    <li>To comply with applicable laws and platform policies.</li>
-  </ul>
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <meta name="theme-color" content="#0B0F1A" />
 
-  <h2>Sharing</h2>
-  <p>
-    We may share data with infrastructure providers (hosting/monitoring) and with Meta/WhatsApp to send and receive messages via the WhatsApp Cloud API.
-    We do not sell personal information.
-  </p>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              rv: {
+                night:   '#0B0F1A',
+                slate:   '#151929',
+                card:    '#1C2136',
+                border:  '#2E3555',
+                border2: '#3D4570',
+                teal:    '#00D4A1',
+                text:    '#F0F1F5',
+                muted:   '#9498AE',
+                faint:   '#5E6380',
+                warn:    '#FFB020',
+              },
+            },
+            fontFamily: {
+              display: ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              sans:    ['IBM Plex Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              mono:    ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+            },
+            boxShadow: {
+              teal: '0 0 24px rgba(0,212,161,0.15)',
+            },
+          },
+        },
+      };
+    </script>
 
-  <h2>Retention</h2>
-  <p>
-    We retain information only as long as needed to provide the service and for legitimate operational and compliance purposes.
-  </p>
+    <style>
+      html { scroll-behavior: smooth; }
+      .toc-link { transition: color 0.15s, border-color 0.15s; }
+      .toc-link.active { color: #00D4A1; border-left-color: #00D4A1; }
+    </style>
+  </head>
 
-  <h2>Contact</h2>
-  <p>
-    Email: <a href="mailto:nkosi@rivetsoftware.dev">nkosi@rivetsoftware.dev</a>
-  </p>
+  <body class="bg-rv-night text-rv-text antialiased font-sans">
 
-  <p><a href="/">← Back</a></p>
-</body>
+    <!-- NAV -->
+    <header class="sticky top-0 z-50 border-b border-rv-border bg-rv-night/90 backdrop-blur-md">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <a href="/" class="flex items-center gap-2.5">
+            <img src="./assets/rivet-icon.png" alt="Rivet" class="h-8 w-8 object-contain" draggable="false" />
+            <span class="font-display text-xl font-bold tracking-tight text-rv-text">Rivet</span>
+          </a>
+          <nav class="hidden md:flex items-center gap-8 font-sans text-sm font-medium text-rv-muted">
+            <a href="/#product"  class="hover:text-rv-text transition-colors">Product</a>
+            <a href="/#packs"    class="hover:text-rv-text transition-colors">Packs</a>
+            <a href="/#pricing"  class="hover:text-rv-text transition-colors">Pricing</a>
+            <a href="/#faq"      class="hover:text-rv-text transition-colors">FAQ</a>
+          </nav>
+          <div class="flex items-center gap-4">
+            <a href="/#demo" class="hidden sm:inline font-sans text-sm font-medium text-rv-muted hover:text-rv-text transition-colors">Book a demo</a>
+            <a href="/register" class="inline-flex items-center justify-center rounded-lg bg-rv-teal px-5 py-2 font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
+              Start free trial
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- PAGE HEADER -->
+    <div class="bg-rv-slate border-b border-rv-border py-12">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="flex items-center gap-2 font-sans text-sm text-rv-faint">
+          <a href="/" class="hover:text-rv-text transition-colors">Home</a>
+          <span>/</span>
+          <span class="text-rv-muted">Privacy Policy</span>
+        </div>
+        <h1 class="mt-4 font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1px;">Privacy Policy</h1>
+        <div class="mt-3 flex flex-wrap items-center gap-4">
+          <span class="font-sans text-sm text-rv-muted">Rivet Software (Pty) Ltd</span>
+          <span class="rounded-full border border-rv-border bg-rv-card px-3 py-1 font-mono text-xs text-rv-teal">Effective: 14 March 2026</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CONTENT -->
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 py-16">
+      <div class="lg:grid lg:grid-cols-[240px_1fr] lg:gap-16">
+
+        <!-- Sticky TOC (desktop) -->
+        <aside class="hidden lg:block">
+          <div class="sticky top-24">
+            <div class="font-sans text-xs font-semibold uppercase tracking-wide text-rv-muted mb-4">Contents</div>
+            <nav class="space-y-1">
+              <a href="#s1"  class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">1. Introduction</a>
+              <a href="#s2"  class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">2. Information We Collect</a>
+              <a href="#s3"  class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">3. How We Use Your Information</a>
+              <a href="#s4"  class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">4. WhatsApp &amp; Meta Data</a>
+              <a href="#s5"  class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">5. Data Sharing</a>
+              <a href="#s6"  class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">6. Data Retention</a>
+              <a href="#s7"  class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">7. Data Security</a>
+              <a href="#s8"  class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">8. Your Rights</a>
+              <a href="#s9"  class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">9. Cookies</a>
+              <a href="#s10" class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">10. International Transfers</a>
+              <a href="#s11" class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">11. Children's Privacy</a>
+              <a href="#s12" class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">12. Policy Changes</a>
+              <a href="#s13" class="toc-link block border-l-2 border-rv-border pl-3 py-1 font-sans text-sm text-rv-faint hover:text-rv-text">13. Contact Us</a>
+            </nav>
+
+            <div class="mt-8 rounded-xl border border-rv-border bg-rv-card p-4">
+              <div class="font-sans text-xs font-semibold text-rv-muted mb-2">Related</div>
+              <a href="/terms" class="block font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Terms of Service &rarr;</a>
+              <a href="mailto:legal@rivetsoftware.dev" class="mt-2 block font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">legal@rivetsoftware.dev</a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main content -->
+        <article class="min-w-0">
+
+          <!-- Mobile TOC -->
+          <div class="mb-10 rounded-xl border border-rv-border bg-rv-card p-5 lg:hidden">
+            <div class="font-sans text-xs font-semibold uppercase tracking-wide text-rv-muted mb-3">Contents</div>
+            <div class="grid grid-cols-2 gap-x-4 gap-y-1.5">
+              <a href="#s1"  class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">1. Introduction</a>
+              <a href="#s2"  class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">2. Information We Collect</a>
+              <a href="#s3"  class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">3. How We Use It</a>
+              <a href="#s4"  class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">4. WhatsApp &amp; Meta</a>
+              <a href="#s5"  class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">5. Data Sharing</a>
+              <a href="#s6"  class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">6. Retention</a>
+              <a href="#s7"  class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">7. Security</a>
+              <a href="#s8"  class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">8. Your Rights</a>
+              <a href="#s9"  class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">9. Cookies</a>
+              <a href="#s10" class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">10. Int'l Transfers</a>
+              <a href="#s11" class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">11. Children</a>
+              <a href="#s12" class="font-sans text-sm text-rv-faint hover:text-rv-teal transition-colors">12. Changes</a>
+            </div>
+          </div>
+
+          <div class="space-y-12">
+
+            <section id="s1">
+              <h2 class="font-display text-xl font-bold text-rv-text">1. Introduction</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">
+                Rivet Software (Pty) Ltd ("Rivet", "we", "us", or "our") operates the Rivet platform, a WhatsApp-first business automation solution for small and medium-sized businesses (SMBs) across Africa. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform and services.
+              </p>
+              <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
+                By accessing or using Rivet, you agree to the collection and use of information in accordance with this policy. If you do not agree, please discontinue use of our services.
+              </p>
+            </section>
+
+            <section id="s2">
+              <h2 class="font-display text-xl font-bold text-rv-text">2. Information We Collect</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+
+              <h3 class="mt-6 font-display text-sm font-semibold uppercase tracking-wide text-rv-teal">2.1 Information You Provide</h3>
+              <ul class="mt-3 space-y-2">
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Account registration details (name, email address, business name, phone number)</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Payment and billing information processed through our payment partners</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>WhatsApp Business Account credentials and authorisation tokens obtained via Meta's Embedded Signup</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Business configuration data including automation flows, templates, and catalogue information</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Communications and support requests you send to us</li>
+              </ul>
+
+              <h3 class="mt-6 font-display text-sm font-semibold uppercase tracking-wide text-rv-teal">2.2 Information Collected Automatically</h3>
+              <ul class="mt-3 space-y-2">
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Usage data including pages visited, features used, and actions taken within the platform</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Device information including browser type, operating system, and IP address</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Log data including access times, error logs, and API request metadata</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Cookies and similar tracking technologies to maintain sessions and improve user experience</li>
+              </ul>
+
+              <h3 class="mt-6 font-display text-sm font-semibold uppercase tracking-wide text-rv-teal">2.3 Information from Third Parties</h3>
+              <ul class="mt-3 space-y-2">
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>WhatsApp Business Account data obtained from Meta's Graph API upon your authorisation</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Customer data processed on your behalf through WhatsApp messaging (processed as a data processor)</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Integration data from connected platforms such as WooCommerce or Shopify</li>
+              </ul>
+            </section>
+
+            <section id="s3">
+              <h2 class="font-display text-xl font-bold text-rv-text">3. How We Use Your Information</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">We use the information we collect for the following purposes:</p>
+              <ul class="mt-3 space-y-2">
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Providing, maintaining, and improving the Rivet platform and its features</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Processing transactions and managing your subscription</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Sending operational communications including service updates, security alerts, and support responses</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Sending marketing communications where you have provided consent</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Analysing usage patterns to improve product functionality and user experience</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Complying with legal obligations and enforcing our Terms of Service</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Detecting, preventing, and addressing fraud, security incidents, and technical issues</li>
+              </ul>
+            </section>
+
+            <section id="s4">
+              <h2 class="font-display text-xl font-bold text-rv-text">4. WhatsApp and Meta Data</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">
+                Rivet integrates with the WhatsApp Business Platform via Meta's official APIs. By connecting your WhatsApp Business Account to Rivet, you authorise us to:
+              </p>
+              <ul class="mt-3 space-y-2">
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Access your WhatsApp Business Account ID (WABA ID) and associated phone number(s)</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Send and receive WhatsApp messages on your behalf as directed by your automation configurations</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Access message delivery and read receipts for operational purposes</li>
+              </ul>
+              <div class="mt-5 rounded-xl border border-rv-border bg-rv-card p-5">
+                <p class="font-sans text-sm text-rv-muted leading-relaxed">
+                  We do not sell WhatsApp message content or contact data to third parties. Message content is processed solely to deliver the automation services you have configured. We comply with Meta's Platform Terms and WhatsApp Business Solution Provider requirements.
+                </p>
+              </div>
+            </section>
+
+            <section id="s5">
+              <h2 class="font-display text-xl font-bold text-rv-text">5. Data Sharing and Disclosure</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">We do not sell your personal information. We may share your information with:</p>
+              <ul class="mt-3 space-y-2">
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Service providers who assist in delivering our platform (hosting, payment processing, analytics) under data processing agreements</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Meta Platforms, Inc. as required to facilitate WhatsApp Business API services</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Legal authorities where required by applicable law, court order, or government regulation</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Successor entities in the event of a merger, acquisition, or sale of assets, with prior notice to you</li>
+              </ul>
+            </section>
+
+            <section id="s6">
+              <h2 class="font-display text-xl font-bold text-rv-text">6. Data Retention</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">
+                We retain your personal information for as long as your account is active or as needed to provide our services. We retain certain data for longer periods where required by law or for legitimate business purposes such as resolving disputes or enforcing agreements.
+              </p>
+              <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
+                Message logs and automation data are retained for a default period of 90 days unless you configure a longer retention period within the platform. Upon account termination, we will delete or anonymise your data within 30 days, subject to legal retention obligations.
+              </p>
+              <div class="mt-5 grid gap-3 sm:grid-cols-2">
+                <div class="rounded-xl border border-rv-border bg-rv-card p-4">
+                  <div class="font-mono text-xs text-rv-teal">Default retention</div>
+                  <div class="mt-1 font-display text-2xl font-bold text-rv-text">90 days</div>
+                  <div class="mt-1 font-sans text-xs text-rv-faint">Message logs &amp; automation data</div>
+                </div>
+                <div class="rounded-xl border border-rv-border bg-rv-card p-4">
+                  <div class="font-mono text-xs text-rv-teal">Post-termination deletion</div>
+                  <div class="mt-1 font-display text-2xl font-bold text-rv-text">30 days</div>
+                  <div class="mt-1 font-sans text-xs text-rv-faint">Subject to legal obligations</div>
+                </div>
+              </div>
+            </section>
+
+            <section id="s7">
+              <h2 class="font-display text-xl font-bold text-rv-text">7. Data Security</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">
+                We implement industry-standard technical and organisational measures to protect your information, including:
+              </p>
+              <ul class="mt-3 space-y-2">
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Encryption of access tokens and sensitive credentials at rest using <span class="font-mono text-xs text-rv-text">AES-256</span></li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>TLS encryption for all data in transit</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Role-based access controls limiting employee access to customer data</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Regular security reviews and vulnerability assessments</li>
+              </ul>
+              <p class="mt-4 font-sans text-sm text-rv-faint leading-relaxed">
+                No method of transmission or storage is 100% secure. We cannot guarantee absolute security but are committed to protecting your information to the best of our ability.
+              </p>
+            </section>
+
+            <section id="s8">
+              <h2 class="font-display text-xl font-bold text-rv-text">8. Your Rights</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">
+                Subject to applicable law, including the Protection of Personal Information Act (POPIA) of South Africa, you have the right to:
+              </p>
+              <ul class="mt-3 space-y-2">
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Access the personal information we hold about you</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Request correction of inaccurate or incomplete information</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Request deletion of your personal information, subject to legal retention obligations</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Object to or restrict certain processing of your information</li>
+                <li class="flex items-start gap-3 font-sans text-sm text-rv-muted leading-relaxed"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rv-teal"></span>Lodge a complaint with the Information Regulator of South Africa</li>
+              </ul>
+              <div class="mt-5 rounded-xl border border-rv-border bg-rv-card p-5 flex items-center gap-4">
+                <div>
+                  <div class="font-sans text-sm font-semibold text-rv-text">Exercise your rights</div>
+                  <div class="mt-0.5 font-sans text-sm text-rv-muted">Email us at <a href="mailto:legal@rivetsoftware.dev" class="text-rv-teal hover:opacity-80 transition-opacity">legal@rivetsoftware.dev</a></div>
+                </div>
+              </div>
+            </section>
+
+            <section id="s9">
+              <h2 class="font-display text-xl font-bold text-rv-text">9. Cookies</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">
+                We use cookies and similar technologies to maintain your session, remember your preferences, and analyse platform usage. You may configure your browser to refuse cookies, but this may affect the functionality of the platform.
+              </p>
+            </section>
+
+            <section id="s10">
+              <h2 class="font-display text-xl font-bold text-rv-text">10. International Transfers</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">
+                Rivet is incorporated in South Africa and primarily processes data within South Africa. As we expand operations across Africa, data may be transferred to and processed in other jurisdictions. We ensure appropriate safeguards are in place for any such transfers in accordance with POPIA and applicable local laws.
+              </p>
+            </section>
+
+            <section id="s11">
+              <h2 class="font-display text-xl font-bold text-rv-text">11. Children's Privacy</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">
+                Our services are not directed at individuals under the age of 18. We do not knowingly collect personal information from minors. If you believe a minor has provided us with personal information, please contact us immediately.
+              </p>
+            </section>
+
+            <section id="s12">
+              <h2 class="font-display text-xl font-bold text-rv-text">12. Changes to This Policy</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <p class="mt-5 font-sans text-base text-rv-muted leading-relaxed">
+                We may update this Privacy Policy from time to time. We will notify you of material changes by email or by posting a prominent notice on the platform. Your continued use of Rivet after changes are posted constitutes acceptance of the updated policy.
+              </p>
+            </section>
+
+            <section id="s13">
+              <h2 class="font-display text-xl font-bold text-rv-text">13. Contact Us</h2>
+              <div class="mt-4 h-px bg-rv-border"></div>
+              <div class="mt-5 rounded-2xl border border-rv-border bg-rv-card p-6">
+                <div class="font-display text-base font-semibold text-rv-text">Rivet Software (Pty) Ltd</div>
+                <div class="mt-4 space-y-2">
+                  <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-rv-faint w-16">Email</span>
+                    <a href="mailto:legal@rivetsoftware.dev" class="font-sans text-sm text-rv-teal hover:opacity-80 transition-opacity">legal@rivetsoftware.dev</a>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-rv-faint w-16">Website</span>
+                    <a href="https://rivetsoftware.dev" class="font-sans text-sm text-rv-muted hover:text-rv-text transition-colors">rivetsoftware.dev</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </article>
+      </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-rv-night border-t border-rv-border py-16">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-5">
+          <div class="lg:col-span-2">
+            <div class="flex items-center gap-2.5">
+              <img src="./assets/rivet-icon.png" alt="Rivet" class="h-8 w-8 object-contain" draggable="false" />
+              <span class="font-display text-xl font-bold tracking-tight text-rv-text">Rivet</span>
+            </div>
+            <p class="mt-3 font-sans text-sm text-rv-faint leading-relaxed max-w-xs">
+              WhatsApp automation for businesses that can't afford to miss a lead, a delivery, or an appointment.
+            </p>
+            <p class="mt-4 font-sans text-xs text-rv-faint">Built in South Africa &#127487;&#127462;</p>
+          </div>
+          <div>
+            <div class="font-sans text-xs font-semibold uppercase tracking-wide text-rv-muted">Product</div>
+            <ul class="mt-4 space-y-2.5">
+              <li><a href="/#product"  class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Features</a></li>
+              <li><a href="/#packs"    class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Packs</a></li>
+              <li><a href="/#pricing"  class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Pricing</a></li>
+              <li><a href="/#demo"     class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Book a demo</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="font-sans text-xs font-semibold uppercase tracking-wide text-rv-muted">Resources</div>
+            <ul class="mt-4 space-y-2.5">
+              <li><a href="/#faq"      class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">FAQ</a></li>
+              <li><a href="/#security" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Security</a></li>
+              <li><a href="https://status.rivetsoftware.dev" target="_blank" rel="noopener" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Status</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="font-sans text-xs font-semibold uppercase tracking-wide text-rv-muted">Legal</div>
+            <ul class="mt-4 space-y-2.5">
+              <li><a href="/privacy"  class="font-sans text-sm text-rv-teal hover:opacity-80 transition-opacity">Privacy</a></li>
+              <li><a href="/terms"    class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Terms</a></li>
+              <li><a href="mailto:hello@rivetsoftware.dev" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-12 border-t border-rv-border pt-8">
+          <p class="font-sans text-sm text-rv-faint">&copy; <span id="year"></span> Rivet Software (Pty) Ltd. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Highlight active TOC section on scroll
+      const sections = document.querySelectorAll('section[id]');
+      const tocLinks = document.querySelectorAll('.toc-link');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-20% 0px -70% 0px' });
+      sections.forEach(s => observer.observe(s));
+    </script>
+
+  </body>
 </html>
