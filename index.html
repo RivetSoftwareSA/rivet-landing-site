@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rivet | WhatsApp Automation for Growing Businesses</title>
+    <title>Rivet | WhatsApp chat bots builder for Growing Businesses</title>
 
     <!-- SEO -->
     <meta
@@ -15,7 +15,7 @@
 
     <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Rivet | WhatsApp Automation for Growing Businesses" />
+    <meta property="og:title" content="Rivet | WhatsApp Bots for Growing Businesses" />
     <meta
       property="og:description"
       content="Automate your WhatsApp messages, follow-ups, and updates. Built for logistics, clinics, real estate &amp; e-commerce. No developers needed."
@@ -127,18 +127,18 @@
           <nav class="hidden md:flex items-center gap-8 font-sans text-sm font-medium text-rv-muted">
             <a href="#product" class="hover:text-rv-text transition-colors">Product</a>
             <a href="#packs"   class="hover:text-rv-text transition-colors">Packs</a>
-            <a href="#pricing" class="hover:text-rv-text transition-colors">Pricing</a>
+            <a href="#pricing" data-track-event="pricing_click" class="hover:text-rv-text transition-colors">Pricing</a>
             <a href="#faq"     class="hover:text-rv-text transition-colors">FAQ</a>
           </nav>
 
           <!-- CTAs -->
           <div class="flex items-center gap-4">
-            <a href="#demo" class="hidden sm:inline font-sans text-sm font-medium text-rv-muted hover:text-rv-text transition-colors">Book a demo</a>
+            <a href="https://app.rivetsoftware.dev/login" data-track-event="start_trial_click" class="hidden sm:inline font-sans text-sm font-medium text-rv-muted hover:text-rv-text transition-colors">Start free trial</a>
             <a
-              href="/register"
+              href="#demo"
               class="inline-flex items-center justify-center rounded-lg bg-rv-teal px-5 py-2 font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity"
             >
-              Start free trial
+              Book a demo
             </a>
           </div>
         </div>
@@ -154,7 +154,7 @@
         <div class="grid gap-12 lg:grid-cols-12 lg:items-center">
 
           <!-- Left column -->
-          <div class="lg:col-span-7">
+          <div class="lg:col-span-6">
             <!-- Eyebrow pill -->
             <div class="inline-flex items-center gap-2 rounded-full border border-rv-border bg-rv-card px-4 py-1.5 font-mono text-xs text-rv-teal">
               <span class="h-1.5 w-1.5 rounded-full bg-rv-teal"></span>
@@ -166,7 +166,7 @@
               class="mt-6 font-display text-5xl sm:text-6xl font-bold text-rv-text leading-[1.08]"
               style="letter-spacing: -2px;"
             >
-              Deploy WhatsApp automations like software.
+              Deploy WhatsApp bots like software.
             </h1>
 
             <!-- Sub-headline -->
@@ -194,7 +194,8 @@
             <!-- CTAs -->
             <div class="mt-8 flex flex-col sm:flex-row gap-3">
               <a
-                href="/register"
+                href="https://app.rivetsoftware.dev/login"
+                data-track-event="start_trial_click"
                 class="inline-flex items-center justify-center rounded-[10px] bg-rv-teal px-7 py-3.5 font-display text-base font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity"
               >
                 Start free trial
@@ -220,55 +221,18 @@
             </div>
           </div>
 
-          <!-- Right column — console mock -->
-          <div class="lg:col-span-5">
+          <!-- Right column — product screenshot -->
+          <div class="lg:col-span-6">
             <div
-              class="overflow-hidden rounded-2xl border border-rv-border bg-rv-card shadow-feature"
+              class="overflow-hidden rounded-2xl border border-rv-border shadow-feature"
               style="transform: perspective(1000px) rotateY(-3deg);"
             >
-              <!-- Browser chrome -->
-              <div class="flex items-center gap-1.5 border-b border-rv-border bg-rv-night px-4 py-3">
-                <span class="h-2.5 w-2.5 rounded-full bg-[#FF5F57]"></span>
-                <span class="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]"></span>
-                <span class="h-2.5 w-2.5 rounded-full bg-[#28C840]"></span>
-                <div class="ml-3 flex-1 rounded bg-rv-card px-3 py-1 font-mono text-[10px] text-rv-faint">console.rivetsoftware.dev</div>
-              </div>
-
-              <!-- Console content -->
-              <div class="space-y-3 p-4">
-                <div class="flex items-center justify-between">
-                  <span class="font-display text-xs font-semibold text-rv-text">Workspace: Clinic Demo</span>
-                  <span class="inline-flex items-center gap-1.5 font-mono text-[11px] text-rv-teal">
-                    <span class="h-1.5 w-1.5 rounded-full bg-rv-teal"></span>Active: v12
-                  </span>
-                </div>
-
-                <div class="rounded-xl border border-rv-border bg-rv-night p-3">
-                  <div class="flex items-center justify-between">
-                    <span class="font-display text-sm font-medium text-rv-text">Clinic Booking Pack</span>
-                    <span class="rounded-full bg-rv-teal px-2 py-0.5 font-mono text-[10px] font-semibold text-rv-night">Live</span>
-                  </div>
-                  <div class="mt-1 font-mono text-[11px] text-rv-faint">Last run: 2m ago &middot; Success 98.4%</div>
-                  <div class="mt-3 flex gap-2">
-                    <button class="rounded-lg bg-rv-teal px-3 py-1.5 font-mono text-[11px] font-semibold text-rv-night">Publish</button>
-                    <button class="rounded-lg border border-rv-border px-3 py-1.5 font-mono text-[11px] text-rv-muted">Roll back</button>
-                    <button class="rounded-lg border border-rv-border px-3 py-1.5 font-mono text-[11px] text-rv-muted">Export Pack</button>
-                  </div>
-                </div>
-
-                <div class="rounded-xl border border-rv-border bg-rv-night p-3">
-                  <div class="mb-2 flex items-center justify-between">
-                    <span class="font-sans text-xs font-medium text-rv-muted">Run Timeline</span>
-                    <span class="font-mono text-[10px] text-rv-faint">corr_id=9f2a&hellip;</span>
-                  </div>
-                  <div class="space-y-1.5 font-mono text-[10px] text-rv-faint">
-                    <div><span class="text-rv-teal">OK</span> msg.received &rarr; workspace=clinic-demo</div>
-                    <div><span class="text-rv-teal">OK</span> flow.start pack=clinic v12 trigger="hi"</div>
-                    <div><span class="text-rv-teal">OK</span> policy.check quiet_hours=off</div>
-                    <div><span class="text-rv-teal">OK</span> send.text &rarr; "Reply 1 to book, 2 for hours"</div>
-                  </div>
-                </div>
-              </div>
+              <img
+                src="./assets/rivet_shared_inbox.png"
+                alt="Rivet shared inbox"
+                class="block w-full"
+                draggable="false"
+              />
             </div>
           </div>
 
@@ -423,7 +387,7 @@
                 <span class="font-sans text-xs text-rv-faint">We'll reply within 24 hours</span>
               </div>
 
-              <form id="demoForm" data-endpoint="" class="mt-6 grid gap-4">
+              <form id="demoForm" class="mt-6 grid gap-4">
                 <!-- Honeypot -->
                 <input type="text" name="website" id="website" class="hidden" tabindex="-1" autocomplete="off" />
 
@@ -431,18 +395,20 @@
                   <div>
                     <label class="font-sans text-xs text-rv-muted" for="name">Your name</label>
                     <input
-                      id="name" name="name" required
+                      id="name" name="name" required maxlength="120"
                       class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text placeholder:text-rv-faint focus:outline-none focus:ring-2 focus:ring-rv-teal/40"
                       placeholder="Roger Nkosi"
                     />
+                    <p id="err-name" class="hidden mt-1 font-sans text-xs text-red-400"></p>
                   </div>
                   <div>
-                    <label class="font-sans text-xs text-rv-muted" for="company">Business name</label>
+                    <label class="font-sans text-xs text-rv-muted" for="businessName">Business name</label>
                     <input
-                      id="company" name="company" required
+                      id="businessName" name="businessName" required maxlength="160"
                       class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text placeholder:text-rv-faint focus:outline-none focus:ring-2 focus:ring-rv-teal/40"
                       placeholder="Rivet Software (Pty) Ltd"
                     />
+                    <p id="err-businessName" class="hidden mt-1 font-sans text-xs text-red-400"></p>
                   </div>
                 </div>
 
@@ -450,18 +416,20 @@
                   <div>
                     <label class="font-sans text-xs text-rv-muted" for="email">Email</label>
                     <input
-                      id="email" name="email" type="email" required
+                      id="email" name="email" type="email" required maxlength="320"
                       class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text placeholder:text-rv-faint focus:outline-none focus:ring-2 focus:ring-rv-teal/40"
                       placeholder="you@company.com"
                     />
+                    <p id="err-email" class="hidden mt-1 font-sans text-xs text-red-400"></p>
                   </div>
                   <div>
-                    <label class="font-sans text-xs text-rv-muted" for="whatsapp">WhatsApp number</label>
+                    <label class="font-sans text-xs text-rv-muted" for="phoneNumber">WhatsApp number</label>
                     <input
-                      id="whatsapp" name="whatsapp" required
+                      id="phoneNumber" name="phoneNumber" type="tel" required maxlength="32"
                       class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text placeholder:text-rv-faint focus:outline-none focus:ring-2 focus:ring-rv-teal/40"
-                      placeholder="+27&hellip;"
+                      placeholder="+27..."
                     />
+                    <p id="err-phoneNumber" class="hidden mt-1 font-sans text-xs text-red-400"></p>
                   </div>
                 </div>
 
@@ -496,7 +464,7 @@
                 <div>
                   <label class="font-sans text-xs text-rv-muted" for="notes">Notes (optional)</label>
                   <textarea
-                    id="notes" name="notes" rows="3"
+                    id="notes" name="notes" rows="3" maxlength="4000"
                     class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text placeholder:text-rv-faint focus:outline-none focus:ring-2 focus:ring-rv-teal/40"
                     placeholder="Tell us what you want to automate and which industry you're in."
                   ></textarea>
@@ -514,11 +482,11 @@
                   By submitting, you agree we can contact you about Rivet. We don't sell your data.
                 </p>
 
-                <div id="demoSuccess" class="hidden rounded-xl border border-rv-border bg-rv-night p-4 font-sans text-sm text-rv-text">
-                  &#10003; Request received. We'll contact you shortly.
+                <div id="demoSuccess" class="hidden rounded-xl border border-rv-teal/30 bg-rv-teal/5 p-4 font-sans text-sm text-rv-text">
+                  &#10003; Booking received! We'll be in touch within 24 hours.
                 </div>
-                <div id="demoError" class="hidden rounded-xl border border-rv-border bg-rv-night p-4 font-sans text-sm text-rv-text">
-                  &#9888; Something went wrong. Please try again, or email us at
+                <div id="demoError" class="hidden rounded-xl border border-red-500/30 bg-red-500/5 p-4 font-sans text-sm text-rv-muted">
+                  &#9888; Something went wrong. Please try again or email us at
                   <a href="mailto:hello@rivetsoftware.dev" class="font-mono text-rv-teal hover:underline">hello@rivetsoftware.dev</a>.
                 </div>
               </form>
@@ -555,7 +523,7 @@
         </div>
 
         <!-- Pack cards -->
-        <div class="mt-10 grid gap-4 md:grid-cols-3">
+        <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
 
           <div class="rounded-2xl border border-rv-border bg-rv-card p-6" style="border-left: 3px solid #00D4A1;">
             <div class="flex items-center justify-between">
@@ -597,29 +565,19 @@
             </div>
           </div>
 
-        </div>
-
-        <!-- eCommerce coming soon -->
-        <div class="mt-4 rounded-2xl border border-dashed border-rv-border bg-rv-card/60 p-5">
-          <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <div class="flex flex-wrap items-center gap-3">
-                <div class="font-display text-sm font-semibold text-rv-text">Also shipping early</div>
-                <span class="inline-flex items-center gap-1.5 rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-mono text-[10px] uppercase tracking-wide text-rv-muted">
-                  <span class="h-1.5 w-1.5 rounded-full bg-rv-teal/60"></span>In build
-                </span>
-              </div>
-              <div class="mt-1 font-sans text-sm text-rv-muted">
-                eCommerce Pack &mdash; Built for Africa. Includes PayGate, Ozow, Paystack, and local courier integrations. Launching April 2026.
-              </div>
+          <div class="rounded-2xl border border-rv-border bg-rv-card p-6" style="border-left: 3px solid #00D4A1;">
+            <div class="flex items-center justify-between">
+              <h3 class="font-display text-lg font-semibold text-rv-text">eCommerce Pack</h3>
+              <span class="rounded border border-rv-border bg-rv-night px-1.5 py-0.5 font-mono text-[10px] text-rv-faint">v1</span>
             </div>
-            <div class="flex flex-wrap gap-2">
-              <span class="rounded border border-rv-border bg-rv-night px-2 py-1 font-mono text-[11px] text-rv-muted">PayGate</span>
-              <span class="rounded border border-rv-border bg-rv-night px-2 py-1 font-mono text-[11px] text-rv-muted">Ozow</span>
-              <span class="rounded border border-rv-border bg-rv-night px-2 py-1 font-mono text-[11px] text-rv-muted">Paystack</span>
-              <span class="rounded border border-rv-border bg-rv-night px-2 py-1 font-mono text-[11px] text-rv-muted">Courier APIs</span>
+            <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
+              Built for Africa. Includes PayGate, Ozow, Paystack, and local courier integrations for order automation.
+            </p>
+            <div class="mt-4 flex items-center gap-2 font-sans text-xs text-rv-muted">
+              <span class="h-2 w-2 rounded-full bg-rv-teal"></span> Connects to your store via webhook
             </div>
           </div>
+
         </div>
 
       </div>
@@ -633,11 +591,7 @@
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
         <div class="max-w-2xl">
-          <div class="inline-flex items-center gap-2 rounded-full border border-rv-border bg-rv-card px-3 py-1 font-mono text-xs text-rv-muted">
-            <span class="h-1.5 w-1.5 rounded-full bg-rv-warn"></span>
-            Launching April 2026
-          </div>
-          <h2 class="mt-4 font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
+          <h2 class="font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
             Start small. Scale when you're ready.
           </h2>
           <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
@@ -716,7 +670,7 @@
               <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>1 Pack</li>
               <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Email support (48hr)</li>
             </ul>
-            <a href="/register" class="mt-6 block w-full rounded-xl bg-rv-teal py-3 text-center font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
+            <a href="https://app.rivetsoftware.dev/login" data-track-event="start_trial_click" class="mt-6 block w-full rounded-xl bg-rv-teal py-3 text-center font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
               Start free trial
             </a>
             <p class="mt-2 text-center font-sans text-xs text-rv-faint"><a href="#demo" class="hover:text-rv-muted transition-colors">or book a demo</a></p>
@@ -749,7 +703,7 @@
               <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Pack export &amp; reuse</li>
               <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Priority email + chat (24hr)</li>
             </ul>
-            <a href="/register" class="mt-6 block w-full rounded-xl bg-rv-teal py-3 text-center font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
+            <a href="https://app.rivetsoftware.dev/login" data-track-event="start_trial_click" class="mt-6 block w-full rounded-xl bg-rv-teal py-3 text-center font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
               Start free trial
             </a>
             <p class="mt-2 text-center font-sans text-xs text-rv-faint"><a href="#demo" class="hover:text-rv-muted transition-colors">or book a demo</a></p>
@@ -783,7 +737,7 @@
             <a href="#demo" class="mt-6 block w-full rounded-xl bg-rv-teal py-3 text-center font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
               Book a demo
             </a>
-            <p class="mt-2 text-center font-sans text-xs text-rv-faint"><a href="/register" class="hover:text-rv-muted transition-colors">or start free trial</a></p>
+            <p class="mt-2 text-center font-sans text-xs text-rv-faint"><a href="https://app.rivetsoftware.dev/login" data-track-event="start_trial_click" class="hover:text-rv-muted transition-colors">or start free trial</a></p>
             <p class="mt-2 font-sans text-[11px] text-rv-faint">WhatsApp messaging fees charged separately by Meta &mdash; zero markup.</p>
           </div>
 
@@ -922,6 +876,42 @@
 
 
     <!-- ============================================================
+         HOW RIVET USES WHATSAPP  (bg: night)
+    ============================================================ -->
+    <section id="whatsapp-usage" class="bg-rv-night py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <h2 class="font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
+            How Rivet uses WhatsApp
+          </h2>
+          <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
+            Rivet is a software platform &mdash; not a messaging service. We give businesses the tools to build and run their own WhatsApp automation. Here's exactly how the WhatsApp Business Platform is used.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
+            <div class="font-display text-sm font-semibold text-rv-text">Transactional notifications</div>
+            <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Order confirmations, appointment reminders, delivery updates, and payment receipts &mdash; sent to customers who have opted in.</div>
+          </div>
+          <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
+            <div class="font-display text-sm font-semibold text-rv-text">Automated conversation flows</div>
+            <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">BotFlows that respond to inbound customer messages &mdash; bookings, lead qualification, FAQ responses, and support routing.</div>
+          </div>
+          <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
+            <div class="font-display text-sm font-semibold text-rv-text">Template-based outbound messaging</div>
+            <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Pre-approved Meta message templates for outbound notifications. All templates are submitted to and approved by Meta before use.</div>
+          </div>
+          <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
+            <div class="font-display text-sm font-semibold text-rv-text">No unsolicited messaging</div>
+            <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Rivet does not send bulk unsolicited messages. All usage complies with Meta's Platform Terms, WhatsApp Business Policy, and WhatsApp's Acceptable Use Policy.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
          SECURITY  (bg: slate)
     ============================================================ -->
     <section id="security" class="bg-rv-slate py-24">
@@ -1037,7 +1027,8 @@
             </div>
             <div class="flex shrink-0 flex-col gap-3 sm:flex-row">
               <a
-                href="/register"
+                href="https://app.rivetsoftware.dev/login"
+                data-track-event="start_trial_click"
                 class="inline-flex items-center justify-center rounded-xl bg-rv-teal px-7 py-3.5 font-display text-base font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity"
               >
                 Start free trial
@@ -1069,9 +1060,15 @@
               <span class="font-display text-xl font-bold tracking-tight text-rv-text">Rivet</span>
             </div>
             <p class="mt-3 font-sans text-sm text-rv-faint leading-relaxed max-w-xs">
-              WhatsApp automation for businesses that can't afford to miss a lead, a delivery, or an appointment.
+              WhatsApp bots for businesses that can't afford to miss a lead, a delivery, or an appointment.
             </p>
             <p class="mt-4 font-sans text-xs text-rv-faint">Built in South Africa &#127487;&#127462;</p>
+            <address class="mt-4 not-italic font-sans text-xs text-rv-faint leading-relaxed">
+              Rivet Software (Pty) Ltd<br />
+              Meadowbrook Lane, Block F, St Andrews Office Park<br />
+              Bryanston, Sandton, Gauteng, 2191<br />
+              South Africa
+            </address>
           </div>
 
           <!-- Product links -->
@@ -1080,8 +1077,9 @@
             <ul class="mt-4 space-y-2.5">
               <li><a href="#product"  class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Features</a></li>
               <li><a href="#packs"    class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Packs</a></li>
-              <li><a href="#pricing"  class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Pricing</a></li>
+              <li><a href="#pricing" data-track-event="pricing_click"  class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Pricing</a></li>
               <li><a href="#demo"     class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Book a demo</a></li>
+              <li><a href="/about"    class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">About</a></li>
             </ul>
           </div>
 
@@ -1090,7 +1088,7 @@
             <div class="font-sans text-xs font-semibold uppercase tracking-wide text-rv-muted">Resources</div>
             <ul class="mt-4 space-y-2.5">
               <li><a href="#faq" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">FAQ</a></li>
-              <li><a href="#security" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Security</a></li>
+              <li><a href="/security" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Security</a></li>
               <li><a href="https://status.rivetsoftware.dev" target="_blank" rel="noopener" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Status</a></li>
             </ul>
           </div>
@@ -1147,41 +1145,142 @@
       }
 
       // ── Demo form ───────────────────────────────────────────────
+      const BOOKING_API = "https://api-dev.rivetsoftware.dev/api/bookings/demo";
+
       const demoForm    = document.getElementById("demoForm");
       const demoSuccess = document.getElementById("demoSuccess");
       const demoError   = document.getElementById("demoError");
       const demoSubmit  = document.getElementById("demoSubmit");
 
-      function setSubmitting(isSubmitting) {
+      function setSubmitting(on) {
         if (!demoSubmit) return;
-        demoSubmit.disabled = isSubmitting;
-        demoSubmit.classList.toggle("opacity-70", isSubmitting);
-        demoSubmit.classList.toggle("cursor-not-allowed", isSubmitting);
-        demoSubmit.textContent = isSubmitting ? "Submitting\u2026" : "Book my free demo";
+        demoSubmit.disabled = on;
+        demoSubmit.classList.toggle("opacity-70", on);
+        demoSubmit.classList.toggle("cursor-not-allowed", on);
+        demoSubmit.textContent = on ? "Submitting\u2026" : "Book my free demo";
       }
+
+      function clearFieldErrors() {
+        ["name", "businessName", "email", "phoneNumber"].forEach(f => {
+          const err = document.getElementById("err-" + f);
+          const inp = document.getElementById(f);
+          if (err) { err.textContent = ""; err.classList.add("hidden"); }
+          if (inp) inp.classList.remove("border-red-500");
+        });
+      }
+
+      function showFieldError(field, msg) {
+        const err = document.getElementById("err-" + field);
+        const inp = document.getElementById(field);
+        if (err) { err.textContent = msg; err.classList.remove("hidden"); }
+        if (inp) inp.classList.add("border-red-500");
+      }
+
+      // Maps ASP.NET Core ValidationProblem field names → form element ids
+      const API_FIELD_MAP = {
+        Name: "name",
+        BusinessName: "businessName",
+        Email: "email",
+        PhoneNumber: "phoneNumber",
+      };
+
+      const USECASE_LABELS = {
+        bookings:  "Bookings & appointments",
+        logistics: "Delivery & logistics updates",
+        leads:     "Lead follow-up & sales",
+        support:   "Customer support",
+        agency:    "Agency (manages for clients)",
+        other:     "Other",
+      };
+      const AGENCY_LABELS = {
+        yes:      "Manages WhatsApp for multiple clients",
+        no:       "Single business",
+        not_sure: "Not sure about multi-client",
+      };
 
       if (demoForm) {
         demoForm.addEventListener("submit", async (e) => {
           e.preventDefault();
-          const hp = document.getElementById("website");
-          if (hp && hp.value) return;
 
+          // Honeypot
+          if (document.getElementById("website")?.value) return;
+
+          clearFieldErrors();
           demoSuccess.classList.add("hidden");
           demoError.classList.add("hidden");
           setSubmitting(true);
 
-          const endpoint = demoForm.getAttribute("data-endpoint");
-          const data = new FormData(demoForm);
+          const val = id => (document.getElementById(id)?.value ?? "").trim();
+
+          // Append agency/usecase context to notes so it reaches the team
+          const contextParts = [
+            val("agency")  ? "Multi-client: "   + (AGENCY_LABELS[val("agency")]  ?? val("agency"))  : null,
+            val("usecase") ? "Primary use case: " + (USECASE_LABELS[val("usecase")] ?? val("usecase")) : null,
+          ].filter(Boolean);
+          const notesBase  = val("notes");
+          const notesExtra = contextParts.length ? "[" + contextParts.join(" | ") + "]" : "";
+          const notes      = [notesBase, notesExtra].filter(Boolean).join("\n\n") || undefined;
+
+          const payload = {
+            name:         val("name"),
+            businessName: val("businessName"),
+            email:        val("email"),
+            phoneNumber:  val("phoneNumber"),
+            notes,
+          };
 
           try {
-            if (endpoint && endpoint.trim().length > 0) {
-              const res = await fetch(endpoint, { method: "POST", body: data, headers: { Accept: "application/json" } });
-              if (!res.ok) throw new Error("Form submit failed");
+            const res = await fetch(BOOKING_API, {
+              method:  "POST",
+              headers: { "Content-Type": "application/json", "Accept": "application/json" },
+              body:    JSON.stringify(payload),
+            });
+
+            // ── 201 Created ─────────────────────────────────────────
+            if (res.status === 201) {
+              demoSuccess.classList.remove("hidden");
+              demoSuccess.scrollIntoView({ behavior: "smooth", block: "nearest" });
+              setTimeout(() => demoForm.reset(), 300);
+              return;
             }
-            demoSuccess.classList.remove("hidden");
-            demoSuccess.scrollIntoView({ behavior: "smooth", block: "nearest" });
-            setTimeout(() => demoForm.reset(), 200);
-          } catch (err) {
+
+            // ── 400 Validation ──────────────────────────────────────
+            if (res.status === 400) {
+              const body = await res.json().catch(() => ({}));
+              const errors = body.errors ?? {};
+              let hadFieldError = false;
+              for (const [apiField, messages] of Object.entries(errors)) {
+                const formField = API_FIELD_MAP[apiField];
+                if (formField && messages?.length) {
+                  showFieldError(formField, messages[0]);
+                  hadFieldError = true;
+                }
+              }
+              // Scroll to first field error or fallback to generic error
+              if (hadFieldError) {
+                const firstErrInput = demoForm.querySelector(".border-red-500");
+                firstErrInput?.scrollIntoView({ behavior: "smooth", block: "center" });
+                firstErrInput?.focus();
+              } else {
+                demoError.classList.remove("hidden");
+                demoError.scrollIntoView({ behavior: "smooth", block: "nearest" });
+              }
+              return;
+            }
+
+            // ── 503 Email delivery failed (booking was saved) ────────
+            if (res.status === 503) {
+              demoSuccess.textContent = "\u2713 Booking received! We\u2019ll be in touch within 24 hours. (Confirmation email may be delayed.)";
+              demoSuccess.classList.remove("hidden");
+              demoSuccess.scrollIntoView({ behavior: "smooth", block: "nearest" });
+              setTimeout(() => demoForm.reset(), 300);
+              return;
+            }
+
+            // ── Any other error ──────────────────────────────────────
+            throw new Error("status " + res.status);
+
+          } catch {
             demoError.classList.remove("hidden");
             demoError.scrollIntoView({ behavior: "smooth", block: "nearest" });
           } finally {
@@ -1189,6 +1288,28 @@
           }
         });
       }
+    </script>
+    <script src="./assets/track-visit.js"></script>
+    <script>
+      // ── Trial CTA click tracking ─────────────────────────────────
+      document.querySelectorAll('[data-trial-cta]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          try {
+            fetch('https://api-dev.rivetsoftware.dev/api/marketing/visits', {
+              method:    'POST',
+              headers:   { 'Content-Type': 'application/json' },
+              keepalive: true,
+              body: JSON.stringify({
+                origin:      'trial_click',
+                landingPath: window.location.pathname,
+                queryString: window.location.search || null,
+                referrer:    document.referrer || null,
+                userAgent:   navigator.userAgent || null,
+              }),
+            }).catch(function () {});
+          } catch (_) {}
+        });
+      });
     </script>
   </body>
 </html>
