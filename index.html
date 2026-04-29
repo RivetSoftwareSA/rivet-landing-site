@@ -1,1315 +1,1493 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rivet | WhatsApp chat bots builder for Growing Businesses</title>
 
-    <!-- SEO -->
-    <meta
-      name="description"
-      content="Rivet automates your WhatsApp messages, follow-ups, and updates. Built for logistics, clinics, real estate, and e-commerce. No developers needed. Set up in a day."
-    />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://rivetsoftware.dev/" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rivet | WhatsApp chat bots builder for Growing Businesses</title>
 
-    <!-- Open Graph / Twitter -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Rivet | WhatsApp Bots for Growing Businesses" />
-    <meta
-      property="og:description"
-      content="Automate your WhatsApp messages, follow-ups, and updates. Built for logistics, clinics, real estate &amp; e-commerce. No developers needed."
-    />
-    <meta property="og:url" content="https://rivetsoftware.dev/" />
-    <meta property="og:image" content="https://rivetsoftware.dev/assets/og-rivet.png" />
-    <meta name="twitter:card" content="summary_large_image" />
+  <!-- SEO -->
+  <meta name="description"
+    content="Rivet automates your WhatsApp messages, follow-ups, and updates. Built for logistics, clinics, real estate, and e-commerce. No developers needed. Set up in a day." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://rivetsoftware.dev/" />
 
-    <!-- Fonts: DM Sans (display) + IBM Plex Sans (body) + JetBrains Mono (mono) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rivet | WhatsApp Bots for Growing Businesses" />
+  <meta property="og:description"
+    content="Automate your WhatsApp messages, follow-ups, and updates. Built for logistics, clinics, real estate &amp; e-commerce. No developers needed." />
+  <meta property="og:url" content="https://rivetsoftware.dev/" />
+  <meta property="og:image" content="https://rivetsoftware.dev/assets/og-rivet.png" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./assets/favicon.png" />
-    <meta name="theme-color" content="#0B0F1A" />
+  <!-- Fonts: DM Sans (display) + IBM Plex Sans (body) + JetBrains Mono (mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
 
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              rv: {
-                night:   '#0B0F1A',
-                slate:   '#151929',
-                card:    '#1C2136',
-                border:  '#2E3555',
-                border2: '#3D4570',
-                teal:    '#00D4A1',
-                text:    '#F0F1F5',
-                muted:   '#9498AE',
-                faint:   '#5E6380',
-                warn:    '#FFB020',
-              },
-            },
-            fontFamily: {
-              display: ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-              sans:    ['IBM Plex Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-              mono:    ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
-            },
-            boxShadow: {
-              teal:    '0 0 24px rgba(0,212,161,0.15)',
-              card:    '0 4px 24px rgba(0,0,0,0.3)',
-              feature: '0 20px 60px rgba(0,0,0,0.5)',
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
+  <meta name="theme-color" content="#0B0F1A" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rv: {
+              night: '#0B0F1A',
+              slate: '#151929',
+              card: '#1C2136',
+              border: '#2E3555',
+              border2: '#3D4570',
+              teal: '#00D4A1',
+              text: '#F0F1F5',
+              muted: '#9498AE',
+              faint: '#5E6380',
+              warn: '#FFB020',
             },
           },
+          fontFamily: {
+            display: ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['IBM Plex Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+          },
+          boxShadow: {
+            teal: '0 0 24px rgba(0,212,161,0.15)',
+            card: '0 4px 24px rgba(0,0,0,0.3)',
+            feature: '0 20px 60px rgba(0,0,0,0.5)',
+          },
         },
-      };
-    </script>
+      },
+    };
+  </script>
 
-    <style>
-      html { scroll-behavior: smooth; }
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-      .feature-card {
-        transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-      }
-      .feature-card:hover {
-        border-color: #3D4570;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-      }
+    .feature-card {
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
 
-      .pricing-card {
-        transition: transform 0.2s, box-shadow 0.2s;
-      }
-      .pricing-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-      }
+    .feature-card:hover {
+      border-color: #3D4570;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
 
-      details summary::-webkit-details-marker { display: none; }
-      details summary::marker { display: none; }
-      details summary { list-style: none; }
-      details summary::after {
-        content: '+';
-        color: #9498AE;
-        float: right;
-        font-size: 1.1rem;
-        line-height: 1;
-        transition: transform 0.2s;
-      }
-      details[open] summary::after {
-        transform: rotate(45deg);
-      }
-    </style>
-  </head>
+    .pricing-card {
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
 
-  <body class="bg-rv-night text-rv-text antialiased font-sans">
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    }
 
-    <!-- ============================================================
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details summary::marker {
+      display: none;
+    }
+
+    details summary {
+      list-style: none;
+    }
+
+    details summary::after {
+      content: '+';
+      color: #9498AE;
+      float: right;
+      font-size: 1.1rem;
+      line-height: 1;
+      transition: transform 0.2s;
+    }
+
+    details[open] summary::after {
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+
+<body class="bg-rv-night text-rv-text antialiased font-sans">
+
+  <!-- ============================================================
          NAV
     ============================================================ -->
-    <header class="sticky top-0 z-50 border-b border-rv-border bg-rv-night/90 backdrop-blur-md">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="flex h-16 items-center justify-between">
+  <header class="sticky top-0 z-50 border-b border-rv-border bg-rv-night/90 backdrop-blur-md">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
 
-          <!-- Brand -->
-          <a href="#" class="flex items-center gap-2.5">
-            <img src="./assets/rivet-icon.png" alt="Rivet" class="h-8 w-8 object-contain" draggable="false" />
-            <span class="font-display text-xl font-bold tracking-tight text-rv-text">Rivet</span>
-          </a>
+        <!-- Brand -->
+        <a href="#" class="flex items-center gap-2.5">
+          <img src="./assets/rivet-icon.png" alt="Rivet" class="h-8 w-8 object-contain" draggable="false" />
+          <span class="font-display text-xl font-bold tracking-tight text-rv-text">Rivet</span>
+        </a>
 
-          <!-- Nav links -->
-          <nav class="hidden md:flex items-center gap-8 font-sans text-sm font-medium text-rv-muted">
-            <a href="#product" class="hover:text-rv-text transition-colors">Product</a>
-            <a href="#packs"   class="hover:text-rv-text transition-colors">Packs</a>
-            <a href="#pricing" data-track-event="pricing_click" class="hover:text-rv-text transition-colors">Pricing</a>
-            <a href="#faq"     class="hover:text-rv-text transition-colors">FAQ</a>
-          </nav>
+        <!-- Nav links -->
+        <nav class="hidden md:flex items-center gap-8 font-sans text-sm font-medium text-rv-muted">
+          <a href="#product" class="hover:text-rv-text transition-colors">Product</a>
+          <a href="#packs" class="hover:text-rv-text transition-colors">Packs</a>
+          <a href="#pricing" data-track-event="pricing_click" class="hover:text-rv-text transition-colors">Pricing</a>
+          <a href="#faq" class="hover:text-rv-text transition-colors">FAQ</a>
+        </nav>
 
-          <!-- CTAs -->
-          <div class="flex items-center gap-4">
-            <a href="https://app.rivetsoftware.dev/login" data-track-event="start_trial_click" class="hidden sm:inline font-sans text-sm font-medium text-rv-muted hover:text-rv-text transition-colors">Start free trial</a>
-            <a
-              href="#demo"
-              class="inline-flex items-center justify-center rounded-lg bg-rv-teal px-5 py-2 font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity"
-            >
-              Book a demo
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
-
-
-    <!-- ============================================================
-         HERO  (bg: night)
-    ============================================================ -->
-    <section class="bg-rv-night pt-20 pb-28">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="grid gap-12 lg:grid-cols-12 lg:items-center">
-
-          <!-- Left column -->
-          <div class="lg:col-span-6">
-            <!-- Eyebrow pill -->
-            <div class="inline-flex items-center gap-2 rounded-full border border-rv-border bg-rv-card px-4 py-1.5 font-mono text-xs text-rv-teal">
-              <span class="h-1.5 w-1.5 rounded-full bg-rv-teal"></span>
-              Meta Cloud API direct &middot; Client-owned billing
-            </div>
-
-            <!-- Headline -->
-            <h1
-              class="mt-6 font-display text-5xl sm:text-6xl font-bold text-rv-text leading-[1.08]"
-              style="letter-spacing: -2px;"
-            >
-              Deploy WhatsApp bots like software.
-            </h1>
-
-            <!-- Sub-headline -->
-            <p class="mt-5 font-sans text-lg text-rv-muted leading-relaxed max-w-xl">
-              Rivet is the agency operating system for WhatsApp: multi-client workspaces, packs,
-              and safe releases, with production-grade observability and controls.
-            </p>
-
-            <!-- Trust pills -->
-            <div class="mt-6 flex flex-wrap gap-2">
-              <span class="inline-flex items-center gap-1.5 rounded-full border border-rv-border bg-rv-card px-3 py-1 font-sans text-xs text-rv-muted">
-                <span class="h-1.5 w-1.5 rounded-full bg-rv-teal"></span>Multi-tenant by design
-              </span>
-              <span class="inline-flex items-center gap-1.5 rounded-full border border-rv-border bg-rv-card px-3 py-1 font-sans text-xs text-rv-muted">
-                <span class="h-1.5 w-1.5 rounded-full bg-rv-teal"></span>Versioning + rollback
-              </span>
-              <span class="inline-flex items-center gap-1.5 rounded-full border border-rv-border bg-rv-card px-3 py-1 font-sans text-xs text-rv-muted">
-                <span class="h-1.5 w-1.5 rounded-full bg-rv-teal"></span>Run Timeline (debuggable)
-              </span>
-              <span class="inline-flex items-center gap-1.5 rounded-full border border-rv-border bg-rv-card px-3 py-1 font-sans text-xs text-rv-muted">
-                <span class="h-1.5 w-1.5 rounded-full bg-rv-teal"></span>Policies + safety rails
-              </span>
-            </div>
-
-            <!-- CTAs -->
-            <div class="mt-8 flex flex-col sm:flex-row gap-3">
-              <a
-                href="https://app.rivetsoftware.dev/login"
-                data-track-event="start_trial_click"
-                class="inline-flex items-center justify-center rounded-[10px] bg-rv-teal px-7 py-3.5 font-display text-base font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity"
-              >
-                Start free trial
-              </a>
-              <a
-                href="#demo"
-                class="inline-flex items-center justify-center rounded-[10px] border border-rv-border px-7 py-3.5 font-display text-base font-semibold text-rv-muted hover:border-rv-border2 transition-colors"
-              >
-                Book a demo
-              </a>
-            </div>
-
-            <p class="mt-4 font-sans text-xs text-rv-faint">
-              No lock-in. WhatsApp fees billed directly by WhatsApp &mdash; you stay in control.
-            </p>
-
-            <!-- Feature pills -->
-            <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-2">
-              <div class="rounded-lg border border-rv-border bg-rv-card px-3 py-2.5 font-mono text-xs text-rv-muted">Multi-tenant by design</div>
-              <div class="rounded-lg border border-rv-border bg-rv-card px-3 py-2.5 font-mono text-xs text-rv-muted">Versioning + rollback</div>
-              <div class="rounded-lg border border-rv-border bg-rv-card px-3 py-2.5 font-mono text-xs text-rv-muted">Run Timeline</div>
-              <div class="rounded-lg border border-rv-border bg-rv-card px-3 py-2.5 font-mono text-xs text-rv-muted">Policies + safety rails</div>
-            </div>
-          </div>
-
-          <!-- Right column — product screenshot -->
-          <div class="lg:col-span-6">
-            <div
-              class="overflow-hidden rounded-2xl border border-rv-border shadow-feature"
-              style="transform: perspective(1000px) rotateY(-3deg);"
-            >
-              <img
-                src="./assets/rivet_shared_inbox.png"
-                alt="Rivet shared inbox"
-                class="block w-full"
-                draggable="false"
-              />
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ============================================================
-         PRODUCT FEATURES  (bg: slate)
-    ============================================================ -->
-    <section id="product" class="bg-rv-slate py-24">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="max-w-2xl">
-          <h2 class="font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
-            Stop losing business to slow replies and missed follow-ups.
-          </h2>
-          <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
-            Rivet runs your WhatsApp conversations automatically &mdash; confirmations, reminders, updates, lead
-            qualification &mdash; while you focus on running your business.
-          </p>
-        </div>
-
-        <!-- 2×2 feature cards -->
-        <div class="mt-12 grid gap-4 md:grid-cols-2">
-
-          <div class="feature-card rounded-2xl border border-rv-border bg-rv-card p-8">
-            <div class="flex items-start justify-between">
-              <div class="flex h-11 w-11 items-center justify-center rounded-xl text-2xl" style="background: rgba(0,212,161,0.12);">&#9889;</div>
-              <span class="h-2 w-2 rounded-full bg-rv-teal"></span>
-            </div>
-            <h3 class="mt-5 font-display text-xl font-semibold text-rv-text">Flow DevOps</h3>
-            <ul class="mt-4 space-y-2.5 font-sans text-sm text-rv-muted">
-              <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Version every publish</li>
-              <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Rollback in one click</li>
-              <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Release notes per deploy</li>
-              <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Promotion-ready model</li>
-            </ul>
-          </div>
-
-          <div class="feature-card rounded-2xl border border-rv-border bg-rv-card p-8">
-            <div class="flex items-start justify-between">
-              <div class="flex h-11 w-11 items-center justify-center rounded-xl text-2xl" style="background: rgba(0,212,161,0.12);">&#128202;</div>
-              <span class="h-2 w-2 rounded-full bg-rv-teal"></span>
-            </div>
-            <h3 class="mt-5 font-display text-xl font-semibold text-rv-text">Run Timeline</h3>
-            <ul class="mt-4 space-y-2.5 font-sans text-sm text-rv-muted">
-              <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Step-by-step trace</li>
-              <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Variables + branches</li>
-              <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Retries + failures</li>
-              <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Correlation IDs</li>
-            </ul>
-          </div>
-
-          <div class="feature-card rounded-2xl border border-rv-border bg-rv-card p-8">
-            <div class="flex items-start justify-between">
-              <div class="flex h-11 w-11 items-center justify-center rounded-xl text-2xl" style="background: rgba(0,212,161,0.12);">&#129513;</div>
-              <span class="h-2 w-2 rounded-full bg-rv-teal"></span>
-            </div>
-            <h3 class="mt-5 font-display text-xl font-semibold text-rv-text">Packs</h3>
-            <ul class="mt-4 space-y-2.5 font-sans text-sm text-rv-muted">
-              <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Build once, reuse</li>
-              <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Import/export across clients</li>
-              <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Install checks</li>
-              <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Upgrade path</li>
-            </ul>
-          </div>
-
-          <div class="feature-card rounded-2xl border border-rv-border bg-rv-card p-8">
-            <div class="flex items-start justify-between">
-              <div class="flex h-11 w-11 items-center justify-center rounded-xl text-2xl" style="background: rgba(0,212,161,0.12);">&#128737;</div>
-              <span class="h-2 w-2 rounded-full bg-rv-teal"></span>
-            </div>
-            <h3 class="mt-5 font-display text-xl font-semibold text-rv-text">Safety &amp; Policy</h3>
-            <ul class="mt-4 space-y-2.5 font-sans text-sm text-rv-muted">
-              <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>24h rules support</li>
-              <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Throttles + quiet hours</li>
-              <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Kill switches</li>
-              <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Audit trails</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <!-- Integrations bar -->
-        <div class="mt-4 rounded-2xl border border-rv-border bg-rv-card p-6">
-          <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <div>
-              <div class="font-display text-sm font-semibold text-rv-text">Integrates with your stack</div>
-              <div class="mt-1 font-sans text-sm text-rv-muted">
-                API calls + signed webhooks with delivery logs and retries. Optional no-code mode for teams without ready APIs.
-              </div>
-              <div class="mt-3 flex flex-wrap gap-2">
-                <span class="rounded border border-rv-border bg-rv-night px-2 py-1 font-mono text-[11px] text-rv-muted">Webhooks</span>
-                <span class="rounded border border-rv-border bg-rv-night px-2 py-1 font-mono text-[11px] text-rv-muted">REST APIs</span>
-                <span class="rounded border border-rv-border bg-rv-night px-2 py-1 font-mono text-[11px] text-rv-muted">WooCommerce</span>
-                <span class="rounded border border-rv-border bg-rv-night px-2 py-1 font-mono text-[11px] text-rv-muted">Shopify</span>
-                <span class="rounded border border-rv-border bg-rv-night px-2 py-1 font-mono text-[11px] text-rv-muted">Meta Catalog</span>
-              </div>
-            </div>
-            <a
-              href="#demo"
-              class="inline-flex shrink-0 items-center justify-center rounded-lg bg-rv-teal px-4 py-2 font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity"
-            >
-              Book a demo
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ============================================================
-         DEMO  (bg: night)
-    ============================================================ -->
-    <section id="demo" class="bg-rv-night py-24">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="grid gap-10 lg:grid-cols-12 lg:items-start">
-
-          <!-- Left -->
-          <div class="lg:col-span-5">
-            <h2 class="font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
-              See Rivet running live in 30 minutes.
-            </h2>
-            <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
-              We'll set up a real WhatsApp flow for your use case &mdash; bookings, delivery updates, lead capture &mdash;
-              and walk you through it live. No slides. No fluff.
-            </p>
-
-            <div class="mt-6 grid gap-3 sm:grid-cols-2">
-              <div class="rounded-xl border border-rv-border bg-rv-card p-4">
-                <div class="font-display text-xs font-semibold text-rv-text">You'll see</div>
-                <div class="mt-2 font-sans text-xs text-rv-muted leading-relaxed">
-                  A live WhatsApp conversation running automatically &middot; How to update a flow without downtime &middot; Every message tracked and traceable
-                </div>
-              </div>
-              <div class="rounded-xl border border-rv-border bg-rv-card p-4">
-                <div class="font-display text-xs font-semibold text-rv-text">Bring</div>
-                <div class="mt-2 font-sans text-xs text-rv-muted leading-relaxed">
-                  Your use case (we'll guide you) &middot; Your WhatsApp number (or use ours for the demo)
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right — form -->
-          <div class="lg:col-span-7">
-            <div class="rounded-2xl border border-rv-border bg-rv-card p-8">
-              <div class="flex items-center justify-between">
-                <div class="font-display text-sm font-semibold text-rv-text">Book your free demo</div>
-                <span class="font-sans text-xs text-rv-faint">We'll reply within 24 hours</span>
-              </div>
-
-              <form id="demoForm" class="mt-6 grid gap-4">
-                <!-- Honeypot -->
-                <input type="text" name="website" id="website" class="hidden" tabindex="-1" autocomplete="off" />
-
-                <div class="grid gap-4 sm:grid-cols-2">
-                  <div>
-                    <label class="font-sans text-xs text-rv-muted" for="name">Your name</label>
-                    <input
-                      id="name" name="name" required maxlength="120"
-                      class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text placeholder:text-rv-faint focus:outline-none focus:ring-2 focus:ring-rv-teal/40"
-                      placeholder="Roger Nkosi"
-                    />
-                    <p id="err-name" class="hidden mt-1 font-sans text-xs text-red-400"></p>
-                  </div>
-                  <div>
-                    <label class="font-sans text-xs text-rv-muted" for="businessName">Business name</label>
-                    <input
-                      id="businessName" name="businessName" required maxlength="160"
-                      class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text placeholder:text-rv-faint focus:outline-none focus:ring-2 focus:ring-rv-teal/40"
-                      placeholder="Rivet Software (Pty) Ltd"
-                    />
-                    <p id="err-businessName" class="hidden mt-1 font-sans text-xs text-red-400"></p>
-                  </div>
-                </div>
-
-                <div class="grid gap-4 sm:grid-cols-2">
-                  <div>
-                    <label class="font-sans text-xs text-rv-muted" for="email">Email</label>
-                    <input
-                      id="email" name="email" type="email" required maxlength="320"
-                      class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text placeholder:text-rv-faint focus:outline-none focus:ring-2 focus:ring-rv-teal/40"
-                      placeholder="you@company.com"
-                    />
-                    <p id="err-email" class="hidden mt-1 font-sans text-xs text-red-400"></p>
-                  </div>
-                  <div>
-                    <label class="font-sans text-xs text-rv-muted" for="phoneNumber">WhatsApp number</label>
-                    <input
-                      id="phoneNumber" name="phoneNumber" type="tel" required maxlength="32"
-                      class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text placeholder:text-rv-faint focus:outline-none focus:ring-2 focus:ring-rv-teal/40"
-                      placeholder="+27..."
-                    />
-                    <p id="err-phoneNumber" class="hidden mt-1 font-sans text-xs text-red-400"></p>
-                  </div>
-                </div>
-
-                <div class="grid gap-4 sm:grid-cols-2">
-                  <div>
-                    <label class="font-sans text-xs text-rv-muted" for="agency">Do you manage WhatsApp for multiple clients?</label>
-                    <select
-                      id="agency" name="agency"
-                      class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text focus:outline-none focus:ring-2 focus:ring-rv-teal/40"
-                    >
-                      <option value="yes">Yes</option>
-                      <option value="no">No</option>
-                      <option value="not_sure">Not sure</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label class="font-sans text-xs text-rv-muted" for="usecase">What do you mainly use WhatsApp for?</label>
-                    <select
-                      id="usecase" name="usecase"
-                      class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text focus:outline-none focus:ring-2 focus:ring-rv-teal/40"
-                    >
-                      <option value="bookings">Booking &amp; appointments</option>
-                      <option value="logistics">Delivery &amp; logistics updates</option>
-                      <option value="leads">Lead follow-up &amp; sales</option>
-                      <option value="support">Customer support</option>
-                      <option value="agency">I manage it for clients (agency)</option>
-                      <option value="other">Something else</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label class="font-sans text-xs text-rv-muted" for="notes">Notes (optional)</label>
-                  <textarea
-                    id="notes" name="notes" rows="3" maxlength="4000"
-                    class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text placeholder:text-rv-faint focus:outline-none focus:ring-2 focus:ring-rv-teal/40"
-                    placeholder="Tell us what you want to automate and which industry you're in."
-                  ></textarea>
-                </div>
-
-                <button
-                  id="demoSubmit"
-                  type="submit"
-                  class="w-full inline-flex items-center justify-center rounded-xl bg-rv-teal px-5 py-3 font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity"
-                >
-                  Book my free demo
-                </button>
-
-                <p class="font-sans text-xs text-rv-faint">
-                  By submitting, you agree we can contact you about Rivet. We don't sell your data.
-                </p>
-
-                <div id="demoSuccess" class="hidden rounded-xl border border-rv-teal/30 bg-rv-teal/5 p-4 font-sans text-sm text-rv-text">
-                  &#10003; Booking received! We'll be in touch within 24 hours.
-                </div>
-                <div id="demoError" class="hidden rounded-xl border border-red-500/30 bg-red-500/5 p-4 font-sans text-sm text-rv-muted">
-                  &#9888; Something went wrong. Please try again or email us at
-                  <a href="mailto:hello@rivetsoftware.dev" class="font-mono text-rv-teal hover:underline">hello@rivetsoftware.dev</a>.
-                </div>
-              </form>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ============================================================
-         PACKS  (bg: slate)
-    ============================================================ -->
-    <section id="packs" class="bg-rv-slate py-24">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-
-        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div>
-            <h2 class="font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
-              Ready-built flows. Go live in hours, not weeks.
-            </h2>
-            <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed max-w-xl">
-              Skip the setup. Choose a Pack built for your industry, customize it for your business, and go live
-              on WhatsApp the same day.
-            </p>
-          </div>
-          <a
-            href="#demo"
-            class="inline-flex shrink-0 items-center justify-center rounded-lg border border-rv-border px-4 py-2 font-display text-sm text-rv-muted hover:border-rv-border2 transition-colors"
-          >
+        <!-- CTAs -->
+        <div class="flex items-center gap-4">
+          <a href="https://app.rivetsoftware.dev/login" data-track-event="start_trial_click"
+            class="hidden sm:inline font-sans text-sm font-medium text-rv-muted hover:text-rv-text transition-colors">Start
+            free trial</a>
+          <a href="#demo"
+            class="inline-flex items-center justify-center rounded-lg bg-rv-teal px-5 py-2 font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
             Book a demo
           </a>
         </div>
+      </div>
+    </div>
+  </header>
 
-        <!-- Pack cards -->
-        <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
 
-          <div class="rounded-2xl border border-rv-border bg-rv-card p-6" style="border-left: 3px solid #00D4A1;">
-            <div class="flex items-center justify-between">
-              <h3 class="font-display text-lg font-semibold text-rv-text">Clinic Booking Pack</h3>
-              <span class="rounded border border-rv-border bg-rv-night px-1.5 py-0.5 font-mono text-[10px] text-rv-faint">v1</span>
-            </div>
-            <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
-              Let patients book, reschedule, and get reminders automatically &mdash; no receptionist needed.
-            </p>
-            <div class="mt-4 flex items-center gap-2 font-sans text-xs text-rv-muted">
-              <span class="h-2 w-2 rounded-full bg-rv-teal"></span> No integration needed to get started
-            </div>
+  <!-- ============================================================
+         HERO  (bg: night)
+    ============================================================ -->
+  <section class="bg-rv-night pt-20 pb-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid gap-12 lg:grid-cols-12 lg:items-center">
+
+        <!-- Left column -->
+        <div class="lg:col-span-6">
+          <!-- Eyebrow pill -->
+          <div
+            class="inline-flex items-center gap-2 rounded-full border border-rv-border bg-rv-card px-4 py-1.5 font-mono text-xs text-rv-teal">
+            <span class="h-1.5 w-1.5 rounded-full bg-rv-teal"></span>
+            Meta Cloud API direct &middot; Client-owned billing
           </div>
 
-          <div class="rounded-2xl border border-rv-border bg-rv-card p-6" style="border-left: 3px solid #00D4A1;">
-            <div class="flex items-center justify-between">
-              <h3 class="font-display text-lg font-semibold text-rv-text">Logistics Updates Pack</h3>
-              <span class="rounded border border-rv-border bg-rv-night px-1.5 py-0.5 font-mono text-[10px] text-rv-faint">v1</span>
-            </div>
-            <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
-              Send automatic order status updates, ETA notifications, and proof-of-delivery confirmations to customers.
-            </p>
-            <div class="mt-4 flex items-center gap-2 font-sans text-xs text-rv-muted">
-              <span class="h-2 w-2 rounded-full bg-rv-warn"></span> Connects to your tracking system via webhook
-            </div>
+          <!-- Headline -->
+          <h1 class="mt-6 font-display text-5xl sm:text-6xl font-bold text-rv-text leading-[1.08]"
+            style="letter-spacing: -2px;">
+            Deploy WhatsApp bots like software.
+          </h1>
+
+          <!-- Sub-headline -->
+          <p class="mt-5 font-sans text-lg text-rv-muted leading-relaxed max-w-xl">
+            Rivet is the agency operating system for WhatsApp: multi-client workspaces, packs,
+            and safe releases, with production-grade observability and controls.
+          </p>
+
+          <!-- Trust pills -->
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span
+              class="inline-flex items-center gap-1.5 rounded-full border border-rv-border bg-rv-card px-3 py-1 font-sans text-xs text-rv-muted">
+              <span class="h-1.5 w-1.5 rounded-full bg-rv-teal"></span>Multi-tenant by design
+            </span>
+            <span
+              class="inline-flex items-center gap-1.5 rounded-full border border-rv-border bg-rv-card px-3 py-1 font-sans text-xs text-rv-muted">
+              <span class="h-1.5 w-1.5 rounded-full bg-rv-teal"></span>Versioning + rollback
+            </span>
+            <span
+              class="inline-flex items-center gap-1.5 rounded-full border border-rv-border bg-rv-card px-3 py-1 font-sans text-xs text-rv-muted">
+              <span class="h-1.5 w-1.5 rounded-full bg-rv-teal"></span>Run Timeline (debuggable)
+            </span>
+            <span
+              class="inline-flex items-center gap-1.5 rounded-full border border-rv-border bg-rv-card px-3 py-1 font-sans text-xs text-rv-muted">
+              <span class="h-1.5 w-1.5 rounded-full bg-rv-teal"></span>Policies + safety rails
+            </span>
           </div>
 
-          <div class="rounded-2xl border border-rv-border bg-rv-card p-6" style="border-left: 3px solid #00D4A1;">
-            <div class="flex items-center justify-between">
-              <h3 class="font-display text-lg font-semibold text-rv-text">Real Estate Qualifier Pack</h3>
-              <span class="rounded border border-rv-border bg-rv-night px-1.5 py-0.5 font-mono text-[10px] text-rv-faint">v1</span>
-            </div>
-            <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
-              Capture leads from WhatsApp, qualify their preferences, and book viewings automatically &mdash; so agents
-              focus on hot prospects.
-            </p>
-            <div class="mt-4 flex items-center gap-2 font-sans text-xs text-rv-muted">
-              <span class="h-2 w-2 rounded-full bg-rv-teal"></span> Perfect for agencies managing multiple agents
-            </div>
+          <!-- CTAs -->
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="https://app.rivetsoftware.dev/login" data-track-event="start_trial_click"
+              class="inline-flex items-center justify-center rounded-[10px] bg-rv-teal px-7 py-3.5 font-display text-base font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
+              Start free trial
+            </a>
+            <a href="#demo"
+              class="inline-flex items-center justify-center rounded-[10px] border border-rv-border px-7 py-3.5 font-display text-base font-semibold text-rv-muted hover:border-rv-border2 transition-colors">
+              Book a demo
+            </a>
           </div>
 
-          <div class="rounded-2xl border border-rv-border bg-rv-card p-6" style="border-left: 3px solid #00D4A1;">
-            <div class="flex items-center justify-between">
-              <h3 class="font-display text-lg font-semibold text-rv-text">eCommerce Pack</h3>
-              <span class="rounded border border-rv-border bg-rv-night px-1.5 py-0.5 font-mono text-[10px] text-rv-faint">v1</span>
-            </div>
-            <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
-              Built for Africa. Includes PayGate, Ozow, Paystack, and local courier integrations for order automation.
-            </p>
-            <div class="mt-4 flex items-center gap-2 font-sans text-xs text-rv-muted">
-              <span class="h-2 w-2 rounded-full bg-rv-teal"></span> Connects to your store via webhook
-            </div>
-          </div>
+          <p class="mt-4 font-sans text-xs text-rv-faint">
+            No lock-in. WhatsApp fees billed directly by WhatsApp &mdash; you stay in control.
+          </p>
 
+          <!-- Feature pills -->
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-2">
+            <div class="rounded-lg border border-rv-border bg-rv-card px-3 py-2.5 font-mono text-xs text-rv-muted">
+              Multi-tenant by design</div>
+            <div class="rounded-lg border border-rv-border bg-rv-card px-3 py-2.5 font-mono text-xs text-rv-muted">
+              Versioning + rollback</div>
+            <div class="rounded-lg border border-rv-border bg-rv-card px-3 py-2.5 font-mono text-xs text-rv-muted">Run
+              Timeline</div>
+            <div class="rounded-lg border border-rv-border bg-rv-card px-3 py-2.5 font-mono text-xs text-rv-muted">
+              Policies + safety rails</div>
+          </div>
+        </div>
+
+        <!-- Right column — product screenshot -->
+        <div class="lg:col-span-6">
+          <div class="overflow-hidden rounded-2xl border border-rv-border shadow-feature"
+            style="transform: perspective(1000px) rotateY(-3deg);">
+            <img src="./assets/rivet_shared_inbox.png" alt="Rivet shared inbox" class="block w-full"
+              draggable="false" />
+          </div>
         </div>
 
       </div>
-    </section>
+    </div>
+  </section>
 
 
-    <!-- ============================================================
+  <!-- ============================================================
+         PRODUCT FEATURES  (bg: slate)
+    ============================================================ -->
+  <section id="product" class="bg-rv-slate py-24">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
+          Stop losing business to slow replies and missed follow-ups.
+        </h2>
+        <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
+          Rivet runs your WhatsApp conversations automatically &mdash; confirmations, reminders, updates, lead
+          qualification &mdash; while you focus on running your business.
+        </p>
+      </div>
+
+      <!-- 2×2 feature cards -->
+
+      <div class="mt-12 grid gap-4 md:grid-cols-2">
+
+        <div class="feature-card rounded-2xl border border-rv-border bg-rv-card p-8">
+          <div class="flex items-start justify-between">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl"
+              style="background: rgba(0,212,161,0.12);">
+              <i data-lucide="zap" class="w-5 h-5 text-rv-teal"></i>
+            </div>
+            <span class="h-2 w-2 rounded-full bg-rv-teal"></span>
+          </div>
+          <h3 class="mt-5 font-display text-xl font-semibold text-rv-text">Flow DevOps</h3>
+          <ul class="mt-4 space-y-2.5 font-sans text-sm text-rv-muted">
+            <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Version every
+              publish</li>
+            <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Rollback in
+              one click</li>
+            <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Release notes
+              per deploy</li>
+            <li class="flex items-start gap-2"><span
+                class="mt-0.5 text-rv-teal font-bold">&middot;</span>Promotion-ready model</li>
+          </ul>
+        </div>
+
+        <div class="feature-card rounded-2xl border border-rv-border bg-rv-card p-8">
+          <div class="flex items-start justify-between">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl"
+              style="background: rgba(0,212,161,0.12);">
+              <i data-lucide="bar-chart-3" class="w-5 h-5 text-rv-teal"></i>
+            </div>
+            <span class="h-2 w-2 rounded-full bg-rv-teal"></span>
+          </div>
+          <h3 class="mt-5 font-display text-xl font-semibold text-rv-text">Run Timeline</h3>
+          <ul class="mt-4 space-y-2.5 font-sans text-sm text-rv-muted">
+            <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Step-by-step
+              trace</li>
+            <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Variables +
+              branches</li>
+            <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Retries +
+              failures</li>
+            <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Correlation
+              IDs</li>
+          </ul>
+        </div>
+
+        <div class="feature-card rounded-2xl border border-rv-border bg-rv-card p-8">
+          <div class="flex items-start justify-between">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl"
+              style="background: rgba(0,212,161,0.12);">
+              <i data-lucide="package" class="w-5 h-5 text-rv-teal"></i>
+            </div>
+            <span class="h-2 w-2 rounded-full bg-rv-teal"></span>
+          </div>
+          <h3 class="mt-5 font-display text-xl font-semibold text-rv-text">Packs</h3>
+          <ul class="mt-4 space-y-2.5 font-sans text-sm text-rv-muted">
+            <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Build once,
+              reuse</li>
+            <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Import/export
+              across clients</li>
+            <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Install checks
+            </li>
+            <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Upgrade path
+            </li>
+          </ul>
+        </div>
+
+        <div class="feature-card rounded-2xl border border-rv-border bg-rv-card p-8">
+          <div class="flex items-start justify-between">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl"
+              style="background: rgba(0,212,161,0.12);">
+              <i data-lucide="shield" class="w-5 h-5 text-rv-teal"></i>
+            </div>
+            <span class="h-2 w-2 rounded-full bg-rv-teal"></span>
+          </div>
+          <h3 class="mt-5 font-display text-xl font-semibold text-rv-text">Safety &amp; Policy</h3>
+          <ul class="mt-4 space-y-2.5 font-sans text-sm text-rv-muted">
+            <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>24h rules
+              support</li>
+            <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Throttles +
+              quiet hours</li>
+            <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Kill switches
+            </li>
+            <li class="flex items-start gap-2"><span class="mt-0.5 text-rv-teal font-bold">&middot;</span>Audit trails
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Integrations bar -->
+      <div class="mt-4 rounded-2xl border border-rv-border bg-rv-card p-6">
+        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div>
+            <div class="font-display text-sm font-semibold text-rv-text">Integrates with your stack</div>
+            <div class="mt-1 font-sans text-sm text-rv-muted">
+              API calls + signed webhooks with delivery logs and retries. Optional no-code mode for teams without ready
+              APIs.
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span
+                class="rounded border border-rv-border bg-rv-night px-2 py-1 font-mono text-[11px] text-rv-muted">Webhooks</span>
+              <span
+                class="rounded border border-rv-border bg-rv-night px-2 py-1 font-mono text-[11px] text-rv-muted">REST
+                APIs</span>
+              <span
+                class="rounded border border-rv-border bg-rv-night px-2 py-1 font-mono text-[11px] text-rv-muted">WooCommerce</span>
+              <span
+                class="rounded border border-rv-border bg-rv-night px-2 py-1 font-mono text-[11px] text-rv-muted">Shopify</span>
+              <span
+                class="rounded border border-rv-border bg-rv-night px-2 py-1 font-mono text-[11px] text-rv-muted">Meta
+                Catalog</span>
+            </div>
+          </div>
+          <a href="#demo"
+            class="inline-flex shrink-0 items-center justify-center rounded-lg bg-rv-teal px-4 py-2 font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
+            Book a demo
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+         DEMO  (bg: night)
+    ============================================================ -->
+  <section id="demo" class="bg-rv-night py-24">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid gap-10 lg:grid-cols-12 lg:items-start">
+
+        <!-- Left -->
+        <div class="lg:col-span-5">
+          <h2 class="font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
+            See Rivet running live in 30 minutes.
+          </h2>
+          <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
+            We'll set up a real WhatsApp flow for your use case &mdash; bookings, delivery updates, lead capture &mdash;
+            and walk you through it live. No slides. No fluff.
+          </p>
+
+          <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-xl border border-rv-border bg-rv-card p-4">
+              <div class="font-display text-xs font-semibold text-rv-text">You'll see</div>
+              <div class="mt-2 font-sans text-xs text-rv-muted leading-relaxed">
+                A live WhatsApp conversation running automatically &middot; How to update a flow without downtime
+                &middot; Every message tracked and traceable
+              </div>
+            </div>
+            <div class="rounded-xl border border-rv-border bg-rv-card p-4">
+              <div class="font-display text-xs font-semibold text-rv-text">Bring</div>
+              <div class="mt-2 font-sans text-xs text-rv-muted leading-relaxed">
+                Your use case (we'll guide you) &middot; Your WhatsApp number (or use ours for the demo)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right — form -->
+        <div class="lg:col-span-7">
+          <div class="rounded-2xl border border-rv-border bg-rv-card p-8">
+            <div class="flex items-center justify-between">
+              <div class="font-display text-sm font-semibold text-rv-text">Book your free demo</div>
+              <span class="font-sans text-xs text-rv-faint">We'll reply within 24 hours</span>
+            </div>
+
+            <form id="demoForm" class="mt-6 grid gap-4">
+              <!-- Honeypot -->
+              <input type="text" name="website" id="website" class="hidden" tabindex="-1" autocomplete="off" />
+
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label class="font-sans text-xs text-rv-muted" for="name">Your name</label>
+                  <input id="name" name="name" required maxlength="120"
+                    class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text placeholder:text-rv-faint focus:outline-none focus:ring-2 focus:ring-rv-teal/40"
+                    placeholder="Roger Nkosi" />
+                  <p id="err-name" class="hidden mt-1 font-sans text-xs text-red-400"></p>
+                </div>
+                <div>
+                  <label class="font-sans text-xs text-rv-muted" for="businessName">Business name</label>
+                  <input id="businessName" name="businessName" required maxlength="160"
+                    class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text placeholder:text-rv-faint focus:outline-none focus:ring-2 focus:ring-rv-teal/40"
+                    placeholder="Rivet Software (Pty) Ltd" />
+                  <p id="err-businessName" class="hidden mt-1 font-sans text-xs text-red-400"></p>
+                </div>
+              </div>
+
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label class="font-sans text-xs text-rv-muted" for="email">Email</label>
+                  <input id="email" name="email" type="email" required maxlength="320"
+                    class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text placeholder:text-rv-faint focus:outline-none focus:ring-2 focus:ring-rv-teal/40"
+                    placeholder="you@company.com" />
+                  <p id="err-email" class="hidden mt-1 font-sans text-xs text-red-400"></p>
+                </div>
+                <div>
+                  <label class="font-sans text-xs text-rv-muted" for="phoneNumber">WhatsApp number</label>
+                  <input id="phoneNumber" name="phoneNumber" type="tel" required maxlength="32"
+                    class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text placeholder:text-rv-faint focus:outline-none focus:ring-2 focus:ring-rv-teal/40"
+                    placeholder="+27..." />
+                  <p id="err-phoneNumber" class="hidden mt-1 font-sans text-xs text-red-400"></p>
+                </div>
+              </div>
+
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label class="font-sans text-xs text-rv-muted" for="agency">Do you manage WhatsApp for multiple
+                    clients?</label>
+                  <select id="agency" name="agency"
+                    class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text focus:outline-none focus:ring-2 focus:ring-rv-teal/40">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="not_sure">Not sure</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="font-sans text-xs text-rv-muted" for="usecase">What do you mainly use WhatsApp
+                    for?</label>
+                  <select id="usecase" name="usecase"
+                    class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text focus:outline-none focus:ring-2 focus:ring-rv-teal/40">
+                    <option value="bookings">Booking &amp; appointments</option>
+                    <option value="logistics">Delivery &amp; logistics updates</option>
+                    <option value="leads">Lead follow-up &amp; sales</option>
+                    <option value="support">Customer support</option>
+                    <option value="agency">I manage it for clients (agency)</option>
+                    <option value="other">Something else</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="font-sans text-xs text-rv-muted" for="notes">Notes (optional)</label>
+                <textarea id="notes" name="notes" rows="3" maxlength="4000"
+                  class="mt-1 w-full rounded-xl border border-rv-border bg-rv-night px-4 py-3 font-sans text-sm text-rv-text placeholder:text-rv-faint focus:outline-none focus:ring-2 focus:ring-rv-teal/40"
+                  placeholder="Tell us what you want to automate and which industry you're in."></textarea>
+              </div>
+
+              <button id="demoSubmit" type="submit"
+                class="w-full inline-flex items-center justify-center rounded-xl bg-rv-teal px-5 py-3 font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
+                Book my free demo
+              </button>
+
+              <p class="font-sans text-xs text-rv-faint">
+                By submitting, you agree we can contact you about Rivet. We don't sell your data.
+              </p>
+
+              <div id="demoSuccess"
+                class="hidden rounded-xl border border-rv-teal/30 bg-rv-teal/5 p-4 font-sans text-sm text-rv-text">
+                &#10003; Booking received! We'll be in touch within 24 hours.
+              </div>
+              <div id="demoError"
+                class="hidden rounded-xl border border-red-500/30 bg-red-500/5 p-4 font-sans text-sm text-rv-muted">
+                &#9888; Something went wrong. Please try again or email us at
+                <a href="mailto:hello@rivetsoftware.dev"
+                  class="font-mono text-rv-teal hover:underline">hello@rivetsoftware.dev</a>.
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+         PACKS  (bg: slate)
+    ============================================================ -->
+  <section id="packs" class="bg-rv-slate py-24">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+      <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div>
+          <h2 class="font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
+            Ready-built flows. Go live in hours, not weeks.
+          </h2>
+          <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed max-w-xl">
+            Skip the setup. Choose a Pack built for your industry, customize it for your business, and go live
+            on WhatsApp the same day.
+          </p>
+        </div>
+        <a href="#demo"
+          class="inline-flex shrink-0 items-center justify-center rounded-lg border border-rv-border px-4 py-2 font-display text-sm text-rv-muted hover:border-rv-border2 transition-colors">
+          Book a demo
+        </a>
+      </div>
+
+      <!-- Pack cards -->
+      <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+
+        <div class="rounded-2xl border border-rv-border bg-rv-card p-6" style="border-left: 3px solid #00D4A1;">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display text-lg font-semibold text-rv-text">Clinic Booking Pack</h3>
+            <span
+              class="rounded border border-rv-border bg-rv-night px-1.5 py-0.5 font-mono text-[10px] text-rv-faint">v1</span>
+          </div>
+          <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
+            Let patients book, reschedule, and get reminders automatically &mdash; no receptionist needed.
+          </p>
+          <div class="mt-4 flex items-center gap-2 font-sans text-xs text-rv-muted">
+            <span class="h-2 w-2 rounded-full bg-rv-teal"></span> No integration needed to get started
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-rv-border bg-rv-card p-6" style="border-left: 3px solid #00D4A1;">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display text-lg font-semibold text-rv-text">Logistics Updates Pack</h3>
+            <span
+              class="rounded border border-rv-border bg-rv-night px-1.5 py-0.5 font-mono text-[10px] text-rv-faint">v1</span>
+          </div>
+          <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
+            Send automatic order status updates, ETA notifications, and proof-of-delivery confirmations to customers.
+          </p>
+          <div class="mt-4 flex items-center gap-2 font-sans text-xs text-rv-muted">
+            <span class="h-2 w-2 rounded-full bg-rv-warn"></span> Connects to your tracking system via webhook
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-rv-border bg-rv-card p-6" style="border-left: 3px solid #00D4A1;">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display text-lg font-semibold text-rv-text">Real Estate Qualifier Pack</h3>
+            <span
+              class="rounded border border-rv-border bg-rv-night px-1.5 py-0.5 font-mono text-[10px] text-rv-faint">v1</span>
+          </div>
+          <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
+            Capture leads from WhatsApp, qualify their preferences, and book viewings automatically &mdash; so agents
+            focus on hot prospects.
+          </p>
+          <div class="mt-4 flex items-center gap-2 font-sans text-xs text-rv-muted">
+            <span class="h-2 w-2 rounded-full bg-rv-teal"></span> Perfect for agencies managing multiple agents
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-rv-border bg-rv-card p-6" style="border-left: 3px solid #00D4A1;">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display text-lg font-semibold text-rv-text">eCommerce Pack</h3>
+            <span
+              class="rounded border border-rv-border bg-rv-night px-1.5 py-0.5 font-mono text-[10px] text-rv-faint">v1</span>
+          </div>
+          <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">
+            Built for Africa. Includes PayGate, Ozow, Paystack, and local courier integrations for order automation.
+          </p>
+          <div class="mt-4 flex items-center gap-2 font-sans text-xs text-rv-muted">
+            <span class="h-2 w-2 rounded-full bg-rv-teal"></span> Connects to your store via webhook
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
          PRICING  (bg: night)
     ============================================================ -->
-    <section id="pricing" class="bg-rv-night py-24">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+  <section id="pricing" class="bg-rv-night py-24">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
-        <div class="max-w-2xl">
-          <h2 class="font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
-            Start small. Scale when you're ready.
-          </h2>
-          <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
-            No setup fees. No long contracts. Start with one WhatsApp number and grow from there.
-          </p>
-        </div>
-
-        <!-- Toggle -->
-        <div class="mt-8 flex items-center gap-2">
-          <button
-            id="toggleMonthly"
-            onclick="setPricing('monthly')"
-            class="rounded-lg border border-rv-border bg-rv-card px-4 py-2 font-sans text-sm font-medium text-rv-text transition-colors"
-          >Monthly</button>
-          <button
-            id="toggleAnnual"
-            onclick="setPricing('annual')"
-            class="rounded-lg border border-transparent px-4 py-2 font-sans text-sm font-medium text-rv-muted transition-colors hover:text-rv-text"
-          >Annual &nbsp;<span class="font-mono text-xs text-rv-teal">save 20%</span></button>
-        </div>
-
-        <!-- All plans include -->
-        <div class="mt-6 rounded-2xl border border-rv-border bg-rv-card p-6">
-          <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-            <div class="flex-1">
-              <div class="font-display text-sm font-semibold text-rv-text">All plans include</div>
-              <div class="mt-3 flex flex-wrap gap-2">
-                <span class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-muted">Multi-tenant workspaces</span>
-                <span class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-muted">Inbox + handoff</span>
-                <span class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-muted">Steps Builder + runtime</span>
-                <span class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-muted">Webhooks + API calls</span>
-                <span class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-muted">Policies (quiet hours / rate limits)</span>
-                <span class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-muted">Audit trails</span>
-                <span class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-muted">Run Timeline</span>
-                <span class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-muted">Templates + Packs</span>
-              </div>
-              <div class="mt-4">
-                <div class="mb-2 font-sans text-xs font-medium text-rv-muted">Optional add-ons &mdash; only pay for what you need</div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-faint">WooCommerce integration</span>
-                  <span class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-faint">Shopify integration</span>
-                  <span class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-faint">Meta Catalog sync</span>
-                  <span class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-faint">No-code mode (no developers required)</span>
-                </div>
-              </div>
-            </div>
-            <a
-              href="#demo"
-              class="inline-flex shrink-0 items-center justify-center rounded-lg bg-rv-teal px-4 py-2 font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity"
-            >
-              Book a demo
-            </a>
-          </div>
-        </div>
-
-        <!-- 4 pricing cards -->
-        <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-
-          <!-- Starter -->
-          <div class="pricing-card flex flex-col rounded-2xl border border-rv-border bg-rv-card p-6">
-            <div class="font-sans text-xs font-medium text-rv-muted">Solo businesses &amp; first-time adopters</div>
-            <h3 class="mt-2 font-display text-xl font-bold text-rv-text">&#127807; Starter</h3>
-            <div class="mt-4">
-              <div class="font-display text-4xl font-bold text-rv-text">
-                <span class="price-monthly">R499</span><span class="price-annual hidden">R399</span>
-              </div>
-              <div class="font-sans text-sm text-rv-faint">/month</div>
-              <div class="price-annual-save hidden mt-1 font-mono text-xs text-rv-teal">billed R4,788/yr &mdash; save R1,200</div>
-            </div>
-            <ul class="mt-6 flex-1 space-y-2.5 font-sans text-sm text-rv-muted">
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>3 active BotFlows</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>500 contacts</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>1 agent seat</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>1 WhatsApp number</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>WhatsApp Business API</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>1 Pack</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Email support (48hr)</li>
-            </ul>
-            <a href="https://app.rivetsoftware.dev/login" data-track-event="start_trial_click" class="mt-6 block w-full rounded-xl bg-rv-teal py-3 text-center font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
-              Start free trial
-            </a>
-            <p class="mt-2 text-center font-sans text-xs text-rv-faint"><a href="#demo" class="hover:text-rv-muted transition-colors">or book a demo</a></p>
-            <p class="mt-2 font-sans text-[11px] text-rv-faint">WhatsApp messaging fees charged separately by Meta &mdash; zero markup.</p>
-          </div>
-
-          <!-- Growth (recommended) -->
-          <div class="pricing-card relative flex flex-col rounded-2xl bg-rv-card p-6" style="border: 1.5px solid #00D4A1; box-shadow: 0 0 24px rgba(0,212,161,0.10);">
-            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-rv-teal px-3 py-1 font-display text-xs font-semibold text-rv-night">
-              Most popular
-            </div>
-            <div class="font-sans text-xs font-medium text-rv-muted">Best for growing SMEs</div>
-            <h3 class="mt-2 font-display text-xl font-bold text-rv-text">&#128640; Growth</h3>
-            <div class="mt-4">
-              <div class="font-display text-4xl font-bold text-rv-text">
-                <span class="price-monthly">R1,299</span><span class="price-annual hidden">R1,099</span>
-              </div>
-              <div class="font-sans text-sm text-rv-faint">/month</div>
-              <div class="price-annual-save hidden mt-1 font-mono text-xs text-rv-teal">billed R13,188/yr &mdash; save R2,400</div>
-            </div>
-            <ul class="mt-6 flex-1 space-y-2.5 font-sans text-sm text-rv-muted">
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>15 active BotFlows</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>5,000 contacts</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>5 agent seats</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>1 WhatsApp number</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>WooCommerce + Shopify sync</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>5 Packs</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Contact segments &amp; tags</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Version control &amp; rollback</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Pack export &amp; reuse</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Priority email + chat (24hr)</li>
-            </ul>
-            <a href="https://app.rivetsoftware.dev/login" data-track-event="start_trial_click" class="mt-6 block w-full rounded-xl bg-rv-teal py-3 text-center font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
-              Start free trial
-            </a>
-            <p class="mt-2 text-center font-sans text-xs text-rv-faint"><a href="#demo" class="hover:text-rv-muted transition-colors">or book a demo</a></p>
-            <p class="mt-2 font-sans text-[11px] text-rv-faint">WhatsApp messaging fees charged separately by Meta &mdash; zero markup.</p>
-          </div>
-
-          <!-- Business -->
-          <div class="pricing-card flex flex-col rounded-2xl border border-rv-border bg-rv-card p-6">
-            <div class="font-sans text-xs font-medium text-rv-muted">Multi-location businesses &amp; power users</div>
-            <h3 class="mt-2 font-display text-xl font-bold text-rv-text">&#127962; Business</h3>
-            <div class="mt-4">
-              <div class="font-display text-4xl font-bold text-rv-text">
-                <span class="price-monthly">R2,499</span><span class="price-annual hidden">R2,099</span>
-              </div>
-              <div class="font-sans text-sm text-rv-faint">/month</div>
-              <div class="price-annual-save hidden mt-1 font-mono text-xs text-rv-teal">billed R25,188/yr &mdash; save R4,800</div>
-            </div>
-            <ul class="mt-6 flex-1 space-y-2.5 font-sans text-sm text-rv-muted">
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Unlimited BotFlows</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>25,000 contacts</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>15 agent seats</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>3 WhatsApp numbers</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>All integrations + custom webhooks</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Unlimited Packs</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Up to 3 client workspaces</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>RBAC</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Audit trail &amp; activity log</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>WhatsApp Flows (Meta native)</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Priority support (8hr SLA)</li>
-            </ul>
-            <a href="#demo" class="mt-6 block w-full rounded-xl bg-rv-teal py-3 text-center font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
-              Book a demo
-            </a>
-            <p class="mt-2 text-center font-sans text-xs text-rv-faint"><a href="https://app.rivetsoftware.dev/login" data-track-event="start_trial_click" class="hover:text-rv-muted transition-colors">or start free trial</a></p>
-            <p class="mt-2 font-sans text-[11px] text-rv-faint">WhatsApp messaging fees charged separately by Meta &mdash; zero markup.</p>
-          </div>
-
-          <!-- Agency -->
-          <div class="pricing-card flex flex-col rounded-2xl border border-rv-border bg-rv-card p-6">
-            <div class="font-sans text-xs font-medium text-rv-muted">Built for agencies managing multiple clients</div>
-            <h3 class="mt-2 font-display text-xl font-bold text-rv-text">&#9889; Agency</h3>
-            <div class="mt-4">
-              <div class="font-display text-4xl font-bold text-rv-text">
-                <span class="price-monthly">R4,999</span><span class="price-annual hidden">R4,199</span>
-              </div>
-              <div class="font-sans text-sm text-rv-faint">/month</div>
-              <div class="price-annual-save hidden mt-1 font-mono text-xs text-rv-teal">billed R50,388/yr &mdash; save R9,600</div>
-            </div>
-            <ul class="mt-6 flex-1 space-y-2.5 font-sans text-sm text-rv-muted">
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Unlimited everything</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Unlimited client workspaces</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Full white-label branding</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Client billing &amp; usage tracking</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Custom Pack creation</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Dedicated partner manager</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Early feature access</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Volume discount on Meta API fees</li>
-              <li class="flex items-start gap-2"><span class="font-bold text-rv-teal">&#10003;</span>Dedicated support (4hr SLA)</li>
-            </ul>
-            <a href="#demo" class="mt-6 block w-full rounded-xl border border-rv-border py-3 text-center font-display text-sm font-semibold text-rv-muted hover:border-rv-border2 transition-colors">
-              Book a demo
-            </a>
-            <p class="mt-3 font-sans text-[11px] text-rv-faint">WhatsApp messaging fees charged separately by Meta &mdash; zero markup.</p>
-          </div>
-
-        </div>
-
-        <!-- WhatsApp fees explainer -->
-        <div class="mt-6 rounded-2xl border border-rv-border bg-rv-card p-6">
-          <div class="flex items-start gap-3">
-            <span class="mt-0.5 font-mono text-sm text-rv-teal">i</span>
-            <div>
-              <div class="font-display text-sm font-semibold text-rv-text">WhatsApp messaging fees</div>
-              <p class="mt-1 font-sans text-sm text-rv-muted leading-relaxed">
-                Rivet's platform fee covers the software. WhatsApp messaging costs are passed through at Meta's rates with zero markup.
-              </p>
-              <div class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
-                <div class="rounded-lg border border-rv-border bg-rv-night p-2.5">
-                  <div class="font-mono text-[11px] text-rv-faint">Service (inbound)</div>
-                  <div class="mt-1 font-mono text-sm font-semibold text-rv-teal">FREE</div>
-                </div>
-                <div class="rounded-lg border border-rv-border bg-rv-night p-2.5">
-                  <div class="font-mono text-[11px] text-rv-faint">Utility (outbound)</div>
-                  <div class="mt-1 font-mono text-sm font-semibold text-rv-text">~R0.07&ndash;0.25</div>
-                </div>
-                <div class="rounded-lg border border-rv-border bg-rv-night p-2.5">
-                  <div class="font-mono text-[11px] text-rv-faint">Marketing</div>
-                  <div class="mt-1 font-mono text-sm font-semibold text-rv-text">~R0.40&ndash;0.80</div>
-                </div>
-                <div class="rounded-lg border border-rv-border bg-rv-night p-2.5">
-                  <div class="font-mono text-[11px] text-rv-faint">Authentication</div>
-                  <div class="mt-1 font-mono text-sm font-semibold text-rv-text">~R0.13&ndash;0.33</div>
-                </div>
-              </div>
-              <p class="mt-3 font-sans text-xs text-rv-faint">Most clients spend R150&ndash;R650/month on Meta fees in addition to the platform.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Add-ons -->
-        <div class="mt-6 rounded-2xl border border-rv-border bg-rv-card p-6">
-          <div class="font-display text-sm font-semibold text-rv-text">Add-ons &mdash; extend any plan</div>
-          <div class="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
-            <div class="rounded-xl border border-rv-border bg-rv-night p-3">
-              <div class="font-sans text-xs text-rv-muted">Extra WhatsApp number</div>
-              <div class="mt-1 font-mono text-sm font-semibold text-rv-text">+R249<span class="text-rv-faint font-normal">/mo</span></div>
-            </div>
-            <div class="rounded-xl border border-rv-border bg-rv-night p-3">
-              <div class="font-sans text-xs text-rv-muted">Extra agent seat</div>
-              <div class="mt-1 font-mono text-sm font-semibold text-rv-text">+R169<span class="text-rv-faint font-normal">/seat/mo</span></div>
-            </div>
-            <div class="rounded-xl border border-rv-border bg-rv-night p-3">
-              <div class="font-sans text-xs text-rv-muted">Contact expansion</div>
-              <div class="mt-1 font-mono text-sm font-semibold text-rv-text">+R299<span class="text-rv-faint font-normal">/10K/mo</span></div>
-            </div>
-            <div class="rounded-xl border border-rv-border bg-rv-night p-3">
-              <div class="font-sans text-xs text-rv-muted">AI Flow Assistant</div>
-              <div class="mt-1 font-mono text-sm font-semibold text-rv-text">+R499<span class="text-rv-faint font-normal">/mo</span></div>
-            </div>
-            <div class="rounded-xl border border-rv-border bg-rv-night p-3">
-              <div class="font-sans text-xs text-rv-muted">Custom Pack build</div>
-              <div class="mt-1 font-mono text-sm font-semibold text-rv-text">R3,499<span class="text-rv-faint font-normal"> once-off</span></div>
-            </div>
-            <div class="rounded-xl border border-rv-border bg-rv-night p-3">
-              <div class="font-sans text-xs text-rv-muted">Onboarding &amp; setup</div>
-              <div class="mt-1 font-mono text-sm font-semibold text-rv-text">R2,499<span class="text-rv-faint font-normal"> once-off</span></div>
-            </div>
-            <div class="rounded-xl border border-rv-border bg-rv-night p-3 sm:col-span-2">
-              <div class="font-sans text-xs text-rv-muted">Priority onboarding (agencies)</div>
-              <div class="mt-1 font-mono text-sm font-semibold text-rv-text">R4,999<span class="text-rv-faint font-normal"> once-off</span></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- What clients actually pay -->
-        <div class="mt-6 rounded-2xl border border-rv-border bg-rv-card p-6">
-          <div class="font-display text-sm font-semibold text-rv-text">What clients actually pay</div>
-          <p class="mt-1 font-sans text-xs text-rv-faint">Platform + Meta fees combined, with real-world ROI context.</p>
-          <div class="mt-4 grid gap-3 sm:grid-cols-2">
-
-            <div class="rounded-xl border border-rv-border bg-rv-night p-4">
-              <div class="font-display text-sm font-semibold text-rv-text">Solo GP Clinic <span class="font-mono text-xs text-rv-faint font-normal">(50 appts/wk)</span></div>
-              <div class="mt-2 font-mono text-xs text-rv-muted">Starter R499 + ~R130 Meta = <span class="text-rv-text font-semibold">~R629/mo</span></div>
-              <div class="mt-1.5 font-sans text-xs text-rv-teal">Recovering 4 no-shows/month = R4,000+ saved</div>
-            </div>
-
-            <div class="rounded-xl border border-rv-border bg-rv-night p-4">
-              <div class="font-display text-sm font-semibold text-rv-text">Online Boutique <span class="font-mono text-xs text-rv-faint font-normal">(Shopify)</span></div>
-              <div class="mt-2 font-mono text-xs text-rv-muted">Growth R1,299 + ~R330 Meta = <span class="text-rv-text font-semibold">~R1,629/mo</span></div>
-              <div class="mt-1.5 font-sans text-xs text-rv-teal">5 cart recoveries/month = 500%+ ROI</div>
-            </div>
-
-            <div class="rounded-xl border border-rv-border bg-rv-night p-4">
-              <div class="font-display text-sm font-semibold text-rv-text">Real Estate Agency <span class="font-mono text-xs text-rv-faint font-normal">(10 agents)</span></div>
-              <div class="mt-2 font-mono text-xs text-rv-muted">Growth R1,299 + ~R580 Meta = <span class="text-rv-text font-semibold">~R1,879/mo</span></div>
-              <div class="mt-1.5 font-sans text-xs text-rv-teal">1 extra deal/quarter covers 3 months easily</div>
-            </div>
-
-            <div class="rounded-xl border border-rv-border bg-rv-night p-4">
-              <div class="font-display text-sm font-semibold text-rv-text">Digital Agency <span class="font-mono text-xs text-rv-faint font-normal">(12 clients)</span></div>
-              <div class="mt-2 font-mono text-xs text-rv-muted">Agency R4,999 &mdash; Meta fees passed to clients</div>
-              <div class="mt-1.5 font-sans text-xs text-rv-teal">Charges clients R1,299&ndash;2,499 each = R15K&ndash;30K revenue</div>
-            </div>
-
-          </div>
-        </div>
-
+      <div class="max-w-2xl">
+        <h2 class="font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
+          Start small. Scale when you're ready.
+        </h2>
+        <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
+          No setup fees. No long contracts. Start with one WhatsApp number and grow from there.
+        </p>
       </div>
-    </section>
+
+      <!-- Toggle -->
+      <div class="mt-8 flex items-center gap-2">
+        <button id="toggleMonthly" onclick="setPricing('monthly')"
+          class="rounded-lg border border-rv-border bg-rv-card px-4 py-2 font-sans text-sm font-medium text-rv-text transition-colors">Monthly</button>
+        <button id="toggleAnnual" onclick="setPricing('annual')"
+          class="rounded-lg border border-transparent px-4 py-2 font-sans text-sm font-medium text-rv-muted transition-colors hover:text-rv-text">Annual
+          &nbsp;<span class="font-mono text-xs text-rv-teal">save 20%</span></button>
+      </div>
+
+      <!-- All plans include -->
+      <div class="mt-6 rounded-2xl border border-rv-border bg-rv-card p-6">
+        <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+          <div class="flex-1">
+            <div class="font-display text-sm font-semibold text-rv-text">All plans include</div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span
+                class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-muted">Multi-tenant
+                workspaces</span>
+              <span
+                class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-muted">Inbox
+                + handoff</span>
+              <span
+                class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-muted">Steps
+                Builder + runtime</span>
+              <span
+                class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-muted">Webhooks
+                + API calls</span>
+              <span
+                class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-muted">Policies
+                (quiet hours / rate limits)</span>
+              <span
+                class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-muted">Audit
+                trails</span>
+              <span
+                class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-muted">Run
+                Timeline</span>
+              <span
+                class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-muted">Templates
+                + Packs</span>
+            </div>
+            <div class="mt-4">
+              <div class="mb-2 font-sans text-xs font-medium text-rv-muted">Optional add-ons &mdash; only pay for what
+                you need</div>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-faint">WooCommerce
+                  integration</span>
+                <span
+                  class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-faint">Shopify
+                  integration</span>
+                <span
+                  class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-faint">Meta
+                  Catalog sync</span>
+                <span
+                  class="rounded-full border border-rv-border bg-rv-night px-2.5 py-1 font-sans text-[11px] text-rv-faint">No-code
+                  mode (no developers required)</span>
+              </div>
+            </div>
+          </div>
+          <a href="#demo"
+            class="inline-flex shrink-0 items-center justify-center rounded-lg bg-rv-teal px-4 py-2 font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
+            Book a demo
+          </a>
+        </div>
+      </div>
+
+      <!-- 4 pricing cards -->
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
 
-    <!-- ============================================================
+        <!-- Starter -->
+        <div class="pricing-card flex flex-col rounded-2xl border border-rv-border bg-rv-card p-6">
+          <div class="font-sans text-xs font-medium text-rv-muted">Solo businesses &amp; first-time adopters</div>
+          <h3 class="mt-2 font-display text-xl font-bold text-rv-text flex items-center gap-2">
+            <i data-lucide="leaf" class="w-5 h-5" style="color: #00d4a1;"></i>
+            Starter
+          </h3>
+          <div class="mt-4">
+            <div class="font-display text-4xl font-bold text-rv-text">
+              <span class="price-monthly">R499</span><span class="price-annual hidden">R399</span>
+            </div>
+            <div class="font-sans text-sm text-rv-faint">/month</div>
+            <div class="price-annual-save hidden mt-1 font-mono text-xs text-rv-teal">billed R4,788/yr &mdash; save
+              R1,200</div>
+          </div>
+          <ul class="mt-6 flex-1 space-y-2.5 font-sans text-sm text-rv-muted">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>3 active BotFlows</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>500 contacts</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>1 agent seat</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>1 WhatsApp number</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>WhatsApp Business API</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>1 Pack</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Email support (48hr)</span></li>
+          </ul>
+          <a href="https://app.rivetsoftware.dev/login" data-track-event="start_trial_click"
+            class="mt-6 block w-full rounded-xl bg-rv-teal py-3 text-center font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
+            Start free trial
+          </a>
+          <p class="mt-2 text-center font-sans text-xs text-rv-faint"><a href="#demo"
+              class="hover:text-rv-muted transition-colors">or book a demo</a></p>
+          <p class="mt-2 font-sans text-[11px] text-rv-faint">WhatsApp messaging fees charged separately by Meta &mdash;
+            zero markup.</p>
+        </div>
+
+        <!-- Growth (recommended) -->
+        <div class="pricing-card relative flex flex-col rounded-2xl bg-rv-card p-6"
+          style="border: 1.5px solid #00D4A1; box-shadow: 0 0 24px rgba(0,212,161,0.10);">
+          <div
+            class="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-rv-teal px-3 py-1 font-display text-xs font-semibold text-rv-night">
+            Most popular
+          </div>
+          <div class="font-sans text-xs font-medium text-rv-muted">Best for growing SMEs</div>
+          <h3 class="mt-2 font-display text-xl font-bold text-rv-text flex items-center gap-2">
+            <i data-lucide="rocket" class="w-5 h-5" style="color: #00d4a1;"></i>
+            Growth
+          </h3>
+          <div class="mt-4">
+            <div class="font-display text-4xl font-bold text-rv-text">
+              <span class="price-monthly">R1,299</span><span class="price-annual hidden">R1,099</span>
+            </div>
+            <div class="font-sans text-sm text-rv-faint">/month</div>
+            <div class="price-annual-save hidden mt-1 font-mono text-xs text-rv-teal">billed R13,188/yr &mdash; save
+              R2,400</div>
+          </div>
+          <ul class="mt-6 flex-1 space-y-2.5 font-sans text-sm text-rv-muted">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>15 active BotFlows</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>5,000 contacts</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>5 agent seats</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>1 WhatsApp number</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>WooCommerce + Shopify sync</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>5 Packs</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Contact segments &amp; tags</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Version control &amp; rollback</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Pack export &amp; reuse</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Priority email + chat (24hr)</span></li>
+          </ul>
+          <a href="https://app.rivetsoftware.dev/login" data-track-event="start_trial_click"
+            class="mt-6 block w-full rounded-xl bg-rv-teal py-3 text-center font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
+            Start free trial
+          </a>
+          <p class="mt-2 text-center font-sans text-xs text-rv-faint"><a href="#demo"
+              class="hover:text-rv-muted transition-colors">or book a demo</a></p>
+          <p class="mt-2 font-sans text-[11px] text-rv-faint">WhatsApp messaging fees charged separately by Meta &mdash;
+            zero markup.</p>
+        </div>
+
+        <!-- Business -->
+        <div class="pricing-card flex flex-col rounded-2xl border border-rv-border bg-rv-card p-6">
+          <div class="font-sans text-xs font-medium text-rv-muted">Multi-location businesses &amp; power users</div>
+          <h3 class="mt-2 font-display text-xl font-bold text-rv-text flex items-center gap-2">
+            <i data-lucide="building" class="w-5 h-5" style="color: #00d4a1;"></i>
+            Business
+          </h3>
+          <div class="mt-4">
+            <div class="font-display text-4xl font-bold text-rv-text">
+              <span class="price-monthly">R2,499</span><span class="price-annual hidden">R2,099</span>
+            </div>
+            <div class="font-sans text-sm text-rv-faint">/month</div>
+            <div class="price-annual-save hidden mt-1 font-mono text-xs text-rv-teal">billed R25,188/yr &mdash; save
+              R4,800</div>
+          </div>
+          <ul class="mt-6 flex-1 space-y-2.5 font-sans text-sm text-rv-muted">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Unlimited BotFlows</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>25,000 contacts</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>15 agent seats</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>3 WhatsApp numbers</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>All integrations + custom webhooks</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Unlimited Packs</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Up to 3 client workspaces</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>RBAC</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Audit trail &amp; activity log</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>WhatsApp Flows (Meta native)</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Priority support (8hr SLA)</span></li>
+          </ul>
+          <a href="#demo"
+            class="mt-6 block w-full rounded-xl bg-rv-teal py-3 text-center font-display text-sm font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
+            Book a demo
+          </a>
+          <p class="mt-2 text-center font-sans text-xs text-rv-faint"><a href="https://app.rivetsoftware.dev/login"
+              data-track-event="start_trial_click" class="hover:text-rv-muted transition-colors">or start free trial</a>
+          </p>
+          <p class="mt-2 font-sans text-[11px] text-rv-faint">WhatsApp messaging fees charged separately by Meta &mdash;
+            zero markup.</p>
+        </div>
+
+        <!-- Agency -->
+        <div class="pricing-card flex flex-col rounded-2xl border border-rv-border bg-rv-card p-6">
+          <div class="font-sans text-xs font-medium text-rv-muted">Built for agencies managing multiple clients</div>
+          <h3 class="mt-2 font-display text-xl font-bold text-rv-text flex items-center gap-2">
+            <i data-lucide="zap" class="w-5 h-5" style="color: #00d4a1;"></i>
+            Agency
+          </h3>
+          <div class="mt-4">
+            <div class="font-display text-4xl font-bold text-rv-text">
+              <span class="price-monthly">R4,999</span><span class="price-annual hidden">R4,199</span>
+            </div>
+            <div class="font-sans text-sm text-rv-faint">/month</div>
+            <div class="price-annual-save hidden mt-1 font-mono text-xs text-rv-teal">billed R50,388/yr &mdash; save
+              R9,600</div>
+          </div>
+          <ul class="mt-6 flex-1 space-y-2.5 font-sans text-sm text-rv-muted">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Unlimited everything</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Unlimited client workspaces</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Full white-label branding</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Client billing &amp; usage tracking</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Custom Pack creation</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Dedicated partner manager</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Early feature access</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Volume discount on Meta API fees</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5"
+                style="color: #00d4a1;"></i><span>Dedicated support (4hr SLA)</span></li>
+          </ul>
+          <a href="#demo"
+            class="mt-6 block w-full rounded-xl border border-rv-border py-3 text-center font-display text-sm font-semibold text-rv-muted hover:border-rv-border2 transition-colors">
+            Book a demo
+          </a>
+          <p class="mt-3 font-sans text-[11px] text-rv-faint">WhatsApp messaging fees charged separately by Meta &mdash;
+            zero markup.</p>
+        </div>
+      </div>
+
+      <!-- WhatsApp fees explainer -->
+      <div class="mt-6 rounded-2xl border border-rv-border bg-rv-card p-6">
+        <div class="flex items-start gap-3">
+          <span class="mt-0.5 font-mono text-sm text-rv-teal">i</span>
+          <div>
+            <div class="font-display text-sm font-semibold text-rv-text">WhatsApp messaging fees</div>
+            <p class="mt-1 font-sans text-sm text-rv-muted leading-relaxed">
+              Rivet's platform fee covers the software. WhatsApp messaging costs are passed through at Meta's rates with
+              zero markup.
+            </p>
+            <div class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+              <div class="rounded-lg border border-rv-border bg-rv-night p-2.5">
+                <div class="font-mono text-[11px] text-rv-faint">Service (inbound)</div>
+                <div class="mt-1 font-mono text-sm font-semibold text-rv-teal">FREE</div>
+              </div>
+              <div class="rounded-lg border border-rv-border bg-rv-night p-2.5">
+                <div class="font-mono text-[11px] text-rv-faint">Utility (outbound)</div>
+                <div class="mt-1 font-mono text-sm font-semibold text-rv-text">~R0.07&ndash;0.25</div>
+              </div>
+              <div class="rounded-lg border border-rv-border bg-rv-night p-2.5">
+                <div class="font-mono text-[11px] text-rv-faint">Marketing</div>
+                <div class="mt-1 font-mono text-sm font-semibold text-rv-text">~R0.40&ndash;0.80</div>
+              </div>
+              <div class="rounded-lg border border-rv-border bg-rv-night p-2.5">
+                <div class="font-mono text-[11px] text-rv-faint">Authentication</div>
+                <div class="mt-1 font-mono text-sm font-semibold text-rv-text">~R0.13&ndash;0.33</div>
+              </div>
+            </div>
+            <p class="mt-3 font-sans text-xs text-rv-faint">Most clients spend R150&ndash;R650/month on Meta fees in
+              addition to the platform.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add-ons -->
+      <div class="mt-6 rounded-2xl border border-rv-border bg-rv-card p-6">
+        <div class="font-display text-sm font-semibold text-rv-text">Add-ons &mdash; extend any plan</div>
+        <div class="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-xl border border-rv-border bg-rv-night p-3">
+            <div class="font-sans text-xs text-rv-muted">Extra WhatsApp number</div>
+            <div class="mt-1 font-mono text-sm font-semibold text-rv-text">+R249<span
+                class="text-rv-faint font-normal">/mo</span></div>
+          </div>
+          <div class="rounded-xl border border-rv-border bg-rv-night p-3">
+            <div class="font-sans text-xs text-rv-muted">Extra agent seat</div>
+            <div class="mt-1 font-mono text-sm font-semibold text-rv-text">+R169<span
+                class="text-rv-faint font-normal">/seat/mo</span></div>
+          </div>
+          <div class="rounded-xl border border-rv-border bg-rv-night p-3">
+            <div class="font-sans text-xs text-rv-muted">Contact expansion</div>
+            <div class="mt-1 font-mono text-sm font-semibold text-rv-text">+R299<span
+                class="text-rv-faint font-normal">/10K/mo</span></div>
+          </div>
+          <div class="rounded-xl border border-rv-border bg-rv-night p-3">
+            <div class="font-sans text-xs text-rv-muted">AI Flow Assistant</div>
+            <div class="mt-1 font-mono text-sm font-semibold text-rv-text">+R499<span
+                class="text-rv-faint font-normal">/mo</span></div>
+          </div>
+          <div class="rounded-xl border border-rv-border bg-rv-night p-3">
+            <div class="font-sans text-xs text-rv-muted">Custom Pack build</div>
+            <div class="mt-1 font-mono text-sm font-semibold text-rv-text">R3,499<span
+                class="text-rv-faint font-normal"> once-off</span></div>
+          </div>
+          <div class="rounded-xl border border-rv-border bg-rv-night p-3">
+            <div class="font-sans text-xs text-rv-muted">Onboarding &amp; setup</div>
+            <div class="mt-1 font-mono text-sm font-semibold text-rv-text">R2,499<span
+                class="text-rv-faint font-normal"> once-off</span></div>
+          </div>
+          <div class="rounded-xl border border-rv-border bg-rv-night p-3 sm:col-span-2">
+            <div class="font-sans text-xs text-rv-muted">Priority onboarding (agencies)</div>
+            <div class="mt-1 font-mono text-sm font-semibold text-rv-text">R4,999<span
+                class="text-rv-faint font-normal"> once-off</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- What clients actually pay -->
+      <div class="mt-6 rounded-2xl border border-rv-border bg-rv-card p-6">
+        <div class="font-display text-sm font-semibold text-rv-text">What clients actually pay</div>
+        <p class="mt-1 font-sans text-xs text-rv-faint">Platform + Meta fees combined, with real-world ROI context.</p>
+        <div class="mt-4 grid gap-3 sm:grid-cols-2">
+
+          <div class="rounded-xl border border-rv-border bg-rv-night p-4">
+            <div class="font-display text-sm font-semibold text-rv-text">Solo GP Clinic <span
+                class="font-mono text-xs text-rv-faint font-normal">(50 appts/wk)</span></div>
+            <div class="mt-2 font-mono text-xs text-rv-muted">Starter R499 + ~R130 Meta = <span
+                class="text-rv-text font-semibold">~R629/mo</span></div>
+            <div class="mt-1.5 font-sans text-xs text-rv-teal">Recovering 4 no-shows/month = R4,000+ saved</div>
+          </div>
+
+          <div class="rounded-xl border border-rv-border bg-rv-night p-4">
+            <div class="font-display text-sm font-semibold text-rv-text">Online Boutique <span
+                class="font-mono text-xs text-rv-faint font-normal">(Shopify)</span></div>
+            <div class="mt-2 font-mono text-xs text-rv-muted">Growth R1,299 + ~R330 Meta = <span
+                class="text-rv-text font-semibold">~R1,629/mo</span></div>
+            <div class="mt-1.5 font-sans text-xs text-rv-teal">5 cart recoveries/month = 500%+ ROI</div>
+          </div>
+
+          <div class="rounded-xl border border-rv-border bg-rv-night p-4">
+            <div class="font-display text-sm font-semibold text-rv-text">Real Estate Agency <span
+                class="font-mono text-xs text-rv-faint font-normal">(10 agents)</span></div>
+            <div class="mt-2 font-mono text-xs text-rv-muted">Growth R1,299 + ~R580 Meta = <span
+                class="text-rv-text font-semibold">~R1,879/mo</span></div>
+            <div class="mt-1.5 font-sans text-xs text-rv-teal">1 extra deal/quarter covers 3 months easily</div>
+          </div>
+
+          <div class="rounded-xl border border-rv-border bg-rv-night p-4">
+            <div class="font-display text-sm font-semibold text-rv-text">Digital Agency <span
+                class="font-mono text-xs text-rv-faint font-normal">(12 clients)</span></div>
+            <div class="mt-2 font-mono text-xs text-rv-muted">Agency R4,999 &mdash; Meta fees passed to clients</div>
+            <div class="mt-1.5 font-sans text-xs text-rv-teal">Charges clients R1,299&ndash;2,499 each = R15K&ndash;30K
+              revenue</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
          HOW RIVET USES WHATSAPP  (bg: night)
     ============================================================ -->
-    <section id="whatsapp-usage" class="bg-rv-night py-24">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="max-w-2xl">
-          <h2 class="font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
-            How Rivet uses WhatsApp
-          </h2>
-          <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
-            Rivet is a software platform &mdash; not a messaging service. We give businesses the tools to build and run their own WhatsApp automation. Here's exactly how the WhatsApp Business Platform is used.
-          </p>
-        </div>
+  <section id="whatsapp-usage" class="bg-rv-night py-24">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
+          How Rivet uses WhatsApp
+        </h2>
+        <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
+          Rivet is a software platform &mdash; not a messaging service. We give businesses the tools to build and run
+          their own WhatsApp automation. Here's exactly how the WhatsApp Business Platform is used.
+        </p>
+      </div>
 
-        <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
-            <div class="font-display text-sm font-semibold text-rv-text">Transactional notifications</div>
-            <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Order confirmations, appointment reminders, delivery updates, and payment receipts &mdash; sent to customers who have opted in.</div>
-          </div>
-          <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
-            <div class="font-display text-sm font-semibold text-rv-text">Automated conversation flows</div>
-            <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">BotFlows that respond to inbound customer messages &mdash; bookings, lead qualification, FAQ responses, and support routing.</div>
-          </div>
-          <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
-            <div class="font-display text-sm font-semibold text-rv-text">Template-based outbound messaging</div>
-            <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Pre-approved Meta message templates for outbound notifications. All templates are submitted to and approved by Meta before use.</div>
-          </div>
-          <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
-            <div class="font-display text-sm font-semibold text-rv-text">No unsolicited messaging</div>
-            <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Rivet does not send bulk unsolicited messages. All usage complies with Meta's Platform Terms, WhatsApp Business Policy, and WhatsApp's Acceptable Use Policy.</div>
-          </div>
+      <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
+          <div class="font-display text-sm font-semibold text-rv-text">Transactional notifications</div>
+          <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Order confirmations, appointment reminders,
+            delivery updates, and payment receipts &mdash; sent to customers who have opted in.</div>
+        </div>
+        <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
+          <div class="font-display text-sm font-semibold text-rv-text">Automated conversation flows</div>
+          <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">BotFlows that respond to inbound customer
+            messages &mdash; bookings, lead qualification, FAQ responses, and support routing.</div>
+        </div>
+        <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
+          <div class="font-display text-sm font-semibold text-rv-text">Template-based outbound messaging</div>
+          <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Pre-approved Meta message templates for
+            outbound notifications. All templates are submitted to and approved by Meta before use.</div>
+        </div>
+        <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
+          <div class="font-display text-sm font-semibold text-rv-text">No unsolicited messaging</div>
+          <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Rivet does not send bulk unsolicited
+            messages. All usage complies with Meta's Platform Terms, WhatsApp Business Policy, and WhatsApp's Acceptable
+            Use Policy.</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
 
-    <!-- ============================================================
+  <!-- ============================================================
          SECURITY  (bg: slate)
     ============================================================ -->
-    <section id="security" class="bg-rv-slate py-24">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="max-w-2xl">
-          <h2 class="font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
-            Your clients' data is safe. Full stop.
-          </h2>
-          <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
-            Rivet focuses on isolation, auditability, and operational safety from day one.
-          </p>
-        </div>
+  <section id="security" class="bg-rv-slate py-24">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
+          Your clients' data is safe. Full stop.
+        </h2>
+        <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
+          Rivet focuses on isolation, auditability, and operational safety from day one.
+        </p>
+      </div>
 
-        <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
-            <div class="font-display text-sm font-semibold text-rv-text">Each client is fully separated</div>
-            <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Every business on Rivet runs in its own isolated workspace &mdash; no data ever crosses between accounts.</div>
-          </div>
-          <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
-            <div class="font-display text-sm font-semibold text-rv-text">Full history of every action</div>
-            <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Every message sent, every change made, every publish logged &mdash; so you always know what happened and when.</div>
-          </div>
-          <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
-            <div class="font-display text-sm font-semibold text-rv-text">Built-in compliance controls</div>
-            <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Quiet hours, message rate limits, and safety checks built in &mdash; so you stay compliant with WhatsApp's rules automatically.</div>
-          </div>
-          <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
-            <div class="font-display text-sm font-semibold text-rv-text">You control how long data is kept</div>
-            <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Set your own data retention policies. Keep what you need, delete what you don't.</div>
-          </div>
+      <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
+          <div class="font-display text-sm font-semibold text-rv-text">Each client is fully separated</div>
+          <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Every business on Rivet runs in its own
+            isolated workspace &mdash; no data ever crosses between accounts.</div>
+        </div>
+        <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
+          <div class="font-display text-sm font-semibold text-rv-text">Full history of every action</div>
+          <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Every message sent, every change made, every
+            publish logged &mdash; so you always know what happened and when.</div>
+        </div>
+        <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
+          <div class="font-display text-sm font-semibold text-rv-text">Built-in compliance controls</div>
+          <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Quiet hours, message rate limits, and safety
+            checks built in &mdash; so you stay compliant with WhatsApp's rules automatically.</div>
+        </div>
+        <div class="rounded-2xl border border-rv-border bg-rv-card p-6">
+          <div class="font-display text-sm font-semibold text-rv-text">You control how long data is kept</div>
+          <div class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Set your own data retention policies. Keep
+            what you need, delete what you don't.</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
 
-    <!-- ============================================================
+  <!-- ============================================================
          FAQ  (bg: night)
     ============================================================ -->
-    <section id="faq" class="bg-rv-night py-24">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="max-w-2xl">
-          <h2 class="font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
-            Common questions. Straight answers.
-          </h2>
-        </div>
-
-        <div class="mt-10 grid gap-3 lg:grid-cols-2">
-
-          <details class="rounded-2xl border border-rv-border bg-rv-card p-6">
-            <summary class="cursor-pointer font-display text-sm font-semibold text-rv-text">Do I need to be a Meta Business Partner?</summary>
-            <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">No. Rivet connects directly to Meta's Cloud API. Your clients connect their own WhatsApp Business accounts and pay WhatsApp directly &mdash; no middleman.</p>
-          </details>
-
-          <details class="rounded-2xl border border-rv-border bg-rv-card p-6">
-            <summary class="cursor-pointer font-display text-sm font-semibold text-rv-text">Does Rivet include WhatsApp message costs?</summary>
-            <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">No. WhatsApp charges you separately for messages. Rivet is just the software &mdash; you keep full control of your messaging costs.</p>
-          </details>
-
-          <details class="rounded-2xl border border-rv-border bg-rv-card p-6">
-            <summary class="cursor-pointer font-display text-sm font-semibold text-rv-text">We already have an API. Does Rivet still make sense?</summary>
-            <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Yes. Rivet is API and webhook-first. Connect it to your existing systems in minutes. The no-code mode is optional &mdash; for teams that aren't ready for API integration yet.</p>
-          </details>
-
-          <details class="rounded-2xl border border-rv-border bg-rv-card p-6">
-            <summary class="cursor-pointer font-display text-sm font-semibold text-rv-text">Can I undo a change after publishing?</summary>
-            <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Yes. Rivet has one-click rollback built in. Ship confidently &mdash; you can always go back to the last working version.</p>
-          </details>
-
-          <details class="rounded-2xl border border-rv-border bg-rv-card p-6">
-            <summary class="cursor-pointer font-display text-sm font-semibold text-rv-text">Do I need a developer to set up Rivet?</summary>
-            <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">No. Rivet has a no-code mode that lets you build and publish flows without writing any code. If you have a developer, they can connect Rivet to your existing systems via API &mdash; but it's not required.</p>
-          </details>
-
-          <details class="rounded-2xl border border-rv-border bg-rv-card p-6">
-            <summary class="cursor-pointer font-display text-sm font-semibold text-rv-text">How long does it take to go live?</summary>
-            <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Most businesses go live within a day. Book a demo, pick a Pack for your industry, customize it for your business, and you're running.</p>
-          </details>
-
-          <details class="rounded-2xl border border-rv-border bg-rv-card p-6">
-            <summary class="cursor-pointer font-display text-sm font-semibold text-rv-text">What kinds of businesses use Rivet?</summary>
-            <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Logistics companies, medical clinics, real estate agencies, restaurants, and e-commerce stores. Any business using WhatsApp to communicate with customers can automate it with Rivet.</p>
-          </details>
-
-          <details class="rounded-2xl border border-rv-border bg-rv-card p-6">
-            <summary class="cursor-pointer font-display text-sm font-semibold text-rv-text">What happens if something goes wrong?</summary>
-            <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">You get a full run log showing exactly what happened, step by step. And you can pause or roll back any flow instantly with one click.</p>
-          </details>
-
-          <details class="rounded-2xl border border-rv-border bg-rv-card p-6">
-            <summary class="cursor-pointer font-display text-sm font-semibold text-rv-text">Can I upgrade or downgrade anytime?</summary>
-            <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Yes. Upgrades take effect immediately. Downgrades take effect at the next billing cycle.</p>
-          </details>
-
-        </div>
+  <section id="faq" class="bg-rv-night py-24">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
+          Common questions. Straight answers.
+        </h2>
       </div>
-    </section>
+
+      <div class="mt-10 grid gap-3 lg:grid-cols-2">
+
+        <details class="rounded-2xl border border-rv-border bg-rv-card p-6">
+          <summary class="cursor-pointer font-display text-sm font-semibold text-rv-text">Do I need to be a Meta
+            Business Partner?</summary>
+          <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">No. Rivet connects directly to Meta's Cloud
+            API. Your clients connect their own WhatsApp Business accounts and pay WhatsApp directly &mdash; no
+            middleman.</p>
+        </details>
+
+        <details class="rounded-2xl border border-rv-border bg-rv-card p-6">
+          <summary class="cursor-pointer font-display text-sm font-semibold text-rv-text">Does Rivet include WhatsApp
+            message costs?</summary>
+          <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">No. WhatsApp charges you separately for
+            messages. Rivet is just the software &mdash; you keep full control of your messaging costs.</p>
+        </details>
+
+        <details class="rounded-2xl border border-rv-border bg-rv-card p-6">
+          <summary class="cursor-pointer font-display text-sm font-semibold text-rv-text">We already have an API. Does
+            Rivet still make sense?</summary>
+          <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Yes. Rivet is API and webhook-first. Connect
+            it to your existing systems in minutes. The no-code mode is optional &mdash; for teams that aren't ready for
+            API integration yet.</p>
+        </details>
+
+        <details class="rounded-2xl border border-rv-border bg-rv-card p-6">
+          <summary class="cursor-pointer font-display text-sm font-semibold text-rv-text">Can I undo a change after
+            publishing?</summary>
+          <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Yes. Rivet has one-click rollback built in.
+            Ship confidently &mdash; you can always go back to the last working version.</p>
+        </details>
+
+        <details class="rounded-2xl border border-rv-border bg-rv-card p-6">
+          <summary class="cursor-pointer font-display text-sm font-semibold text-rv-text">Do I need a developer to set
+            up Rivet?</summary>
+          <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">No. Rivet has a no-code mode that lets you
+            build and publish flows without writing any code. If you have a developer, they can connect Rivet to your
+            existing systems via API &mdash; but it's not required.</p>
+        </details>
+
+        <details class="rounded-2xl border border-rv-border bg-rv-card p-6">
+          <summary class="cursor-pointer font-display text-sm font-semibold text-rv-text">How long does it take to go
+            live?</summary>
+          <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Most businesses go live within a day. Book a
+            demo, pick a Pack for your industry, customize it for your business, and you're running.</p>
+        </details>
+
+        <details class="rounded-2xl border border-rv-border bg-rv-card p-6">
+          <summary class="cursor-pointer font-display text-sm font-semibold text-rv-text">What kinds of businesses use
+            Rivet?</summary>
+          <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Logistics companies, medical clinics, real
+            estate agencies, restaurants, and e-commerce stores. Any business using WhatsApp to communicate with
+            customers can automate it with Rivet.</p>
+        </details>
+
+        <details class="rounded-2xl border border-rv-border bg-rv-card p-6">
+          <summary class="cursor-pointer font-display text-sm font-semibold text-rv-text">What happens if something goes
+            wrong?</summary>
+          <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">You get a full run log showing exactly what
+            happened, step by step. And you can pause or roll back any flow instantly with one click.</p>
+        </details>
+
+        <details class="rounded-2xl border border-rv-border bg-rv-card p-6">
+          <summary class="cursor-pointer font-display text-sm font-semibold text-rv-text">Can I upgrade or downgrade
+            anytime?</summary>
+          <p class="mt-3 font-sans text-sm text-rv-muted leading-relaxed">Yes. Upgrades take effect immediately.
+            Downgrades take effect at the next billing cycle.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
 
 
-    <!-- ============================================================
+  <!-- ============================================================
          FINAL CTA  (bg: slate)
     ============================================================ -->
-    <section class="bg-rv-slate py-24">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="rounded-3xl border border-rv-border bg-rv-card p-10 sm:p-14">
-          <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
-            <div class="max-w-xl">
-              <h2 class="font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
-                Ready to automate your WhatsApp?
-              </h2>
-              <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
-                14-day free trial. No credit card required. Full access to Growth features.
-              </p>
-            </div>
-            <div class="flex shrink-0 flex-col gap-3 sm:flex-row">
-              <a
-                href="https://app.rivetsoftware.dev/login"
-                data-track-event="start_trial_click"
-                class="inline-flex items-center justify-center rounded-xl bg-rv-teal px-7 py-3.5 font-display text-base font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity"
-              >
-                Start free trial
-              </a>
-              <a
-                href="#demo"
-                class="inline-flex items-center justify-center rounded-xl border border-rv-border px-7 py-3.5 font-display text-base font-semibold text-rv-muted hover:border-rv-border2 transition-colors"
-              >
-                Book a demo
-              </a>
-            </div>
+  <section class="bg-rv-slate py-24">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="rounded-3xl border border-rv-border bg-rv-card p-10 sm:p-14">
+        <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+          <div class="max-w-xl">
+            <h2 class="font-display text-4xl font-bold text-rv-text" style="letter-spacing: -1.2px;">
+              Ready to automate your WhatsApp?
+            </h2>
+            <p class="mt-4 font-sans text-base text-rv-muted leading-relaxed">
+              14-day free trial. No credit card required. Full access to Growth features.
+            </p>
+          </div>
+          <div class="flex shrink-0 flex-col gap-3 sm:flex-row">
+            <a href="https://app.rivetsoftware.dev/login" data-track-event="start_trial_click"
+              class="inline-flex items-center justify-center rounded-xl bg-rv-teal px-7 py-3.5 font-display text-base font-semibold text-rv-night shadow-teal hover:opacity-90 transition-opacity">
+              Start free trial
+            </a>
+            <a href="#demo"
+              class="inline-flex items-center justify-center rounded-xl border border-rv-border px-7 py-3.5 font-display text-base font-semibold text-rv-muted hover:border-rv-border2 transition-colors">
+              Book a demo
+            </a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
 
-    <!-- ============================================================
+  <!-- ============================================================
          FOOTER  (bg: night)
     ============================================================ -->
-    <footer class="bg-rv-night border-t border-rv-border py-16">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="grid gap-10 lg:grid-cols-5">
+  <footer class="bg-rv-night border-t border-rv-border py-16">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid gap-10 lg:grid-cols-5">
 
-          <!-- Brand + tagline -->
-          <div class="lg:col-span-2">
-            <div class="flex items-center gap-2.5">
-              <img src="./assets/rivet-icon.png" alt="Rivet" class="h-8 w-8 object-contain" draggable="false" />
-              <span class="font-display text-xl font-bold tracking-tight text-rv-text">Rivet</span>
-            </div>
-            <p class="mt-3 font-sans text-sm text-rv-faint leading-relaxed max-w-xs">
-              WhatsApp bots for businesses that can't afford to miss a lead, a delivery, or an appointment.
-            </p>
-            <p class="mt-4 font-sans text-xs text-rv-faint">Built in South Africa &#127487;&#127462;</p>
-            <address class="mt-4 not-italic font-sans text-xs text-rv-faint leading-relaxed">
-              Rivet Software (Pty) Ltd<br />
-              Meadowbrook Lane, Block F, St Andrews Office Park<br />
-              Bryanston, Sandton, Gauteng, 2191<br />
-              South Africa
-            </address>
+        <!-- Brand + tagline -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2.5">
+            <img src="./assets/rivet-icon.png" alt="Rivet" class="h-8 w-8 object-contain" draggable="false" />
+            <span class="font-display text-xl font-bold tracking-tight text-rv-text">Rivet</span>
           </div>
-
-          <!-- Product links -->
-          <div>
-            <div class="font-sans text-xs font-semibold uppercase tracking-wide text-rv-muted">Product</div>
-            <ul class="mt-4 space-y-2.5">
-              <li><a href="#product"  class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Features</a></li>
-              <li><a href="#packs"    class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Packs</a></li>
-              <li><a href="#pricing" data-track-event="pricing_click"  class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Pricing</a></li>
-              <li><a href="#demo"     class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Book a demo</a></li>
-              <li><a href="/about"    class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">About</a></li>
-            </ul>
-          </div>
-
-          <!-- Resources -->
-          <div>
-            <div class="font-sans text-xs font-semibold uppercase tracking-wide text-rv-muted">Resources</div>
-            <ul class="mt-4 space-y-2.5">
-              <li><a href="#faq" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">FAQ</a></li>
-              <li><a href="/security" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Security</a></li>
-              <li><a href="https://status.rivetsoftware.dev" target="_blank" rel="noopener" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Status</a></li>
-            </ul>
-          </div>
-
-          <!-- Legal -->
-          <div>
-            <div class="font-sans text-xs font-semibold uppercase tracking-wide text-rv-muted">Legal</div>
-            <ul class="mt-4 space-y-2.5">
-              <li><a href="/privacy" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Privacy</a></li>
-              <li><a href="/terms"   class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Terms</a></li>
-              <li><a href="mailto:hello@rivetsoftware.dev" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Contact</a></li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="mt-12 border-t border-rv-border pt-8">
-          <p class="font-sans text-sm text-rv-faint">
-            &copy; <span id="year"></span> Rivet Software (Pty) Ltd. All rights reserved.
+          <p class="mt-3 font-sans text-sm text-rv-faint leading-relaxed max-w-xs">
+            WhatsApp bots for businesses that can't afford to miss a lead, a delivery, or an appointment.
           </p>
+          <p class="mt-4 font-sans text-xs text-rv-faint">Built in South Africa &#127487;&#127462;</p>
+          <address class="mt-4 not-italic font-sans text-xs text-rv-faint leading-relaxed">
+            Rivet Software (Pty) Ltd<br />
+            Meadowbrook Lane, Block F, St Andrews Office Park<br />
+            Bryanston, Sandton, Gauteng, 2191<br />
+            South Africa
+          </address>
         </div>
+
+        <!-- Product links -->
+        <div>
+          <div class="font-sans text-xs font-semibold uppercase tracking-wide text-rv-muted">Product</div>
+          <ul class="mt-4 space-y-2.5">
+            <li><a href="#product"
+                class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Features</a></li>
+            <li><a href="#packs" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Packs</a>
+            </li>
+            <li><a href="#pricing" data-track-event="pricing_click"
+                class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Pricing</a></li>
+            <li><a href="#demo" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Book a
+                demo</a></li>
+            <li><a href="/about" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">About</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <div class="font-sans text-xs font-semibold uppercase tracking-wide text-rv-muted">Resources</div>
+          <ul class="mt-4 space-y-2.5">
+            <li><a href="#faq" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">FAQ</a></li>
+            <li><a href="/security"
+                class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Security</a></li>
+            <li><a href="https://status.rivetsoftware.dev" target="_blank" rel="noopener"
+                class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Status</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+          <div class="font-sans text-xs font-semibold uppercase tracking-wide text-rv-muted">Legal</div>
+          <ul class="mt-4 space-y-2.5">
+            <li><a href="/privacy"
+                class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Privacy</a></li>
+            <li><a href="/terms" class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Terms</a>
+            </li>
+            <li><a href="mailto:hello@rivetsoftware.dev"
+                class="font-sans text-sm text-rv-faint hover:text-rv-text transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
       </div>
-    </footer>
+
+      <div class="mt-12 border-t border-rv-border pt-8">
+        <p class="font-sans text-sm text-rv-faint">
+          &copy; <span id="year"></span> Rivet Software (Pty) Ltd. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
 
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+  <script>
 
-      // ── Pricing toggle ──────────────────────────────────────────
-      function setPricing(mode) {
-        const monthlyPrices  = document.querySelectorAll('.price-monthly');
-        const annualPrices   = document.querySelectorAll('.price-annual');
-        const annualSaves    = document.querySelectorAll('.price-annual-save');
-        const btnMonthly     = document.getElementById('toggleMonthly');
-        const btnAnnual      = document.getElementById('toggleAnnual');
 
-        const isAnnual = mode === 'annual';
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-        monthlyPrices.forEach(el => el.classList.toggle('hidden', isAnnual));
-        annualPrices.forEach(el  => el.classList.toggle('hidden', !isAnnual));
-        annualSaves.forEach(el   => el.classList.toggle('hidden', !isAnnual));
+    // ── Pricing toggle ──────────────────────────────────────────
+    function setPricing(mode) {
+      const monthlyPrices = document.querySelectorAll('.price-monthly');
+      const annualPrices = document.querySelectorAll('.price-annual');
+      const annualSaves = document.querySelectorAll('.price-annual-save');
+      const btnMonthly = document.getElementById('toggleMonthly');
+      const btnAnnual = document.getElementById('toggleAnnual');
 
-        if (isAnnual) {
-          btnAnnual.classList.add('border-rv-border', 'bg-rv-card', 'text-rv-text');
-          btnAnnual.classList.remove('border-transparent', 'text-rv-muted');
-          btnMonthly.classList.remove('border-rv-border', 'bg-rv-card', 'text-rv-text');
-          btnMonthly.classList.add('border-transparent', 'text-rv-muted');
-        } else {
-          btnMonthly.classList.add('border-rv-border', 'bg-rv-card', 'text-rv-text');
-          btnMonthly.classList.remove('border-transparent', 'text-rv-muted');
-          btnAnnual.classList.remove('border-rv-border', 'bg-rv-card', 'text-rv-text');
-          btnAnnual.classList.add('border-transparent', 'text-rv-muted');
-        }
+      const isAnnual = mode === 'annual';
+
+      monthlyPrices.forEach(el => el.classList.toggle('hidden', isAnnual));
+      annualPrices.forEach(el => el.classList.toggle('hidden', !isAnnual));
+      annualSaves.forEach(el => el.classList.toggle('hidden', !isAnnual));
+
+      if (isAnnual) {
+        btnAnnual.classList.add('border-rv-border', 'bg-rv-card', 'text-rv-text');
+        btnAnnual.classList.remove('border-transparent', 'text-rv-muted');
+        btnMonthly.classList.remove('border-rv-border', 'bg-rv-card', 'text-rv-text');
+        btnMonthly.classList.add('border-transparent', 'text-rv-muted');
+      } else {
+        btnMonthly.classList.add('border-rv-border', 'bg-rv-card', 'text-rv-text');
+        btnMonthly.classList.remove('border-transparent', 'text-rv-muted');
+        btnAnnual.classList.remove('border-rv-border', 'bg-rv-card', 'text-rv-text');
+        btnAnnual.classList.add('border-transparent', 'text-rv-muted');
       }
+    }
 
-      // ── Demo form ───────────────────────────────────────────────
-      const BOOKING_API = "https://api-dev.rivetsoftware.dev/api/bookings/demo";
+    // ── Demo form ───────────────────────────────────────────────
+    const BOOKING_API = "https://api-dev.rivetsoftware.dev/api/bookings/demo";
 
-      const demoForm    = document.getElementById("demoForm");
-      const demoSuccess = document.getElementById("demoSuccess");
-      const demoError   = document.getElementById("demoError");
-      const demoSubmit  = document.getElementById("demoSubmit");
+    const demoForm = document.getElementById("demoForm");
+    const demoSuccess = document.getElementById("demoSuccess");
+    const demoError = document.getElementById("demoError");
+    const demoSubmit = document.getElementById("demoSubmit");
 
-      function setSubmitting(on) {
-        if (!demoSubmit) return;
-        demoSubmit.disabled = on;
-        demoSubmit.classList.toggle("opacity-70", on);
-        demoSubmit.classList.toggle("cursor-not-allowed", on);
-        demoSubmit.textContent = on ? "Submitting\u2026" : "Book my free demo";
-      }
+    function setSubmitting(on) {
+      if (!demoSubmit) return;
+      demoSubmit.disabled = on;
+      demoSubmit.classList.toggle("opacity-70", on);
+      demoSubmit.classList.toggle("cursor-not-allowed", on);
+      demoSubmit.textContent = on ? "Submitting\u2026" : "Book my free demo";
+    }
 
-      function clearFieldErrors() {
-        ["name", "businessName", "email", "phoneNumber"].forEach(f => {
-          const err = document.getElementById("err-" + f);
-          const inp = document.getElementById(f);
-          if (err) { err.textContent = ""; err.classList.add("hidden"); }
-          if (inp) inp.classList.remove("border-red-500");
-        });
-      }
-
-      function showFieldError(field, msg) {
-        const err = document.getElementById("err-" + field);
-        const inp = document.getElementById(field);
-        if (err) { err.textContent = msg; err.classList.remove("hidden"); }
-        if (inp) inp.classList.add("border-red-500");
-      }
-
-      // Maps ASP.NET Core ValidationProblem field names → form element ids
-      const API_FIELD_MAP = {
-        Name: "name",
-        BusinessName: "businessName",
-        Email: "email",
-        PhoneNumber: "phoneNumber",
-      };
-
-      const USECASE_LABELS = {
-        bookings:  "Bookings & appointments",
-        logistics: "Delivery & logistics updates",
-        leads:     "Lead follow-up & sales",
-        support:   "Customer support",
-        agency:    "Agency (manages for clients)",
-        other:     "Other",
-      };
-      const AGENCY_LABELS = {
-        yes:      "Manages WhatsApp for multiple clients",
-        no:       "Single business",
-        not_sure: "Not sure about multi-client",
-      };
-
-      if (demoForm) {
-        demoForm.addEventListener("submit", async (e) => {
-          e.preventDefault();
-
-          // Honeypot
-          if (document.getElementById("website")?.value) return;
-
-          clearFieldErrors();
-          demoSuccess.classList.add("hidden");
-          demoError.classList.add("hidden");
-          setSubmitting(true);
-
-          const val = id => (document.getElementById(id)?.value ?? "").trim();
-
-          // Append agency/usecase context to notes so it reaches the team
-          const contextParts = [
-            val("agency")  ? "Multi-client: "   + (AGENCY_LABELS[val("agency")]  ?? val("agency"))  : null,
-            val("usecase") ? "Primary use case: " + (USECASE_LABELS[val("usecase")] ?? val("usecase")) : null,
-          ].filter(Boolean);
-          const notesBase  = val("notes");
-          const notesExtra = contextParts.length ? "[" + contextParts.join(" | ") + "]" : "";
-          const notes      = [notesBase, notesExtra].filter(Boolean).join("\n\n") || undefined;
-
-          const payload = {
-            name:         val("name"),
-            businessName: val("businessName"),
-            email:        val("email"),
-            phoneNumber:  val("phoneNumber"),
-            notes,
-          };
-
-          try {
-            const res = await fetch(BOOKING_API, {
-              method:  "POST",
-              headers: { "Content-Type": "application/json", "Accept": "application/json" },
-              body:    JSON.stringify(payload),
-            });
-
-            // ── 201 Created ─────────────────────────────────────────
-            if (res.status === 201) {
-              demoSuccess.classList.remove("hidden");
-              demoSuccess.scrollIntoView({ behavior: "smooth", block: "nearest" });
-              setTimeout(() => demoForm.reset(), 300);
-              return;
-            }
-
-            // ── 400 Validation ──────────────────────────────────────
-            if (res.status === 400) {
-              const body = await res.json().catch(() => ({}));
-              const errors = body.errors ?? {};
-              let hadFieldError = false;
-              for (const [apiField, messages] of Object.entries(errors)) {
-                const formField = API_FIELD_MAP[apiField];
-                if (formField && messages?.length) {
-                  showFieldError(formField, messages[0]);
-                  hadFieldError = true;
-                }
-              }
-              // Scroll to first field error or fallback to generic error
-              if (hadFieldError) {
-                const firstErrInput = demoForm.querySelector(".border-red-500");
-                firstErrInput?.scrollIntoView({ behavior: "smooth", block: "center" });
-                firstErrInput?.focus();
-              } else {
-                demoError.classList.remove("hidden");
-                demoError.scrollIntoView({ behavior: "smooth", block: "nearest" });
-              }
-              return;
-            }
-
-            // ── 503 Email delivery failed (booking was saved) ────────
-            if (res.status === 503) {
-              demoSuccess.textContent = "\u2713 Booking received! We\u2019ll be in touch within 24 hours. (Confirmation email may be delayed.)";
-              demoSuccess.classList.remove("hidden");
-              demoSuccess.scrollIntoView({ behavior: "smooth", block: "nearest" });
-              setTimeout(() => demoForm.reset(), 300);
-              return;
-            }
-
-            // ── Any other error ──────────────────────────────────────
-            throw new Error("status " + res.status);
-
-          } catch {
-            demoError.classList.remove("hidden");
-            demoError.scrollIntoView({ behavior: "smooth", block: "nearest" });
-          } finally {
-            setSubmitting(false);
-          }
-        });
-      }
-    </script>
-    <script src="./assets/track-visit.js"></script>
-    <script>
-      // ── Trial CTA click tracking ─────────────────────────────────
-      document.querySelectorAll('[data-trial-cta]').forEach(function (el) {
-        el.addEventListener('click', function () {
-          try {
-            fetch('https://api-dev.rivetsoftware.dev/api/marketing/visits', {
-              method:    'POST',
-              headers:   { 'Content-Type': 'application/json' },
-              keepalive: true,
-              body: JSON.stringify({
-                origin:      'trial_click',
-                landingPath: window.location.pathname,
-                queryString: window.location.search || null,
-                referrer:    document.referrer || null,
-                userAgent:   navigator.userAgent || null,
-              }),
-            }).catch(function () {});
-          } catch (_) {}
-        });
+    function clearFieldErrors() {
+      ["name", "businessName", "email", "phoneNumber"].forEach(f => {
+        const err = document.getElementById("err-" + f);
+        const inp = document.getElementById(f);
+        if (err) { err.textContent = ""; err.classList.add("hidden"); }
+        if (inp) inp.classList.remove("border-red-500");
       });
-    </script>
-  </body>
+    }
+
+    function showFieldError(field, msg) {
+      const err = document.getElementById("err-" + field);
+      const inp = document.getElementById(field);
+      if (err) { err.textContent = msg; err.classList.remove("hidden"); }
+      if (inp) inp.classList.add("border-red-500");
+    }
+
+    // Maps ASP.NET Core ValidationProblem field names → form element ids
+    const API_FIELD_MAP = {
+      Name: "name",
+      BusinessName: "businessName",
+      Email: "email",
+      PhoneNumber: "phoneNumber",
+    };
+
+    const USECASE_LABELS = {
+      bookings: "Bookings & appointments",
+      logistics: "Delivery & logistics updates",
+      leads: "Lead follow-up & sales",
+      support: "Customer support",
+      agency: "Agency (manages for clients)",
+      other: "Other",
+    };
+    const AGENCY_LABELS = {
+      yes: "Manages WhatsApp for multiple clients",
+      no: "Single business",
+      not_sure: "Not sure about multi-client",
+    };
+
+    if (demoForm) {
+      demoForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        // Honeypot
+        if (document.getElementById("website")?.value) return;
+
+        clearFieldErrors();
+        demoSuccess.classList.add("hidden");
+        demoError.classList.add("hidden");
+        setSubmitting(true);
+
+        const val = id => (document.getElementById(id)?.value ?? "").trim();
+
+        // Append agency/usecase context to notes so it reaches the team
+        const contextParts = [
+          val("agency") ? "Multi-client: " + (AGENCY_LABELS[val("agency")] ?? val("agency")) : null,
+          val("usecase") ? "Primary use case: " + (USECASE_LABELS[val("usecase")] ?? val("usecase")) : null,
+        ].filter(Boolean);
+        const notesBase = val("notes");
+        const notesExtra = contextParts.length ? "[" + contextParts.join(" | ") + "]" : "";
+        const notes = [notesBase, notesExtra].filter(Boolean).join("\n\n") || undefined;
+
+        const payload = {
+          name: val("name"),
+          businessName: val("businessName"),
+          email: val("email"),
+          phoneNumber: val("phoneNumber"),
+          notes,
+        };
+
+        try {
+          const res = await fetch(BOOKING_API, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "Accept": "application/json" },
+            body: JSON.stringify(payload),
+          });
+
+          // ── 201 Created ─────────────────────────────────────────
+          if (res.status === 201) {
+            demoSuccess.classList.remove("hidden");
+            demoSuccess.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            setTimeout(() => demoForm.reset(), 300);
+            return;
+          }
+
+          // ── 400 Validation ──────────────────────────────────────
+          if (res.status === 400) {
+            const body = await res.json().catch(() => ({}));
+            const errors = body.errors ?? {};
+            let hadFieldError = false;
+            for (const [apiField, messages] of Object.entries(errors)) {
+              const formField = API_FIELD_MAP[apiField];
+              if (formField && messages?.length) {
+                showFieldError(formField, messages[0]);
+                hadFieldError = true;
+              }
+            }
+            // Scroll to first field error or fallback to generic error
+            if (hadFieldError) {
+              const firstErrInput = demoForm.querySelector(".border-red-500");
+              firstErrInput?.scrollIntoView({ behavior: "smooth", block: "center" });
+              firstErrInput?.focus();
+            } else {
+              demoError.classList.remove("hidden");
+              demoError.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            }
+            return;
+          }
+
+          // ── 503 Email delivery failed (booking was saved) ────────
+          if (res.status === 503) {
+            demoSuccess.textContent = "\u2713 Booking received! We\u2019ll be in touch within 24 hours. (Confirmation email may be delayed.)";
+            demoSuccess.classList.remove("hidden");
+            demoSuccess.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            setTimeout(() => demoForm.reset(), 300);
+            return;
+          }
+
+          // ── Any other error ──────────────────────────────────────
+          throw new Error("status " + res.status);
+
+        } catch {
+          demoError.classList.remove("hidden");
+          demoError.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        } finally {
+          setSubmitting(false);
+        }
+      });
+    }
+  </script>
+  <script src="./assets/track-visit.js"></script>
+  <script>
+    // ── Trial CTA click tracking ─────────────────────────────────
+    document.querySelectorAll('[data-trial-cta]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        try {
+          fetch('https://api-dev.rivetsoftware.dev/api/marketing/visits', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            keepalive: true,
+            body: JSON.stringify({
+              origin: 'trial_click',
+              landingPath: window.location.pathname,
+              queryString: window.location.search || null,
+              referrer: document.referrer || null,
+              userAgent: navigator.userAgent || null,
+            }),
+          }).catch(function () { });
+        } catch (_) { }
+      });
+    });
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
 </html>
