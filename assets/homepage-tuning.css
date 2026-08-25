@@ -1,0 +1,25 @@
+/* Small visual calibration against the approved desktop screenshots. */
+body{font-size:15px}
+.brand{font-size:20px}
+.navlinks{font-size:13px}
+.hero h1{font-size:clamp(60px,6.2vw,92px)}
+.lede{font-size:18px}
+.section h2{font-size:clamp(44px,4.6vw,64px)}
+.subcopy{font-size:16px}
+.step h3,.card h3{font-size:19px}
+.usecase h3{font-size:27px}
+.price{font-size:46px}
+
+/* Restore the taller, slimmer handset silhouette from the approved design. */
+.phone{width:100%;max-width:385px;border-radius:46px;padding:10px}
+.phone-screen{min-height:630px;border-radius:36px}
+.phone-head{padding:17px 19px}
+.chat{padding:23px 17px;gap:13px}
+.bubble{font-size:13px}
+
+@media(max-width:640px){
+  .hero h1{font-size:52px}
+  .lede{font-size:16px}
+  .phone{max-width:365px}
+  .phone-screen{min-height:560px}
+}
